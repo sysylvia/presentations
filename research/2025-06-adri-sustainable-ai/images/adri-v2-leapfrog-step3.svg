@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 550">
+  <defs>
+    <style>
+      .axis { stroke: #374151; stroke-width: 2; fill: none; }
+      .axis-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 18px; fill: #374151; }
+      .gen-curve { fill: none; stroke-width: 4; stroke: #9CA3AF; }
+      .gen-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; fill: #6B7280; font-weight: 500; }
+      .frontier { fill: none; stroke: #D97706; stroke-width: 14; stroke-linecap: round; stroke-linejoin: round; opacity: 0.6; }
+      .frontier-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: bold; fill: #D97706; }
+      .hic-path { fill: none; stroke: #13294B; stroke-width: 4; }
+      .hic-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #13294B; }
+      .drag-arrow { fill: #13294B; opacity: 0.6; }
+      .drag-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-style: italic; fill: #13294B; }
+    </style>
+  </defs>
+
+  <!-- Y-axis (no ticks, no labels) -->
+  <line class="axis" x1="100" y1="480" x2="100" y2="60"/>
+  <polygon points="100,60 95,75 105,75" fill="#374151"/>
+  <text class="axis-label" x="50" y="270" text-anchor="middle" transform="rotate(-90, 50, 270)">Productivity</text>
+
+  <!-- X-axis -->
+  <line class="axis" x1="100" y1="480" x2="940" y2="480"/>
+  <polygon points="940,480 925,475 925,485" fill="#374151"/>
+  <text class="axis-label" x="920" y="515" text-anchor="end">Time</text>
+
+  <!-- Generation 1 -->
+  <path class="gen-curve" d="M 120,480
+    Q 160,478 200,460
+    Q 280,400 340,350
+    Q 420,310 500,300
+    Q 600,295 700,293
+    Q 800,292 900,291"/>
+  <text class="gen-label" x="910" y="283">Gen 1</text>
+
+  <!-- Generation 2 -->
+  <path class="gen-curve" d="M 220,480
+    Q 260,478 300,455
+    Q 380,380 440,300
+    Q 520,220 600,185
+    Q 700,165 800,160
+    Q 860,158 900,157"/>
+  <text class="gen-label" x="910" y="149">Gen 2</text>
+
+  <!-- Generation 3 -->
+  <path class="gen-curve" d="M 420,480
+    Q 460,478 500,450
+    Q 560,380 620,290
+    Q 700,180 780,120
+    Q 850,90 900,80"/>
+  <text class="gen-label" x="910" y="72">Gen 3</text>
+
+  <!-- Technology Frontier -->
+  <path class="frontier" d="M 120,480
+    Q 160,478 200,460
+    Q 280,400 340,350
+    Q 400,315 440,305
+    Q 480,280 520,230
+    Q 560,195 600,180
+    Q 640,168 680,162
+    Q 720,150 760,125
+    Q 820,95 900,80"/>
+  <text class="frontier-label" x="520" y="130">Technology Frontier</text>
+
+  <!-- HIC Path - below frontier, approaches asymptotically -->
+  <path class="hic-path" d="M 120,480
+    Q 160,478 200,462
+    Q 280,410 340,365
+    Q 420,330 500,320
+    Q 560,310 620,280
+    Q 680,250 740,225
+    Q 800,208 860,198
+    Q 900,192 940,188"/>
+  <text class="hic-label" x="870" y="215">HIC Path</text>
+
+  <!-- Two debt drag arrows (backward-pointing) -->
+  <polygon class="drag-arrow" points="380,340 400,330 400,350"/>
+  <polygon class="drag-arrow" points="440,320 460,310 460,330"/>
+  <text class="drag-label" x="420" y="375">Debt Drag</text>
+
+</svg>

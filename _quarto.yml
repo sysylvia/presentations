@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Sean Sylvia — Presentations"
+  navbar:
+    left:
+      - text: "Research"
+        href: research/index.qmd
+      - text: "Teaching"
+        href: teaching/index.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: style/site.css
+
+resources:
+  - "**/*.png"
+  - "**/*.jpg"
+  - "**/*.svg"
+  - "**/*.mp4"
+  - "**/*.gif"

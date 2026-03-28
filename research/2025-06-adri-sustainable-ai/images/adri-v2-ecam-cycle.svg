@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <marker id="arrow-white" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="white" opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <!-- Circular arrow path -->
+  <path d="M 100,30
+           A 70,70 0 0 1 170,100
+           A 70,70 0 0 1 100,170
+           A 70,70 0 0 1 30,100
+           A 70,70 0 0 1 85,32"
+        fill="none"
+        stroke="white"
+        stroke-width="3"
+        stroke-opacity="0.5"
+        marker-end="url(#arrow-white)"/>
+
+  <!-- E - top -->
+  <circle cx="100" cy="30" r="22" fill="#D97706" stroke="white" stroke-width="2"/>
+  <text x="100" y="37" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="20" font-weight="700">E</text>
+
+  <!-- C - right -->
+  <circle cx="170" cy="100" r="22" fill="#4B9CD3" stroke="white" stroke-width="2"/>
+  <text x="170" y="107" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="20" font-weight="700">C</text>
+
+  <!-- A - bottom -->
+  <circle cx="100" cy="170" r="22" fill="#059669" stroke="white" stroke-width="2"/>
+  <text x="100" y="177" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="20" font-weight="700">A</text>
+
+  <!-- M - left -->
+  <circle cx="30" cy="100" r="22" fill="#DC2626" stroke="white" stroke-width="2"/>
+  <text x="30" y="107" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="20" font-weight="700">M</text>
+
+</svg>

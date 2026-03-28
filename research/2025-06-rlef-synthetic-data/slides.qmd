@@ -1,0 +1,622 @@
+---
+title: "RLEF-DataGen"
+subtitle: "Harnessing Expert Feedback to Generate Representative Synthetic Clinical Data for Underserved Populations"
+author:
+  - name: "Sean Sylvia, PhD"
+    affiliation: "DHEPlab, UNC Gillings School of Global Public Health"
+date: today
+format:
+  clean-revealjs:
+    css: clean-unc.scss
+    filters:
+      - reveal-header
+    header-logo: images/dhep-logo-2.png
+    header-logo-link: https://dhep.unc.edu
+    transition: slide
+    background-transition: fade
+    highlight-style: github
+    code-line-numbers: false
+    fig-cap-location: bottom
+    slide-number: true
+    show-slide-number: all
+    controls: true
+    progress: true
+    scroll-view: true
+    history: false
+    hash-type: number
+    multiplex: true
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+    from: markdown+emoji
+    title-slide-attributes:
+      data-background-image: images/RobotDoctor.png
+      data-background-size: cover
+      data-background-opacity: "0.2"
+---
+
+
+## The Data Representation Gap {.smaller}
+
+### The Problem
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**EHR Adoption Disparities:**
+
+- HICs: **78%** of physicians use EHRs (US, 2021)
+- LMICs: **<15%** adoption rates
+- Only **27 of 194** WHO countries have national EHR systems
+:::
+
+::: {.column width="50%"}
+**AI Training Data Bias:**
+
+- **>90%** of clinical AI datasets from HICs
+- **<3%** representation from African populations
+- **74%** of AI studies use data from US/China only
+:::
+
+::::
+
+> "Clinical AI models risk perpetuating healthcare inequities precisely where they could have the most impact"
+
+::: {.notes}
+- US: 96% hospitals, 78% office physicians have certified EHRs as of 2021
+- OECD 2023 report: Only 15 of 27 surveyed countries have unified national EHR systems
+- PLOS Digital Health 2022: Analysis of 30,576 clinical AI papers showed severe geographic disparities
+:::
+
+---
+
+## Synthetic Data as a Potential Solution
+
+### The Growing Use of Synthetic Data 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**What is Synthetic Clinical Data?**
+
+- Artificially generated patient records
+- Preserves statistical properties
+- Protects privacy while enabling research
+:::
+
+::: {.column width="50%"}
+**Market For Synthetic Data:**
+
+- 2023: **$351M** → 2030: **$2.3B**
+- **31.1%** CAGR (2023-2030)
+- [**75% of businesses** will generate synthetic customer data by 2026]{.alert}, up from less than 5% in 2023 (Gartner)
+:::
+
+::::
+
+::: {.notes}
+- Gartner prediction on synthetic data usage
+- NIH launched N3C with synthetic COVID data - precedent for healthcare
+:::
+
+---
+
+## Key Challenges with Synthetic Data 
+
+- **Validation Paradox**: How to verify accuracy without real data?
+- **Rare Event Capture**: May miss critical edge cases & comorbidities
+- **Bias Amplification**: Risk of encoding generation assumptions as "truth"
+- **May not preserve causal relationships**
+
+> Traditionally need a real dataset to train a model to produce (using Generative Adversarial Networks)
+
+
+::: {.notes}
+- Synthetic data challenges: 
+  - Validation requires ground truth we don't have
+  - Rare diseases/complications often missed
+  - Generator biases become "baked in" to all downstream models
+- The inverse care law: Those with greatest health needs have least access to data-driven innovations
+:::
+
+---
+
+## Current Approaches & Limitations
+
+- **GANs**: Require substantial training data (doesn't solve our problem!)
+- **LLMs**: Can generate from limited examples (but quality?)
+  
+**The Fundamental Challenge**
+
+> How do we generate representative data when none exists for these populations?
+
+**Hypothesis**: We can use local expert knowledge (clinician, providers of various types) to guide generation and validate quality
+
+::: {.notes}
+- Key point: Traditional methods still need seed data from the population
+- RLEF addresses validation paradox through expert feedback
+:::
+
+
+## Our Approach: Reinforcement Learning with Expert Feedback
+
+::: {.center}
+![](images/RLHF.png){width="500"}
+:::
+
+#### Note: {.smaller}
+RLHF and RLEF are not exactly the same thing. RLHF is about learning what humans like; RLEF is about learning to do what experts do. RLHF handles subjective alignment, while RLEF handles competence transfer.
+
+---
+
+## How RLEF Addresses Key Challenges
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Traditional Limitations:**
+
+- ❌ Need existing data
+- ❌ Miss rare events
+- ❌ Can't validate without ground truth
+:::
+
+::: {.column width="50%"}
+**Potential RLEF Solutions:**
+
+- ✓ Bootstrap from expert knowledge
+- ✓ Experts flag missing conditions
+- ✓ Continuous validation through feedback
+:::
+
+::::
+
+---
+
+## Why Not Train AI Models Directly?
+
+#### 1. **Cost-effectiveness**: One dataset → Many applications
+#### 2. **Reusability**: Create once, use repeatedly
+#### 3. **Flexibility**: Application-agnostic resource
+
+::: {.notes}
+- RLEF allows us to bootstrap from zero data
+- Experts can identify when rare conditions are missing
+- Validation happens through iterative expert review
+- Bias monitoring built into the feedback loop
+- More efficient to create good data once than retrain many models
+:::
+
+---
+
+## The Economics of Expert Feedback 
+
+### Optimization Framework {.smaller}
+
+$$\text{Maximize: } Q(n,e) = f(n \times I(e) \times E(g,s,a)) - CL(e)$$
+
+$$\text{Subject to: } n \times c(e) \leq B$$
+
+**Where:**
+
+- $Q$ = Quality of synthetic data
+- $n$ = Number of expert evaluations
+- $I(e)$ = Information value per response
+- $E(g,s,a)$ = Engagement multiplier (gamification, skills, analytics)
+- $CL(e)$ = Cognitive load cost
+- $c(e)$ = Monetary cost per response  
+- $B$ = Budget constraint
+
+---
+
+## RLEF as a Socio-Technical System 
+
+### **Socio-Technical Systems:** Social and technical elements are fundamentally intertwined. 
+
+::: {.columns}
+::: {.column width="50%"}
+#### Healthcare Elements: {.smaller}
+
+🔧 **Technology**  
+AI algorithms, devices, platforms
+
+👥 **Practitioners**  
+Doctors, nurses, administrators
+
+🏥 **Patients**  
+Individuals, families, communities
+:::
+
+::: {.column width="50%"}
+#### System Context: {.smaller}
+
+📋 **Policies**  
+Regulations, protocols, guidelines
+
+💰 **Incentives**  
+Financial, professional, social
+
+🔄 **Dynamic Interactions**  
+All elements continuously influence each other
+:::
+:::
+
+::: {.fragment}
+**Optimizing technical components alone can lead to system-wide failure**
+:::
+
+::: {.notes}
+Reference Baxter & Sommerville 2011. Think ecosystem analogy - you can't optimize one species without considering the entire food web. Healthcare is particularly complex because of life-or-death decisions.
+:::
+
+---
+
+## Traditional AI Implementation Framework: CRISP-DM {.smaller} 
+
+::: {.center}
+![](images/crisp-dm-slide1.svg){width=950}
+:::
+
+
+::: {.notes}
+CRISP-DM from Chapman et al. 2000. Excellent for traditional business intelligence but assumes you can build and deploy without changing underlying data generating process. Almost never true in healthcare/social systems.
+:::
+
+---
+
+## Extended Socio-Technical Framework 
+
+#### **Missing Elements**
+
+- Feedback loops and performativity
+- Multiple stakeholders with conflicting objectives
+- Dynamic data distributions
+- Behavioral adaptation to AI systems
+
+#### **New Components Needed**
+
+- System dynamics mapping
+- Continuous behavioral monitoring  
+- Intervention design as core activity
+- Stakeholder impact assessment
+
+::: {.notes}
+This connects to my forthcoming npj Digital Medicine paper. The green boxes are new components. Pink shows the feedback loop that traditional frameworks miss.
+:::
+
+---
+
+## CRISP-DM Extended {.smaller}
+
+::: {.center}
+![](images/crisp-dm-slide2.svg){width=900}
+:::
+
+::: {.fragment}
+**Key Addition:** Feedback Loops. Models change the world they operate in
+:::
+
+::: {.notes}
+This shows how we need to extend CRISP-DM to account for socio-technical realities. The red feedback loop is critical - deployment fundamentally changes the data generating process.
+:::
+
+---
+
+## Integration {.smaller}
+
+::: {.columns}
+::: {.column width="33%"}
+#### Economics / Behavioral Science 
+- Incentives 
+- Market mechanisms 
+- Behavioral economics
+- Game theory applications
+- Decision-making under uncertainty
+
+:::
+
+::: {.column width="33%"}
+#### Specialist Knowledge
+
+- Implementation science
+- Clinical
+- Biomedical
+- Data Engineering and Architecture
+:::
+
+::: {.column width="33%"}
+#### Causal Inference
+
+- Moving beyond correlation
+- Identification strategies
+- Confounding control
+- Treatment effect estimation
+
+:::
+:::
+
+::: {.notes}
+Reference Pearl 2009 for causal inference. This is about building a new type of researcher/practitioner. Not enough to be great at ML or great at economics - need systems thinking across disciplines.
+:::
+
+---
+
+## RLEF as a Socio-technical System
+
+### AugMed Platform
+
+![](images/AugMed.png)}
+
+---
+
+## Key Socio-Technical Elements
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Technical Components:**
+
+- AI/ML models
+- Data infrastructure  
+- Platform interface
+- Feedback mechanisms
+:::
+
+::: {.column width="50%"}
+**Social Components:**
+
+- Expert motivations
+- Trust dynamics
+- Learning effects
+- Community norms
+:::
+
+::::
+
+> "Healthcare AI systems exist within complex human and organizational contexts"
+
+::: {.notes}
+- Drawing from Sylvia's "Digital Health and the Leapfrog Illusion"
+- RLEF inherently involves human-AI collaboration
+- Success depends on understanding feedback loops
+- Platform design must account for behavioral adaptation
+:::
+
+---
+
+## Platform Features as Leverage Points
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Cognitive Burden Factors:**
+
+- Task complexity
+- Time requirements
+- Mental effort
+- Decision fatigue
+:::
+
+::: {.column width="50%"}
+**Engagement Boosters:**
+
+- 🏆 Status badges
+- 📊 Skill measurement
+- 📈 Peer comparisons
+- 🎯 Adaptive learning
+:::
+
+::::
+
+::: {.notes}
+- Cognitive load is non-linear - too simple = low info, too complex = dropoff
+- Platform features can shift the optimal effort point higher
+- Gamification particularly effective for routine tasks
+- Skill measurement helps weight responses by expertise
+:::
+
+---
+
+## Mechanism Design
+
+### Spectrum of Expert Effort
+
+:::: {.columns}
+
+::: {.column width="33%"}
+**Low Effort**
+
+- Binary: "Real or Synthetic?"
+- Quick response (~30 sec)
+- Need many samples
+:::
+
+::: {.column width="33%"}
+**Medium Effort**
+
+- Pairwise comparison
+- "Which is more realistic?"
+- Moderate time (~1 min)
+:::
+
+::: {.column width="33%"}
+**High Effort**
+
+- Feature-level feedback
+- "What's unrealistic?"
+- Detailed review (~3 min)
+:::
+
+::::
+
+---
+
+### Example Platform UI - Smartphone Version {.smaller}
+
+![](images/ui-mockup.png){height="520"}}
+
+
+**Here: Clear binary choice** 
+
+---
+
+## Research Questions {.center}
+
+::: {.fragment}
+1. What design will maximize information gain per dollar spent?
+:::
+
+::: {.fragment}
+2. Can the system be designed so it is feasible and scalable? 
+:::
+
+::: {.fragment}
+3. Would the system be cost-effective, accounting for costs and downstream benefits at scale?
+:::
+
+::: {.notes}
+- UI designed based on remote interviews with 10 CFK clinicians
+- Card flip interaction tested well - creates engagement
+- Binary choice (Real/Synthetic) is our "low effort" starting point
+- Can extend to collect more detailed feedback on why choice was made
+- Mobile-first critical given limited computer access in Kibera
+:::
+
+---
+
+## Study Design: Kibera Pilot 
+
+#### Setting 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Why Kibera?**
+
+- World's largest urban slum
+- ~250,000 residents
+- Limited healthcare infrastructure
+- High disease burden
+:::
+
+::: {.column width="50%"}
+**Partner: CFK Africa**
+
+- Community health organization
+- 20+ years serving Kibera
+- Deep local clinical expertise
+- Trusted by community
+:::
+
+::::
+
+---
+
+## Research Timeline
+
+- ✅ **Phase 1**: Remote interviews with 10 clinicians
+- 🔄 **Phase 2**: UI/UX prototyping & testing
+- 📊 **Phase 3**: Systems mapping & agent-based modeling
+- 🚀 **Phase 4**: 1-month pilot implementation
+
+::: {.notes}
+- ABM allows simulation of different intervention strategies
+- Can test gamification impact before deployment
+- Model expert fatigue and learning curves
+- Predict emergence of collective intelligence
+- Kibera's constraints make systems approach essential
+:::
+
+---
+
+## Expected Impact & Next Steps
+
+### Beyond Technology: Systems Change
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Technical Innovation:**
+
+- RLEF methodology validated
+- Cost-effectiveness proven
+- Quality metrics established
+- Platform features optimized
+:::
+
+::: {.column width="50%"}
+**Social Innovation:**
+
+- Expert engagement models
+- Trust-building mechanisms
+- Community ownership
+- Sustainable incentives
+:::
+
+::::
+
+---
+
+### Path Forward (if successful)
+
+1. **Q3 2025**: Complete pilot & analyze socio-technical dynamics
+2. **Q4 2025**: Publish framework with behavioral insights
+3. **Q1 2026**: Find someone to pay for full study **Hardest Part**
+4. **2026-2030ish**: Design multi-site study with systems perspective
+5. **2030 and beyond**: Scale through partner networks
+
+> "Creating AI that learns from and serves those who need it most"
+
+::: {.notes}
+- Impact goes beyond technical metrics
+- Building sustainable expert communities is key
+- Open source enables adaptation to local contexts
+- Success = technical quality + social sustainability
+:::
+
+---
+
+## Thank You! {.smaller}
+
+### Questions? {.center}
+
+**Contact:**
+
+- Sean Sylvia: ssylvia@email.unc.edu
+- DHEPlab: dheplab.org
+
+**Partners:**
+
+- CFK Africa
+- UNC Gillings School of Global Public Health
+
+**Funders:**
+
+- Gillings Gift (Gillings Innovation Labs)
+- NIH AIM-AHEAD Consortium (previous funding for AugMed Platform)
+
+::: {.notes}
+- Thank collaborators
+- Mention funding sources if applicable
+- Invite questions and discussion
+:::
+
+---
+
+## References
+
+::: {#refs}
+:::
+
+<!-- Manual references for key statistics and frameworks -->
+::: {.references style="font-size: 1em;"}
+**Key Sources:**
+
+- OECD (2023). Progress on implementing and using electronic health record systems.
+- Celi et al. (2022). Sources of bias in artificial intelligence that perpetuate healthcare disparities. PLOS Digital Health.
+- Fortune Business Insights (2023). Synthetic Data Generation Market Forecast 2030.
+- ONC/HealthIT.gov (2021). National Trends in Hospital and Physician Adoption of Electronic Health Records.
+- Gartner (2023). Predicts 2024: AI and Machine Learning.
+- NIH N3C (2020). National COVID Cohort Collaborative synthetic data initiative.
+- Sylvia, S. (2025). Digital Health and the Leapfrog Illusion: Socio-technical Systems in Global Health.
+:::

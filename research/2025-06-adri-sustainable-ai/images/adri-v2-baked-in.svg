@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260">
+  <!-- Title -->
+  <text x="210" y="28" text-anchor="middle" fill="#059669" font-family="Source Sans 3, sans-serif" font-size="20" font-weight="600">Baked In</text>
+
+  <!-- Main flow area - boxes positioned for horizontal flow -->
+  <!-- Box 1: Community -->
+  <rect x="20" y="70" width="100" height="60" rx="8" fill="#D97706"/>
+  <text x="70" y="105" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="14" font-weight="600">Community</text>
+
+  <!-- Arrow 1: Community -> AI System -->
+  <polygon points="125,100 135,93 135,107" fill="#13294B"/>
+
+  <!-- Box 2: AI System -->
+  <rect x="145" y="70" width="130" height="60" rx="8" fill="#4B9CD3"/>
+  <text x="210" y="98" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="14" font-weight="600">AI System</text>
+  <text x="210" y="116" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="11" font-style="italic" opacity="0.9">ECAM</text>
+
+  <!-- Arrow 2: AI System -> Outcomes -->
+  <polygon points="280,100 290,93 290,107" fill="#13294B"/>
+
+  <!-- Box 3: Health Outcomes -->
+  <rect x="300" y="70" width="100" height="60" rx="8" fill="#059669"/>
+  <text x="350" y="98" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="14" font-weight="600">Health</text>
+  <text x="350" y="115" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="14" font-weight="600">Outcomes</text>
+
+  <!-- Feedback loop - wraps around bottom, connecting Outcomes back to Community -->
+  <path d="M 350,135
+           L 350,170
+           Q 350,190 330,190
+           L 90,190
+           Q 70,190 70,170
+           L 70,135"
+        fill="none"
+        stroke="#059669"
+        stroke-width="3"
+        stroke-dasharray="8,5"/>
+
+  <!-- Arrowhead pointing up into Community box -->
+  <polygon points="70,140 64,152 76,152" fill="#059669"/>
+
+  <!-- Continuous Learning label on the loop -->
+  <rect x="140" y="178" width="140" height="24" rx="4" fill="white" stroke="#059669" stroke-width="1.5"/>
+  <text x="210" y="195" text-anchor="middle" fill="#059669" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="500">Continuous Learning</text>
+
+  <!-- Tagline -->
+  <text x="210" y="240" text-anchor="middle" fill="#059669" font-family="Source Sans 3, sans-serif" font-size="13" font-style="italic">Integrated from the start</text>
+
+</svg>

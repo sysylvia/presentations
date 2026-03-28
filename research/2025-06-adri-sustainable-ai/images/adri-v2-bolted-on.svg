@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 260">
+  <!-- Title -->
+  <text x="140" y="28" text-anchor="middle" fill="#6B7280" font-family="Source Sans 3, sans-serif" font-size="20" font-weight="600">Bolted On</text>
+
+  <!-- Box 1: Build AI System -->
+  <rect x="40" y="45" width="200" height="50" rx="8" fill="#4B9CD3"/>
+  <text x="140" y="77" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="16" font-weight="600">Build AI System</text>
+
+  <!-- Arrow 1 -->
+  <polygon points="140,100 130,100 140,118 150,100" fill="#9CA3AF"/>
+
+  <!-- Box 2: Deploy -->
+  <rect x="40" y="123" width="200" height="50" rx="8" fill="#13294B"/>
+  <text x="140" y="155" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="16" font-weight="600">Deploy</text>
+
+  <!-- Arrow 2 -->
+  <polygon points="140,178 130,178 140,196 150,178" fill="#9CA3AF"/>
+
+  <!-- Box 3: Add Community Feedback (later) - dashed, grayed -->
+  <rect x="40" y="201" width="200" height="50" rx="8" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="140" y="228" text-anchor="middle" fill="#6B7280" font-family="Source Sans 3, sans-serif" font-size="14">Community Feedback</text>
+  <text x="140" y="246" text-anchor="middle" fill="#9CA3AF" font-family="Source Sans 3, sans-serif" font-size="12" font-style="italic">(later, maybe)</text>
+
+</svg>

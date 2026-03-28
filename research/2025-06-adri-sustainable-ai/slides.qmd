@@ -1,0 +1,330 @@
+---
+title: "Sustainable AI for Primary Care"
+subtitle: "Designing Systems That Learn Without Leaving Communities Behind"
+author: "Sean Sylvia, Ph.D."
+institute: "DHEPLab, UNC Gillings School of Global Public Health"
+date: today
+title-slide-attributes:
+  data-background-image: images/adri-title-bg.jpg
+  data-background-size: cover
+  data-background-opacity: "0.25"
+format:
+  revealjs:
+    theme: [default, dheplab-theme.scss]
+    slide-number: c/t
+    show-slide-number: all
+    chalkboard:
+      buttons: true
+    preview-links: true
+    logo: images/dhep-logo-2.png
+    footer: "Asia Development Research Institute | Technology for Sustainable PHC"
+    transition: slide
+    background-transition: fade
+    width: 1920
+    height: 1080
+---
+
+## The Promise: AI-Enabled Primary Healthcare
+
+::: {.eyebrow}
+SETTING THE STAGE
+:::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### What AI Can Do
+
+- Extend specialist expertise to frontline workers
+- Standardize care quality across settings
+- Enable continuous learning from practice
+- Reduce diagnostic delays
+:::
+
+::: {.column width="50%"}
+### The Sustainability Question
+
+- Can AI systems improve **and** remain equitable over time?
+- Will they work for **hard-to-reach** populations?
+- How do we design for **long-term** rather than short-term gains?
+:::
+
+::::
+
+::: {.notes}
+[~1 min] Set up the tension: AI has transformative potential, but sustainability requires thinking beyond initial deployment.
+:::
+
+---
+
+## The Problem: AI Systems Can Degrade Over Time
+
+::: {.eyebrow}
+CASE STUDY
+:::
+
+:::: {.columns}
+
+::: {.column width="60%"}
+### Epic Sepsis Model
+
+- Deployed in **56% of US hospitals**
+- Initial promise: Early detection, save lives
+- Reality: **Missed 67% of sepsis cases**
+- Alert fatigue became widespread
+
+::: {.small}
+*Wong et al., JAMA Internal Medicine 2021*
+:::
+:::
+
+::: {.column width="40%"}
+::: {.fragment}
+::: {.callout-warning}
+### Pattern
+
+Technical validation ≠ Sustainable real-world success
+:::
+:::
+:::
+
+::::
+
+::: {.notes}
+[~45 sec] Concrete example showing the gap between promise and reality. Sets up WHY we need a different approach.
+:::
+
+---
+
+## Why? Feedback Loops Change Everything
+
+::: {.eyebrow}
+CORE INSIGHT
+:::
+
+![](images/crisp-dm-slide2.svg){fig-align="center" width="80%"}
+
+::: {.fragment}
+::: {.callout-note}
+### Key Insight
+
+AI deployment changes the data-generating process it depends on
+:::
+:::
+
+::: {.notes}
+[~1.5 min] Core theoretical contribution. When you deploy an AI system, clinician behavior changes, patient selection changes, and the training data for the next iteration is different from what came before.
+:::
+
+---
+
+## The Equity Trap: Who Gets Left Behind?
+
+::: {.eyebrow}
+EQUITY IMPLICATIONS
+:::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### The Feedback Loop
+
+1. AI recommends treatment
+2. Clinicians follow selectively
+3. Outcomes become censored
+4. **Disparities amplify over time**
+:::
+
+::: {.column width="50%"}
+::: {.fragment}
+::: {.callout-important}
+### The Paradox
+
+Populations with **less** AI access may experience **more stable** predictions
+
+- Urban/high-adoption → severe model drift
+- Rural/hard-to-reach → preserved accuracy
+:::
+:::
+:::
+
+::::
+
+::: {.notes}
+[~1 min] Surprising finding: populations we're trying to help can experience worst feedback effects. Hard-to-reach may be protected by lower adoption.
+:::
+
+---
+
+# Design Principles {.section background-color="#13294B"}
+
+## Design Principles for Sustainable AI in PHC
+
+::: {.eyebrow}
+RECOMMENDATIONS
+:::
+
+::: {.incremental}
+1. **Community Engagement as Methodology**
+   - Communities detect when systems stop working for them
+
+2. **Design for Behavioral Adaptation**
+   - Clinicians *will* change behavior—plan for it
+
+3. **Continuous Validation, Not One-Time Approval**
+   - Build monitoring from day one
+
+4. **Equity-First Design**
+   - Test on hard-to-reach first—if it works for them, it works for all
+:::
+
+::: {.notes}
+[~1 min] Actionable recommendations connecting to panelists: community engagement (Ye Zhang), PHC sustainability (Krishna Rao), hard-to-reach (Weiming Tang).
+:::
+
+---
+
+# Applications {.section background-color="#13294B"}
+
+## Example 1: Sentinel — Information Markets for Surveillance
+
+::: {.eyebrow}
+SUSTAINABLE SURVEILLANCE
+:::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Challenge
+
+Traditional surveillance is **slow**, **expensive**, and misses **hard-to-reach communities**
+
+### Solution: Information Markets
+
+- Community members report health signals
+- **Peer prediction** validates without ground truth
+- **Fair compensation** creates sustainable participation
+:::
+
+::: {.column width="50%"}
+::: {.fragment}
+::: {.card}
+### Pilot: Kibera, Kenya (2026)
+
+- Partnership with CFK Africa
+- Community health workers as information providers
+- **Community-owned data ecosystem**
+:::
+:::
+:::
+
+::::
+
+::: {.notes}
+[~45 sec] Sustainable design: community members are partners, not data sources. Fair compensation creates sustainable participation.
+:::
+
+---
+
+## Example 2: CareLoom — CHW-Delivered MCH
+
+::: {.eyebrow}
+MATERNAL & CHILD HEALTH
+:::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Challenge
+
+Pregnant mothers in LMICs lack quality guidance; CHWs lack consistent tools
+
+### Solution: CareLoom Platform
+
+- Mobile app for CHW home visits
+- Evidence-based curriculum delivery
+- **Built on existing CHW networks**—no new infrastructure
+:::
+
+::: {.column width="50%"}
+::: {.fragment}
+::: {.card .featured}
+### Evidence
+
+- **China RCT**: Complete, manuscript in progress
+- **Kenya**: Feasibility assessment underway
+
+**Sustainability:** Leverages existing health system infrastructure
+:::
+:::
+:::
+
+::::
+
+::: {.notes}
+[~45 sec] Sustainable scaling: leverage existing CHW networks rather than building parallel infrastructure.
+:::
+
+---
+
+## A Framework for Action {.dark-slide background-color="#13294B"}
+
+::: {.eyebrow style="color: #7BB8E0;"}
+STAKEHOLDER ACTIONS
+:::
+
+| Stakeholder | Sustainable AI Action |
+|-------------|----------------------|
+| **Policymakers** | Require continuous monitoring, not just approval |
+| **Implementers** | Budget for ongoing validation, not just deployment |
+| **Researchers** | Develop methods for detecting feedback loops |
+| **Communities** | Partner in design and ongoing evaluation |
+
+::: {.fragment}
+::: {.callout-note}
+### The Goal
+
+AI systems that get *better* over time, for *everyone*
+:::
+:::
+
+::: {.notes}
+[~1 min] Clear action points for different stakeholders. This provides the "specific action points for sustainability" the chair is looking for.
+:::
+
+---
+
+## Thank You
+
+::: {.eyebrow}
+KEY MESSAGE
+:::
+
+:::: {.columns}
+
+::: {.column width="60%"}
+### Core Takeaway
+
+**Sustainable AI for primary healthcare requires designing for the socio-technical system, not just the algorithm.**
+
+- Account for feedback loops
+- Engage communities as partners
+- Monitor equity continuously
+- Plan for behavioral adaptation
+:::
+
+::: {.column width="40%"}
+![](images/dhep-logo-2.png){fig-align="center" width="80%"}
+
+**Sean Sylvia, Ph.D.**
+
+sean.sylvia@unc.edu
+
+[dhep.org](https://dhep.org)
+:::
+
+::::
+
+::: {.notes}
+[~30 sec] Closing. Leave with the core message that connects to the panel theme.
+:::

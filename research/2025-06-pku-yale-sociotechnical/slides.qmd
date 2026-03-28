@@ -1,0 +1,594 @@
+---
+title: "Digital Health and the Leapfrog Illusion"
+subtitle: "Socio-technical Systems in Global Health"
+author: "Sean Sylvia, Ph.D."
+date: today
+format:
+  clean-revealjs:
+    css: clean-unc.scss
+    filters:
+      - reveal-header
+    header-logo: images/dhep-logo-2.png
+    header-logo-link: https://dhep.unc.edu
+    transition: slide
+    background-transition: fade
+    highlight-style: github
+    code-line-numbers: false
+    fig-cap-location: bottom
+    slide-number: true
+    show-slide-number: all
+    controls: true
+    progress: true
+    scroll-view: true
+    history: false
+    hash-type: number
+    multiplex: true
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+    from: markdown+emoji
+    title-slide-attributes:
+      data-background-image: images/RobotDoctor.png
+      data-background-size: cover
+      data-background-opacity: "0.2"
+---
+
+## The Promise and Peril of Healthcare AI 
+
+
+### The Promise 
+
+- **By 2030**: AI projected to save US healthcare **$150 billion annually**
+- Transformative potential for diagnosis, treatment, prevention
+- Leapfrogging opportunity for LMICs
+
+---
+
+## AI as Economic Transformation 
+
+### Economics of Digitization: 
+
+**Reduction in (Marginal) Costs **
+
+| Cost Type | Healthcare Application |
+|---------------|----------------------------|
+| **Search Costs** | Instant medical literature access, symptom lookup |
+| **Replication Costs** | Digital health records, AI models deployed at scale |
+| **Transportation Costs** | Telemedicine, remote monitoring, digital consultations |
+| **Tracking Costs** | Continuous patient surveillance, automated data collection |
+| **Verification Costs** | Digital identity, online reputation systems, trust mechanisms |
+
+---
+
+## Leapfrogging Potential 
+
+**LMIC health systems can choose to follow path of developed countries, or adopt latest technology and processes.**
+
+::: {.columns}
+::: {.column width="50%"}
+- Well-traveled, but outdated vs. Modern, but risky
+    - New path in healthcare delivery enabled by "4th Industrial Revolution" tech:AI, sharing economy, IoT, etc
+- Many LMICs have strong incentives to follow new path (WEF 2015)
+    - Large pop + "dual disease burden" --> High cost of high-income country approach 
+    - 4IR tech low marginal cost
+:::
+
+::: {.column width="50%"}
+![](images/mobile.png){width="500"}
+
+*Mobile leapfrogging precedent: LMICs bypassed landline infrastructure*
+:::
+:::
+
+::: {.notes}
+The economic lens is crucial - AI fundamentally changes cost structures. The M-Pesa example shows how LMICs can leapfrog traditional infrastructure. Need a figure showing mobile banking adoption curves.
+:::
+
+
+---
+
+## The Peril: AI Often Fails In Healthcare 
+
+| System | Scope | Key Failure | Real-World Impact |
+|--------|-------|-------------|-------------------|
+| **Epic Sepsis Model** | 56% of US hospitals | Missed 67% of cases, false alerts 88% of the time | Delayed treatment, alert fatigue |
+| **IBM Watson Oncology** | Major hospitals globally | Unsafe treatment recommendations | $62M+ wasted, quietly discontinued |
+| **SkinVision App** | Consumer market | 235% worse performance with rotation | Missed melanomas, health disparities |
+| **COMPAS (Criminal Justice)** | 46 US states | 44.9% vs 23.5% false positive rates | Systematic racial bias in sentencing |
+
+::: {.fragment}
+**Pattern:** Technical validation ≠ Real-world success
+:::
+
+::: {.notes}
+Each row represents millions in investment and thousands of lives affected. The pattern is clear: systems that pass technical validation fail when deployed in complex social systems. Include source citations in appendix.
+:::
+
+
+## Six Challenges to AI Adoption 
+
+![](images/six-challenges.png){width="100%"}
+
+
+# Why do technically sound AI systems fail in practice? {background-color="#40666e"} 
+
+
+## Technical excellence is necessary but insufficient
+
+
+::: {.fragment}
+Healthcare AI systems exist within [**complex human and organizational contexts**]{.alert}
+:::
+
+::: {.fragment}
+We need frameworks that account for [socio-technical dynamics]{.alert}
+:::
+
+::: {.fragment}
+Need a [**Systematic approach**]{.alert} to design, implement, and evaluate for social welfare optimization
+:::
+
+::: {.notes}
+This is the core argument. Technical excellence might get you 30% of the way there. The other 70% is understanding human behavior, organizational dynamics, and unintended consequences.
+:::
+
+# **The Socio-Technical Imperative in Digital Health** {background-color="#40666e"} 
+
+---
+
+## What is a Socio-Technical System? 
+
+::: {.fragment}
+#### [Systems where social and technical elements are fundamentally intertwined]{.alert}
+:::
+
+::: {.fragment}
+::: {.columns}
+::: {.column width="50%"}
+#### Healthcare Elements:
+
+🔧 **Technology**  
+AI algorithms, devices, platforms
+
+👥 **Practitioners**  
+Doctors, nurses, administrators
+
+🏥 **Patients**  
+Individuals, families, communities
+:::
+
+::: {.column width="50%"}
+#### System Context:
+
+📋 **Policies**  
+Regulations, protocols, guidelines
+
+💰 **Incentives**  
+Financial, professional, social
+
+🔄 **Dynamic Interactions**  
+All elements continuously influence each other
+:::
+:::
+
+::: {.fragment}
+**Optimizing technical components alone can lead to system-wide failure**
+:::
+
+::: {.notes}
+Reference Baxter & Sommerville 2011. Think ecosystem analogy - you can't optimize one species without considering the entire food web. Healthcare is particularly complex because of life-or-death decisions.
+:::
+
+---
+
+## Traditional AI Implementation Framework: CRISP-DM  
+
+::: {.columns}
+::: {.column width="70%"}
+::: {.center}
+![](images/crisp-dm-slide1.svg){width="1000"}
+::: 
+:::
+::: {.column width="30%"}
+::: {.fragment}
+<br>
+
+#### Missing Elements:
+- Feedback loops 
+  - Dynamics 
+  - Causality
+- Multiple stakeholders 
+  - Behavioral adaptation 
+
+:::
+:::
+:::
+
+
+::: {.notes}
+CRISP-DM from Chapman et al. 2000. Excellent for traditional business intelligence but assumes you can build and deploy without changing underlying data generating process. Almost never true in healthcare/social systems.
+:::
+
+
+## CRISP-DM Extended: Socio-Technical Systems 
+
+::: {.center}
+![](images/crisp-dm-slide2.svg){width="1000"}
+:::
+
+::: {.fragment}
+[**Key Addition:** Feedback Loops. Models change the world they operate in]{.alert}
+:::
+
+::: {.notes}
+This shows how we need to extend CRISP-DM to account for socio-technical realities. The red feedback loop is critical - deployment fundamentally changes the data generating process.
+:::
+
+---
+
+## Facilitates Cross-Disciplinary Collaboration 
+
+::: {.columns}
+::: {.column width="33%"}
+#### Economics & Behavioral Science 
+- Incentives 
+- Market mechanisms 
+- Behavioral economics
+- Game theory applications
+- Decision-making under uncertainty
+
+:::
+
+::: {.column width="33%"}
+#### Expertise
+
+- Implementation science
+- Clinical
+- Biomedical
+- Data Engineering and Architecture
+:::
+
+::: {.column width="33%"}
+#### Causal Inference
+- Moving beyond correlation
+- Identification strategies
+- Confounding control
+- Treatment effect estimation
+
+:::
+:::
+
+::: {.notes}
+Reference Pearl 2009 for causal inference. This is about building a new type of researcher/practitioner. Not enough to be great at ML or great at economics - need systems thinking across disciplines.
+:::
+
+---
+
+## Framework for LLM deployment in Healthcare Settings
+
+![](images/npj-AI-Audit-Figure.png)
+
+
+# Case Study: The Sepsis Prediction Paradox {background-color="#13294B"} 
+
+
+## Setting the Scene 
+
+::: {.columns}
+::: {.column width="50%"}
+#### Clinical Challenge
+- **Sepsis**: Leading cause of hospital deaths globally
+- **1.7 million cases** annually in US alone
+- **$62 billion** in healthcare costs
+- **Time-critical**: Each hour delay = 7.6% mortality increase
+:::
+
+::: {.column width="50%"}
+#### AI Potential
+- Early detection saves lives
+- Reduce alert fatigue  
+- Standardize care quality
+- Massive cost savings through prevention
+:::
+:::
+
+::: {.fragment}
+[Epic's model deployed across hundreds of hospitals despite **67% miss rate**]{.alert}
+:::
+
+::: {.notes}
+Sepsis is perfect case study - high stakes, time pressure, complex symptoms that mimic other conditions. AI seems like obvious solution, but implementation has been deeply problematic. The statistics come from multiple validation studies.
+:::
+
+---
+
+## Sepsis-specific Socio-Technical Framework 
+
+::: {.center}
+![](images/crisp-dm-slide3.svg){width="850"}
+:::
+
+::: {.fragment}
+[**Selection Bias** <br>
+AI recommendations → Treatment decisions → Censored outcomes → Biased retraining]{.alert}
+:::
+
+::: {.notes}
+This concrete example shows how sepsis prediction systems create the very bias they're trying to avoid. Group B (majority, high-risk) develops severe prediction bias because their outcomes get censored by treatment.
+:::
+
+---
+
+## The Agents & Dynamics
+
+#### Three Physician Types:
+
+- Never-takers (20%): Ignore AI recommendations
+- Always-takers (30%): Follow AI blindly
+- Bayesians (50%): Integrate AI with clinical judgment
+
+#### Dynamics:
+
+- Trust in AI evolves over time
+- Different treatment patterns by patient demographics
+- Alert fatigue develops with false positives
+- Hospital culture affects adoption
+
+::: {.fragment}
+**Key Insight:** Feedback loops between AI, physicians, and outcomes. System behavior emerges from interactions
+:::
+
+
+::: {.notes}
+The three physician types aren't arbitrary - they represent real behavioral patterns from clinical studies. The percentages are estimates from literature and our modeling work. The key insight is that system behavior emerges from interactions.
+:::
+
+---
+
+## The Feedback Loop Catastrophe 
+
+**Selective Labels Bias Process**
+
+1. AI recommends treatment
+2. Physicians follow recommendations selectively 
+3. Treated patients → censored outcomes
+4. Biased training data for next iteration
+5. Performance degrades for untreated groups
+
+
+::: {.fragment}
+
+#### Simulation Results: 10 iterations (Particular set of assumptions)
+
+| Group | Population % | Treatment Rate | Bias  |
+|-------|-------------|----------------|------------------------|
+| Minority | 30% | 85% | +0.1 |
+| Majority | 70% | 95% | **-0.9** |
+
+**Key Finding:** Majority group experiences severe performance degradation
+:::
+
+::: {.fragment}
+[**Deployment changes the data-generating process**]{.alert}
+:::
+
+::: {.notes}
+This is our core theoretical contribution. The math shows that once treatment depends on AI recommendations AND group membership, you get biased training data. Group B represents the majority population that gets treated more often, leading to worse model performance for them.
+:::
+
+---
+
+## Key Insights from Sepsis Case 
+
+::: {.incremental}
+1. **Deployment fundamentally changes the data-generating process**
+   - Traditional ML assumes training ≈ deployment distribution
+   - Leads to ["Endogenous Data Drift"]{.alert}
+
+2. **Sub-populations experience different model performance**
+   - Feedback loops amplify disparities over time
+
+3. **Traditional evaluation metrics miss these dynamics**
+   - Need new metrics that account for distribution shift
+   - System-level outcomes vs. model-level performance
+
+4. **Next Steps: Engineering solutions**
+   - Develop bias decomposition methods
+   - Design intervention protocols
+   - Create robust evaluation frameworks
+:::
+
+::: {.notes}
+These insights drive our research agenda. We're not just documenting problems - we're developing systematic solutions that account for socio-technical realities.
+:::
+
+
+# System Design {background-color="#13294B"}
+
+## Two DHEP Lab Projects 
+
+::: {.columns}
+::: {.column}
+
+#### Project A: Optimizing Clinical Case Presentation 
+
+**Challenge:** Information overload in clinical decision-making
+
+**Approach:** Behavioral economics + AI
+
+**Focus:** AI that complements clinical expertise by optimizing information presentation
+
+:::
+::: {.column}
+
+#### Project B: Information Markets for Epidemiological Surveillance
+
+**Challenge:** Traditional surveillance systems are slow and expensive
+
+**Approach:** Community-based participatory surveillance using prediction markets + AI 
+
+**Focus:** Cost-effective signal of disease and socioeconomic trends at the community level
+
+:::
+
+:::
+
+---
+
+## Key Takeaways 
+
+#### 1. Healthcare AI is Inherently Socio-Technical 
+
+- Technical metrics alone insufficient
+- Must consider [feedback loops]{.alert}
+- [Context determines success]{.alert} in addition to algorithm choice
+
+::: {.fragment}
+#### 2. Frameworks Must Evolve
+
+- From [static/one-way processes]{.alert} to [dynamic systems]{.alert}
+- From [single objectives]{.alert} to [multi-stakeholder optimization]{.alert}
+- From [build/deploy]{.alert} to [maintain/evolve]{.alert}
+
+:::
+
+---
+
+## Key Takeaways - Continued 
+
+#### 3. Equity Implications are Paramount
+- Feedback loops can [amplify disparities]{.alert}
+- Need [proactive design]{.alert} for fairness
+- [Community engagement]{.alert} as methodology, not just ethics
+
+#### 4. New Evaluation Metrics Needed
+- Beyond accuracy: [fairness, robustness, adaptability]{.alert}
+- [System-level outcomes]{.alert}, not just model performance
+- [Long-term impact assessment]{.alert}
+
+
+::: {.notes}
+These aren't just nice-to-haves - they're fundamental requirements for AI systems that actually improve health outcomes rather than optimizing narrow technical metrics while causing broader harm.
+:::
+
+---
+
+## Implications - Research 
+
+### Methodological Advances Needed
+
+- [Causal models]{.alert} of human-AI interaction
+- Methods for [robust optimization]{.alert} under distribution shift  
+- [Participatory design methods]{.alert} at scale
+- [Evaluation frameworks]{.alert} for dynamic systems
+- [Cross-disciplinary training]{.alert} programs
+
+---
+
+## Many Open Research Questions 
+
+::: {.incremental}
+1. How do we evaluate AI systems that change their environment?
+
+2. What are the fundamental limits of prediction in adaptive systems?
+
+3. How do we design AI systems that reduce rather than amplify disparities?
+
+4. How should we regulate systems that evolve continuously after deployment?
+
+5. Who bears responsibility when AI systems cause unintended harm through feedback loops?
+
+6. How do we align individual incentives with collective welfare in AI systems?
+:::
+
+::: {.notes}
+These questions will define the field for the next decade. Each requires interdisciplinary collaboration. The meta-question about training is particularly important - we need institutional changes in how we educate researchers.
+:::
+
+---
+
+## Implications - Practice
+
+### Implementation Principles
+
+- Move beyond "accuracy" as primary metric
+- Design for [system health]{.alert}, not just model performance
+- Engage communities as [partners]{.alert}, not data sources
+- Plan for [behavioral adaptation]{.alert} from day one
+- Informative AI audit and evaluation metrics
+
+---
+
+## Implications - Policy
+### Regulatory Innovation
+
+- Oversight for [dynamic, adaptive systems]{.alert}
+- [Continuous monitoring]{.alert} requirements
+- [Algorithmic impact assessments]{.alert}
+- [Community consent]{.alert} frameworks
+
+::: {.notes}
+This requires changes at every level - from individual research practices to institutional funding priorities to regulatory frameworks. Each stakeholder has specific roles to play.
+:::
+
+
+---
+
+## Reflection 
+
+### 1. How might your AI system change behavior?
+
+::: {.fragment}
+- What **incentives** does it create?
+- Who **adapts** and how?
+- What **unintended consequences** are possible?
+:::
+
+---
+
+## Reflection 
+
+### 2. What feedback loops exist in your domain?
+
+::: {.fragment}
+- How does **deployment change** data distribution?
+- Who **benefits** and who is **harmed**?
+- What **metrics** would detect these changes?
+:::
+
+---
+
+## Reflection 
+
+### 3. How do we regulate dynamic AI systems?
+
+::: {.fragment}
+- Traditional oversight assumes **static systems**
+- What **new approaches** do we need?
+- How do we balance **innovation** and **protection**?
+:::
+
+---
+
+## {background-color="#13294B"}
+
+
+::: {.columns}
+::: {.column width="60%"}
+::: {.center} 
+![](images/dhep-logo-2.png){width="1000"}
+:::
+:::
+::: {.column width="40%"}
+<br>
+<br>
+<br>
+**Sean Sylvia, Ph.D.** <br>
+<br>
+[sean.sylvia@unc.edu](mailto:sean.sylvia@unc.edu) <br>
+<br>
+[dhep.org](https://dhep.org) <br>
+<br>
+:::
+:::
+:::

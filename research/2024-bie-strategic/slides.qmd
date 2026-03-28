@@ -1,0 +1,329 @@
+---
+title: "DHEP Behavioral Insights & Evaluation (BIE)"
+author: "Sean Sylvia, Ph.D."
+institute: "DHEPLab, UNC Gillings School of Global Public Health"
+date: today
+format:
+  revealjs:
+    theme: [default, dheplab-theme.scss]
+    slide-number: c/t
+    show-slide-number: all
+    incremental: false
+    toc: false
+    preview-links: true
+    logo: images/dhep-logo-2.png
+    footer: "Strategic Planning Discussion"
+    transition: slide
+    background-transition: fade
+    width: 1920
+    height: 1080
+---
+
+## Why Now?
+
+Over the past year, I've noticed a pattern:
+
+::: {.fragment}
+Colleagues asking if I can help with evaluation design on their grants
+:::
+
+::: {.fragment}
+Health systems and foundations reaching out about potential projects
+:::
+
+::: {.fragment}
+Conversations about how we diversify funding beyond traditional mechanisms
+:::
+
+::: {.fragment}
+**We have capacity to respond — but no structure to do it well**
+:::
+
+---
+
+## Four Gaps
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.callout-note icon=false}
+## 1. Grant Competitiveness
+Funders expect rigorous behavioral, economic, and AI evaluation — capacity is fragmented across labs
+:::
+
+::: {.callout-note icon=false}
+## 2. Campus Demand
+Colleagues need this support on projects and proposals — no mechanism to respond
+:::
+
+:::
+
+::: {.column width="50%"}
+
+::: {.callout-note icon=false}
+## 3. External Engagement
+Health systems and foundations want to work with us — no infrastructure for contracts
+:::
+
+::: {.callout-note icon=false}
+## 4. Training & AI Facilitation
+Growing demand for methods training and responsible AI support — no coordinated offering
+:::
+
+:::
+
+::::
+
+---
+
+## BIE: A Shared Research Capability
+
+**Behavioral Insights & Evaluation** — housed in DHEP Lab, serving department and campus
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Core Activity Areas:**
+
+1. **Causal Impact Evaluation**
+   - RCTs, quasi-experimental designs
+
+2. **Economic Evaluation**
+   - Cost-effectiveness, budget impact
+
+3. **Digital Strategy & Implementation**
+   - Prospective design, scale-up planning
+:::
+
+::: {.column width="50%"}
+<br>
+
+4. **AI Governance & Policy**
+   - Responsible AI frameworks, standards
+
+5. **Training & Capacity Building**
+   - Workshops, methods courses
+:::
+
+::::
+
+---
+
+## AI-Enabled Academic Workflows
+
+**Curated access to AI tools for faculty research and teaching:**
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.callout-tip icon=false}
+## Research Workflows
+Literature review, analysis, simulation, qualitative synthesis
+:::
+
+::: {.callout-tip icon=false}
+## Teaching Applications
+Instructional content, course materials
+:::
+
+:::
+
+::: {.column width="50%"}
+
+::: {.callout-tip icon=false}
+## Research Administration
+Proposal support, reporting
+:::
+
+::: {.callout-tip icon=false}
+## Governance Guidance
+Reproducibility, data security, IRB, responsible use
+:::
+
+:::
+
+::::
+
+. . .
+
+*Project-scoped, time-limited, aligned with approved academic activities*
+
+---
+
+## How BIE Works
+
+:::: {.columns}
+
+::: {.column width="48%"}
+### Internal (BIE Core)
+
+- UNC investigators and units
+- Cost-recovery recharge rates
+- Study design, analysis, dissemination
+:::
+
+::: {.column width="48%"}
+### External
+
+- Sponsored research agreements
+- Contract / sponsored services
+- Subcontracts as collaborator
+:::
+
+::::
+
+. . .
+
+::: {.callout-important icon=false}
+## Faculty Affiliate Network
+Colleagues with complementary expertise participate as Co-Is on funded projects — compensated through sponsored research mechanisms
+:::
+
+---
+
+## What the Department Gets
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- **Stronger grants**
+  - Rigorous evaluation capacity on large proposals
+
+- **New revenue**
+  - External contracts and cost-recovery income
+
+- **Faculty development**
+  - Training programs and affiliate opportunities
+
+:::
+
+::: {.column width="50%"}
+
+- **Campus leadership**
+  - Positioned as hub for digital health evaluation
+
+- **Efficiency**
+  - Reduced duplication of methods support
+
+:::
+
+::::
+
+---
+
+## What I Need to Launch
+
+**Leverage, not money:**
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+- **Institutional standing** — Approval to establish BIE as a recharge center
+
+- **Staff support** — Partial research coordinator time
+
+- **Admin bandwidth** — Contract and agreement processing capacity
+
+- **Student support** — GRA allocation for initial capacity
+
+:::
+
+::: {.column width="45%"}
+
+. . .
+
+::: {.callout-warning icon=false}
+## Path to Self-Sustaining
+**18-24 months**
+
+Seed investments enable cost-recovery and external funding to sustain operations
+:::
+
+:::
+
+::::
+
+---
+
+## Discussion {.center}
+
+<br>
+
+**Questions to explore:**
+
+- How does this fit with department strategic priorities?
+
+- What administrative pathways should we pursue?
+
+- Who else should be part of this conversation?
+
+---
+
+# Appendix {.appendix}
+
+---
+
+## Engagement Triage Process {.smaller}
+
+:::: {.columns}
+
+::: {.column width="30%"}
+**Step 1: Intake**
+
+↓
+
+**Step 2: Classification**
+
+| Requester | Route |
+|-----------|-------|
+| UNC | BIE Core |
+| External | Sponsored/Contract |
+
+:::
+
+::: {.column width="35%"}
+**Step 3: Work Type**
+
+| Type | Mechanism |
+|------|-----------|
+| Research (generalizable) | Sponsored Research |
+| Services (deliverables) | Contract Services |
+
+↓
+
+**Step 4: Risk Screen**
+
+- IRB / Human subjects
+- Data sensitivity
+- AI governance
+- COI review
+:::
+
+::: {.column width="35%"}
+**Step 5: Strategic Fit**
+
+- Mission alignment?
+- Faculty capacity?
+- Scholarly value?
+
+↓
+
+**Step 6: Route & Execute**
+
+↓
+
+**Step 7: Monitor & Reassess**
+
+:::
+
+::::
+
+<br>
+
+*Structured intake ensures proper routing through administrative, financial, and governance pathways*

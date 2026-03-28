@@ -1,0 +1,21 @@
+---
+title: "Presentations"
+---
+
+## Research Talks
+
+| Date | Event | Title |
+|------|-------|-------|
+| 2025-06 | PKU-Yale Conference | Sociotechnical Perspective on AI in Healthcare |
+| 2025-06 | ADRI Panel | Sustainable AI in Primary Care |
+| 2025-06 | Internal | RLEF Synthetic Data |
+| 2024 | BIE | Strategic Discussion |
+| 2026-03 | REAP Conference, Leuven | Heterogeneous Treatment Effects in Early Childhood |
+
+## Teaching
+
+See the [HPM 883 course website](https://hpm883-spring2026.netlify.app/) for lecture slides.
+
+## Business
+
+Business presentations are available on request.

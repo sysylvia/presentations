@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 320">
+  <!-- Background -->
+  <rect width="850" height="320" fill="#f8fafc"/>
+
+  <!-- Boxes -->
+  <!-- Data/Information -->
+  <rect x="50" y="110" width="150" height="90" rx="10" fill="#D97706" stroke="#13294B" stroke-width="2"/>
+  <text x="125" y="145" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="18" font-weight="600">Data</text>
+  <text x="125" y="170" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="13">What we observe</text>
+  <text x="125" y="188" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="13">&amp; measure</text>
+
+  <!-- Decisions -->
+  <rect x="260" y="110" width="150" height="90" rx="10" fill="#4B9CD3" stroke="#13294B" stroke-width="2"/>
+  <text x="335" y="145" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="18" font-weight="600">Decisions</text>
+  <text x="335" y="170" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="13">What, When,</text>
+  <text x="335" y="188" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="13">Who receives care</text>
+
+  <!-- Behaviors/Outcomes -->
+  <rect x="470" y="110" width="150" height="90" rx="10" fill="#059669" stroke="#13294B" stroke-width="2"/>
+  <text x="545" y="145" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="18" font-weight="600">Behaviors</text>
+  <text x="545" y="170" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="13">Responses &amp;</text>
+  <text x="545" y="188" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="13">adaptations</text>
+
+  <!-- Outcomes -->
+  <rect x="680" y="110" width="150" height="90" rx="10" fill="#13294B" stroke="#13294B" stroke-width="2"/>
+  <text x="755" y="145" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="18" font-weight="600">Outcomes</text>
+  <text x="755" y="170" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="13">Health &amp; system</text>
+  <text x="755" y="188" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="13">effects</text>
+
+  <!-- Forward arrows -->
+  <path d="M200 155 L250 155" stroke="#13294B" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M410 155 L460 155" stroke="#13294B" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M620 155 L670 155" stroke="#13294B" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Feedback loop arrow (bottom) - larger, more prominent -->
+  <path d="M755 200 L755 270 L125 270 L125 200" stroke="#DC2626" stroke-width="4" fill="none" stroke-dasharray="10,5" marker-end="url(#arrowhead-red)"/>
+
+  <!-- Label on feedback loop -->
+  <rect x="340" y="248" width="200" height="34" rx="6" fill="#DC2626"/>
+  <text x="440" y="271" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="14" font-weight="600">Shapes future observations</text>
+
+  <!-- Title -->
+  <text x="425" y="38" text-anchor="middle" fill="#13294B" font-family="Instrument Serif, serif" font-size="26" font-weight="400">The Digital Health Feedback Loop</text>
+  <text x="425" y="62" text-anchor="middle" fill="#6B7280" font-family="Source Sans 3, sans-serif" font-size="15">Digital systems change the environments they operate in</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#13294B"/>
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#DC2626"/>
+    </marker>
+  </defs>
+</svg>
