@@ -18,6 +18,10 @@ format:
     background-transition: fade
     width: 1920
     height: 1080
+title-slide-attributes:
+  data-background-image: images/hf-curriculum-cover.png
+  data-background-size: cover
+  data-background-opacity: "0.2"
 ---
 
 ## The Problem: One Visit, Many Needs
