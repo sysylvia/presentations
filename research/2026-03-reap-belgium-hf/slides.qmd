@@ -1,7 +1,7 @@
 ---
 title: "AI-Enhanced Curriculum Delivery for Community Health Workers"
 subtitle: "Evidence and Design from the Healthy Future Platform"
-author: "Sean Sylvia · Gary Darmstadt · Yunwei Chen · Ann Weber · Siva Balakrishnan"
+author: "Sean Sylvia · Gary Darmstadt · Yunwei Chen · Yuju Wu · Ann Weber · Siva Balakrishnan · Huan Zhou · Scott Rozelle"
 date: "March 28, 2026"
 date-format: long
 format:
@@ -18,11 +18,34 @@ format:
     background-transition: fade
     width: 1920
     height: 1080
+    scrollable: true
 title-slide-attributes:
   data-background-image: images/hf-curriculum-cover.png
   data-background-size: cover
   data-background-opacity: "0.2"
 ---
+
+## Talk Outline
+
+::: {.eyebrow}
+ROADMAP
+:::
+
+1. **The Problem** -- CHWs face impossible content decisions in limited time
+
+2. **The Healthy Future Program** -- Curriculum, platform, and open-source infrastructure
+
+3. **Evidence from HF 1.0** -- RCT results across nutrition, mental health, and social support
+
+4. **Mechanisms** -- Social support, family engagement, and dose-response
+
+5. **The Case for Personalization** -- HTE analysis and the content allocation problem
+
+6. **HF 2.0** -- Algorithm vs. family choice for content personalization
+
+::: {.notes}
+[~30 sec] Quick roadmap. Three acts: evidence, mechanisms, and the path to personalization.
+:::
 
 ## The Problem: One Visit, Many Needs
 
@@ -35,21 +58,21 @@ CONTEXT
 
 A CHW has **30-60 minutes per home visit** to address:
 
-- Breastfeeding — initiation, exclusivity, timing
-- Complementary feeding — diversity, frequency
-- Maternal mental health — depression, anxiety, stress
-- Health service uptake — vaccines, checkups
-- Daily care and stimulation — responsive caregiving
+- Breastfeeding -- initiation, exclusivity, timing
+- Complementary feeding -- diversity, frequency
+- Maternal mental health -- depression, anxiety, stress
+- Health service uptake -- vaccines, checkups
+- Sanitation and safety
+- **Stimulation** -- responsive caregiving, early learning
+- **MORE...**
 
 :::
 ::: {.column width="50%"}
 
 ::: {.callout-important}
 ### The Standard Approach
-Every family at the same developmental stage gets the **same content** — regardless of their specific needs or circumstances.
+Every family at the same developmental stage gets the **same content** -- regardless of their specific needs or circumstances.
 :::
-
-**30-60 minutes · dozens of families · hundreds of content decisions**
 
 :::
 ::::
@@ -65,57 +88,188 @@ THE INTERVENTION
 :::
 
 :::: {.columns}
-::: {.column width="50%"}
+::: {.column width="70%"}
+
+::: {style="font-size: 0.99em;"}
 
 A comprehensive, digitally-enabled community health program addressing the holistic needs of mothers and children from pregnancy through 18 months.
 
 **Three core components:**
 
-- **Stage-based curriculum** — content timed to developmental stage, not one-size-fits-all
-- **CHW home visits** — 30-60 min monthly visits by trained local health workers
-- **CareLoom app** — tablet-based platform that automates content assignment, scheduling, and monitoring
-
-::: {.callout-note}
-### Open Source
-CareLoom is MIT-licensed ([github.com/DHEPLab](https://github.com/DHEPLab)) and the full curriculum is CC BY-NC licensed.
-:::
-
-[**See the app in action →**](https://canva.link/otaxx4z8kq8086z){target="_blank"}
+- **Stage-based curriculum** -- 26 sessions across 6 content domains, timed to developmental stage
+- **CHW home visits** -- 30-60 min monthly visits by trained local health workers
+- **Digital platform** -- tablet app + admin portal that automates content assignment, scheduling, and monitoring
 
 :::
-::: {.column width="50%"}
 
-![Healthy Future curriculum cover](images/hf-curriculum-cover.png){fig-align="center" width="85%" fig-alt="Healthy Future Program curriculum cover showing illustrated pregnant couple"}
+:::
+::: {.column width="30%"}
+
+![Healthy Future curriculum cover](images/hf-curriculum-cover.png){fig-align="center" width="50%" fig-alt="Healthy Future Program curriculum cover"}
 
 :::
 ::::
 
 ::: {.notes}
-[~1.5 min] Three things make this different from typical CHW programs: the curriculum is stage-based (content evolves with the child), it's delivered through a structured app that handles logistics, and both the software and curriculum are freely available. The app is the key — it removes the burden of deciding what to teach from the CHW.
+[~1 min] Three things make this different from typical CHW programs: the curriculum is stage-based, it's delivered through a structured app, and both are freely available. Quick overview -- next two slides go deeper on content and platform.
+:::
+
+## What CHWs Deliver: 26 Sessions Across 6 Domains
+
+::: {.eyebrow}
+CURRICULUM
+:::
+
+:::: {.columns}
+::: {.column width="85%"}
+
+![Healthy Future curriculum: content modules delivered from pregnancy through 18 months](images/HF-Fig1.png){fig-align="center" width="120%" fig-alt="Timeline showing intervention modules from pregnancy through 18 months covering breastfeeding, complementary feeding, preventive care, nutrition, mental health, and health services"}
+
+:::
+::: {.column width="10%"}
+
+**Completion:** 82% participated. Median **12 visits**. Median duration: **32 min**.
+
+**Avg sessions:**
+
+- Breastfeeding: 7.5
+- Comp. feeding: 6.7
+- Preventive: 6.5
+- Mental health: 5.2
+
+:::
+::::
+
+::: {.notes}
+[~1.5 min] Walk through the figure. Content evolves across stages. The app decides what to deliver at each visit based on developmental stage and prior coverage. CHW focuses on delivery, not logistics.
+:::
+
+## The Healthy Future Platform
+
+::: {.eyebrow}
+DIGITAL INFRASTRUCTURE
+:::
+
+:::: {.columns}
+::: {.column width="60%"}
+::: {.fragment}
+
+#### Tablet App (CHW-facing)
+
+- Automated content assignment by developmental stage
+- Structured visit workflow with scripted delivery
+- Real-time data capture (participation, knowledge checks, survey responses)
+- Offline-first -- works in rural, low-connectivity settings
+
+#### Admin Portal (Supervisor-facing)
+
+- Remote monitoring of visit frequency, duration, quality
+- Early detection of implementation issues
+- Supervisory feedback loop
+
+:::
+:::
+::: {.column width="40%"}
+::: {.fragment}
+
+### Key Design Principles
+
+::: {.callout-tip}
+The app **removes the logistical burden** from CHWs. They focus on interpersonal delivery; the platform handles what content, when, and tracking.
+:::
+
+### Built for Adaptation
+
+- Modular curriculum architecture
+- Any structured curriculum can be loaded
+- Can add any language: Currently Mandarin & English
+
+:::
+:::
+::::
+
+::: {.notes}
+[~1 min] The platform is the key enabler. It's what makes the program scalable and what creates the opportunity for personalization later. Two components: the CHW tablet app and the supervisor admin portal.
+:::
+
+## Open Source and Extensible
+
+::: {.eyebrow}
+PUBLIC GOODS
+:::
+
+:::: {.columns}
+::: {.column width="50%"}
+
+### CareLoom Platform
+
+- **MIT License** -- fully open-source
+- [github.com/DHEPLab](https://github.com/DHEPLab)
+- General-purpose: can host any modularized curriculum
+- Carolina Population Center grant to localize (English language, extension frameworks)
+
+### Healthy Future Curriculum
+
+- **CC BY-NC 4.0** -- free for non-commercial use
+- 26 sessions, fully scripted with activities and videos
+- Developed with Stanford REAP, local health systems, and community input
+
+:::
+::: {.column width="50%"}
+
+### Future Vision
+
+- **Hackathon** with developers across China to build extensions and adaptations
+- Framework for other countries/contexts to adapt curriculum
+- Integration with national CHW programs
+
+::: {.callout-note}
+The goal: a reusable infrastructure that other teams can adopt without starting from scratch.
+:::
+
+:::
+::::
+
+::: {.notes}
+[~1 min] Both the software and curriculum are public goods. The platform is general-purpose -- any structured curriculum can be loaded. We're working on English localization and extensibility with a CPC grant. Future: hackathon with developers, adaptation framework for other contexts.
+:::
+
+## {.center}
+
+::: {style="text-align: center; padding: 1em;"}
+
+### Healthy Future Home Visit
+
+<iframe src="https://canva.link/otaxx4z8kq8086z" width="1200" height="675" frameborder="0" allowfullscreen></iframe>
+
+[**Open full video →**](https://canva.link/otaxx4z8kq8086z){target="_blank"}
+
+:::
+
+::: {.notes}
+[~1 min] Quick demo video showing the app in action during a CHW home visit. Show how the app guides the visit, presents content, and captures data.
 :::
 
 ## Study Design
 
 ::: {.eyebrow}
-CLUSTER RCT — RURAL CHINA
+CLUSTER RCT -- RURAL CHINA
 :::
 
 :::: {.columns}
 ::: {.column width="48%"}
 
-**119 rural townships** in four poverty-stricken counties, Sichuan Province
+**119 rural townships** in four poor counties, Sichuan Province
 
 - **40 treatment** / **79 control** townships
 - **1,306 families** enrolled (pregnancy through infancy <6mo)
 - **12 months** of CHW home visits
 - **88% follow-up** rate (despite COVID-19 disruptions)
-- 40 CHWs — one per treatment township, all female, mean age 34.6
+- 40 CHWs -- one per treatment township, all female, mean age 34.6
 
 :::
 ::: {.column width="52%"}
 
-<!-- TODO: Pre-render baseline bar chart from original R code as images/hf-baseline-chart.png -->
-<!-- Shows: 32% exclusive BF, 43% any MH concern, 19% depression, 21% anxiety -->
 ![Baseline profile](images/hf-baseline-chart.png){fig-align="center" width="95%" fig-alt="Bar chart of baseline characteristics: 32% exclusive breastfeeding, 43% any mental health concern, 19% depression, 21% anxiety"}
 
 :::
@@ -126,39 +280,7 @@ Post-double-selection LASSO for covariate selection · County fixed effects · T
 :::
 
 ::: {.notes}
-[~1.5 min] Key points: this is a large-scale cluster RCT, well-powered, with high follow-up despite COVID. The baseline profile shows the dual challenge — poor feeding practices AND high mental health burden. Methods note is there for the economists in the room but don't dwell on it.
-:::
-
-## What CHWs Deliver: 26 Sessions Across 6 Domains
-
-::: {.eyebrow}
-CURRICULUM
-:::
-
-![Healthy Future curriculum: content modules delivered from pregnancy through 18 months](images/HF-Fig1.png){fig-align="center" width="95%" fig-alt="Timeline showing intervention modules from pregnancy through 18 months covering breastfeeding, complementary feeding, preventive care, nutrition, mental health, and health services"}
-
-:::: {.columns}
-::: {.column width="55%"}
-
-::: {.callout-note style="font-size: 0.9em;"}
-**Completion:** 82% participated. Families received a median of **12 home visits** (mean 10.5) over 12 months. Median visit duration: **32 minutes**.
-:::
-
-:::
-::: {.column width="45%"}
-
-**Most delivered modules (avg sessions):**
-
-- Breastfeeding: 7.5
-- Complementary feeding: 6.7
-- Preventive health: 6.5
-- Mental health: 5.2
-
-:::
-::::
-
-::: {.notes}
-[~1.5 min] Walk through the figure — show how content evolves across stages. Emphasize: the app decides what content to deliver at each visit based on the child's developmental stage and what the family has already covered. The CHW focuses on delivery, not logistics.
+[~1.5 min] Large-scale cluster RCT, well-powered, high follow-up despite COVID. Baseline shows dual challenge: poor feeding practices AND high mental health burden.
 :::
 
 ## Primary Outcomes
@@ -167,52 +289,14 @@ CURRICULUM
 PRE-SPECIFIED
 :::
 
-:::: {.columns}
-::: {.column width="33%"}
+![Primary outcome treatment effects](images/hf-primary-outcomes.png){fig-align="center" width="85%" fig-alt="Horizontal bar chart showing treatment effects on three primary outcomes: hemoglobin (null), exclusive breastfeeding (null), dietary diversity (significant, +0.207)"}
 
-### Hemoglobin
-
-**No effect**
-
-p = 0.97
-
-::: {style="font-size: 0.8em; color: #64748B; margin-top: 0.5em;"}
-Biomarker outcomes need longer time horizons
-:::
-
-:::
-::: {.column width="33%"}
-
-### Exclusive Breastfeeding
-
-**No effect**
-
-p = 0.42
-
-::: {style="font-size: 0.8em; color: #64748B; margin-top: 0.5em;"}
-Underpowered — only 210 infants <6mo at follow-up
-:::
-
-:::
-::: {.column width="34%"}
-
-### Dietary Diversity
-
-**+0.207 food groups** (p = 0.035)
-
-::: {style="font-size: 0.8em; color: #64748B; margin-top: 0.5em;"}
-Feeding practices are the proximate pathway — where 12-month programs work first
-:::
-
-:::
-::::
-
-::: {.callout-note style="margin-top: 1.5em; font-size: 0.95em;"}
-**Why dietary diversity?** Behavioral changes in feeding practices are the most responsive outcome at 12 months. Biomarker and growth effects require longer follow-up — this is expected, not a failure.
+::: {.callout-note style="font-size: 0.95em;"}
+**Why dietary diversity?** Behavioral changes in feeding practices are the most responsive outcome at 12 months. Hemoglobin needs longer follow-up; exclusive BF was underpowered (only 210 infants <6mo at follow-up due to COVID timing). The secondary outcomes tell a richer story.
 :::
 
 ::: {.notes}
-[~1.5 min] Be upfront: two of three primary outcomes are null. But explain why — hemoglobin needs longer follow-up, exclusive BF was underpowered due to COVID timing. Dietary diversity is the proximate win, and the secondary outcomes tell a richer story.
+[~1.5 min] Be upfront: two of three primary outcomes are null. But explain why. Dietary diversity is the proximate win. The secondary outcomes are where the program really shines.
 :::
 
 ## Secondary Outcomes: Where We See the Impact
@@ -221,15 +305,13 @@ Feeding practices are the proximate pathway — where 12-month programs work fir
 DOMAIN-LEVEL EFFECTS
 :::
 
-<!-- TODO: Pre-render grouped bar chart from original R code as images/hf-secondary-outcomes.png -->
-![Treatment effects on secondary outcomes by domain](images/hf-secondary-outcomes.png){fig-align="center" width="95%" fig-alt="Grouped bar chart showing treatment effects in SD units with 90% CIs across child outcomes (child health, breastfeeding initiation, complementary feeding) and caregiver outcomes (knowledge, EPDS, DASS, social support)"}
+![Treatment effects on secondary outcomes by domain](images/hf-secondary-forest.png){fig-align="center" width="95%" fig-alt="Forest plot showing treatment effects across child outcomes and caregiver outcomes with 90% CIs"}
 
-::: {.callout-note style="font-size: 0.9em;"}
-**The story:** Behavioral improvements in feeding and breastfeeding initiation, paired with substantial gains in caregiver knowledge and mental health. The program works across multiple domains simultaneously — consistent with its integrated design.
-:::
+
+**The story:** Behavioral improvements in feeding and breastfeeding initiation, paired with substantial gains in caregiver knowledge and mental health. 
 
 ::: {.notes}
-[~1.5 min] This is the strongest slide. Walk through left to right: child outcomes show feeding improvements, caregiver outcomes show knowledge + mental health + social support gains. The breadth of effects reflects the comprehensive design. Highlight that mental health effects are large and robust — this sets up the next slide.
+[~1.5 min] Strongest slide. Walk left to right: child outcomes show feeding improvements, caregiver outcomes show knowledge + mental health + social support gains. The breadth reflects the comprehensive design.
 :::
 
 ## How Does It Work? Social Support, Not Knowledge
@@ -238,37 +320,32 @@ DOMAIN-LEVEL EFFECTS
 MECHANISM
 :::
 
+![Causal pathways: How do CHW visits improve mental health?](images/hf-mechanism-dag.png){fig-align="center" width="90%" fig-alt="DAG showing CHW home visits leading to mental health improvement through social support pathway (significant) but not through mental health knowledge pathway (null)"}
+
 :::: {.columns}
 ::: {.column width="50%"}
 
 ### Mental health improved significantly
 
-- Depression symptoms: **-6.3 pp** (p = 0.008)
-- Anxiety symptoms: **-4.9 pp** (p = 0.020)
-- Stress symptoms: **-4.2 pp** (p = 0.039)
-
-### But NOT through mental health knowledge
-
-- Mental health self-management knowledge: **no effect**
+- Depression: **-6.3 pp** (p = 0.008)
+- Anxiety: **-4.9 pp** (p = 0.020)
+- Stress: **-4.2 pp** (p = 0.039)
 
 :::
 ::: {.column width="50%"}
 
-### Through social connection
-
-- Perceived social support from friends: **+0.208 SD** (p = 0.028)
-- Mediation analysis: **15.9%** of mental health effect flows through social support
-
 ::: {.callout-tip}
 ### The Insight
-Regular CHW home visits functioned as a source of **consistent interpersonal contact and emotional reassurance** — the social connection itself was therapeutic.
+Regular CHW home visits functioned as **consistent interpersonal contact and emotional reassurance** -- the social connection itself was therapeutic.
 :::
+
+*Forthcoming: Causal mediation analysis (Wu & Chen)*
 
 :::
 ::::
 
 ::: {.notes}
-[~1.5 min] This is counterintuitive and memorable. The program improved mental health substantially, but NOT because families learned mental health coping skills. Mental health knowledge scores didn't budge. Instead, having a CHW visit regularly — someone who listens, checks in, provides structure — functioned as social support. The structured visits created a relationship. This matters for how we design HF 2.0.
+[~1.5 min] Counterintuitive and memorable. Mental health improved, but NOT through knowledge. Knowledge scores didn't budge. Instead, the social support from regular visits was the mechanism. 15.9% of the effect flows through perceived social support from friends. The structured visits created a relationship.
 :::
 
 ## Does Family Engagement Matter?
@@ -277,18 +354,30 @@ Regular CHW home visits functioned as a source of **consistent interpersonal con
 ENCOURAGEMENT DESIGN
 :::
 
+::: fragment
+
+### Encouragement design?
+
+Within the 40 treatment townships, we randomly assigned half to **encourage secondary caregiver participation** (typically grandmothers). 
+**Only difference:** CHWs in T2 townships promoted joint participation. 
+
+**Exogenous variation in *who* participates**, allowing us to estimate the causal effect of family engagement.
+
+:::
+
+::: fragment
+
 :::: {.columns}
 ::: {.column width="50%"}
 
-### Two delivery arms within treatment
-
-- **Standard (T1):** CHW visits primary caregiver only
-- **Encouragement (T2):** CHW actively promotes secondary caregiver (typically grandmother) participation
-
 ### The encouragement worked
 
-- Secondary caregiver participation: **21% to 45%**
-- Joint visits: **19% to 43%**
+| | Standard (T1) | Encouragement (T2) |
+|---|---|---|
+| Secondary caregiver participation | 21% | **45%** |
+| Joint visits | 19% | **43%** |
+| Take-up rate | 84% | 82% |
+| Avg visits completed | 11.1 | 10.5 |
 
 :::
 ::: {.column width="50%"}
@@ -297,64 +386,102 @@ ENCOURAGEMENT DESIGN
 
 Each additional home visit improves outcomes:
 
-| Visit type | Feeding effect | MH effect (DASS) |
-|------------|---------------|-----------------|
-| Primary alone | +0.028 SD | -4.1 pts |
+| Visit type | Feeding | MH (DASS) |
+|------------|---------|-----------|
+| Primary alone | +0.028 SD | **-4.1 pts** |
 | Joint visit | +0.048 SD | -5.9 pts |
 
-Joint visits show **~1.7x the effect** on feeding and larger mental health gains — but study underpowered for the comparison (p = 0.12).
+Joint visits: **~1.7x the effect** on feeding
 
-::: {.callout-note style="font-size: 0.85em;"}
-Consistent with the social support mechanism — more people in the room, more social connection.
 :::
+::::
+
+:::
+
+::: {.notes}
+[~2 min] Progressive reveal. First explain the design -- this is an encouragement design, a standard method for estimating effects of behaviors we can't directly randomize. Then show it worked: secondary caregiver participation more than doubled. Then the dose-response: using assignment as an instrument, each joint visit has roughly 1.7x the effect of a solo visit. Underpowered for the comparison (p=0.12) but consistent with social support mechanism.
+:::
+
+## HF 1.0 Works -- But Can We Do Better?
+
+::: {.eyebrow}
+THE SCALING CHALLENGE
+:::
+
+:::: {.columns}
+::: {.column width="70%"}
+
+#### Limiting Constraints
+
+- **Time:** 30-60 minutes per visit, monthly
+- **Cognitive bandwidth:** Families can only absorb so much per session
+- **Content volume:** 26 sessions, 6 domains
+
+#### The wish list keeps growing...
+
+- Early stimulation and responsive parenting integration
+- Expanded nutrition content for complementary feeding
+- Stronger mental health support modules
+
+:::
+::: {.column width="30%"}
+
+### The core tension
+
+**More Content vs. CHW/Caregiver Capacity**
+
+Every additional module competes for limited visit time and CHW bandwidth. Standard delivery can't scale content without scaling burden.
 
 :::
 ::::
 
 ::: {.notes}
-[~1.5 min] This connects back to the social support finding. The encouragement design successfully changed who showed up. And the dose-response analysis — using treatment assignment as an instrument — suggests joint visits may be roughly twice as effective per visit. We can't confirm this statistically at this sample size, but the pattern is consistent with social support as the mechanism. More relationships in the room, more benefit.
+[~1.5 min] HF 1.0 works, but there are real constraints. We want to integrate stimulation, expand nutrition content, strengthen mental health support -- but CHWs only have 30-60 minutes. The current model delivers the same sequence to everyone. Adding more content with this approach creates overload.
 :::
 
-## The Scaling Challenge
+## Digital Infrastructure Enables Personalization
 
 ::: {.eyebrow}
-FROM HF 1.0 TO HF 2.0
+THE OPPORTUNITY
 :::
 
 :::: {.columns}
 ::: {.column width="50%"}
 
-### HF 1.0 demonstrates the program works
+### The CareLoom platform already:
 
-But the current model delivers **the same content sequence** to every family at a given stage.
+- Assigns content by developmental stage
+- Tracks what each family has covered
+- Captures post-visit survey responses and knowledge checks
 
-### The constraints are real
+### What it COULD do:
 
-- **Time:** 30-60 minutes per visit, monthly
-- **Cognitive bandwidth:** Families can only absorb so much per session
-- **Content volume:** 26 sessions, 6 domains — not everything is equally relevant to every family
+- **Personalize** which modules get priority based on family needs
+- Create a **learning loop** -- use intermediate outcomes after each visit to improve delivery over time
+- **Expand content** without increasing CHW burden -- the algorithm handles prioritization
 
 :::
 ::: {.column width="50%"}
 
-### Digital infrastructure creates an opportunity
-
-The CareLoom app already:
-
-- Assigns content by developmental stage
-- Tracks what each family has covered
-- Captures post-visit survey responses
-
 ::: {.callout-tip}
-### The Key Question
-Can we use this infrastructure to **personalize content** — delivering what matters most to each family — while maintaining fidelity and scalability?
+### Can we use digital infrastructure to enable **personalization**?  
+While maintaining standardization and **impelmentaiton fidelity** and 
+**without creating more burden** for CHWs & families.
 :::
+
+#### Learning loop
+
+Visit data (knowledge checks, survey responses, participation) --> 
+
+Platform learns which content combinations work best for which families -->
+
+and adjusts and improves over time
 
 :::
 ::::
 
 ::: {.notes}
-[~1.5 min] Transition slide. We've shown the program works. Now the question: can we do better? The digital infrastructure is already handling logistics — in principle it could also handle personalization. The app knows what stage each family is at, what they've covered, how they responded. The question is how to use that information.
+[~1.5 min] The platform is already collecting the data needed for personalization. After each visit, knowledge checks and survey responses flow back. In principle, this creates a learning loop -- the system can improve over time. The key: personalization doesn't mean less standardization. It means the same rigorous delivery process, but with smarter content selection.
 :::
 
 ## Is There Room to Personalize?
@@ -366,9 +493,7 @@ HETEROGENEOUS TREATMENT EFFECTS
 :::: {.columns}
 ::: {.column width="55%"}
 
-We screened **12 outcomes** for treatment effect heterogeneity using causal forests (4,000 trees, honest splitting).
-
-### BLP heterogeneity test results
+### BLP heterogeneity tests 
 
 | Outcome domain | BLP p-value | Heterogeneity? |
 |---------------|------------|----------------|
@@ -382,20 +507,20 @@ We screened **12 outcomes** for treatment effect heterogeneity using causal fore
 :::
 ::: {.column width="45%"}
 
-![Variable importance for DASS heterogeneity](images/QQ-VI.png){fig-align="center" width="100%" fig-alt="Variable importance plot from causal forest showing which baseline covariates drive heterogeneity in mental health treatment effects"}
+We screened **12 outcomes** for treatment effect heterogeneity using machine learning (causal forests with 4,000 trees)
+
+**Very little variation in the effects of the intervention across families**
+
+#### What does this tell us?
 
 :::
 ::::
 
-::: {.callout-note style="font-size: 0.95em;"}
-**The equity finding:** Unlike teacher incentive programs (Sylvia 2021), where effects concentrated among certain subgroups, the Healthy Future program benefits families **broadly and equitably**. The program works -- and it works for (nearly) everyone.
-:::
-
 ::: {.notes}
-[~1.5 min] This is important for what comes next. We looked hard for heterogeneity — who benefits more, who benefits less. Answer: almost nobody benefits differently. Only mental health shows suggestive heterogeneity. This is good news for equity. But it also means the personalization opportunity isn't about targeting families — it's about something else.
+[~1.5 min] We looked hard for heterogeneity. Answer: almost none. Only mental health shows suggestive heterogeneity. Good news for equity. But it also means personalization isn't about targeting families -- it's about something else.
 :::
 
-## Not Which Families — Which Content
+## Not Which Families -- Which Content
 
 ::: {.eyebrow}
 THE PERSONALIZATION INSIGHT
@@ -420,7 +545,7 @@ THE PERSONALIZATION INSIGHT
 
 ::: {.callout-tip}
 ### The Opportunity
-Personalize **which content** gets priority in each visit — not which families receive the program.
+Personalize **which content** gets priority in each visit -- not which families receive the program.
 :::
 
 Given time and bandwidth constraints, the question becomes:
@@ -433,7 +558,7 @@ This is a content allocation problem, not a targeting problem.
 ::::
 
 ::: {.notes}
-[~1.5 min] This is the pivot. Most personalization in public health is about targeting — identify who benefits and focus resources on them. Our data says that's not the opportunity here. Instead, the question is about content: given that a CHW has 30-60 minutes and 3-5 possible modules to deliver, which ones should she prioritize for this particular family? That's a fundamentally different personalization problem.
+[~1.5 min] The pivot. Most personalization in public health is about targeting. Our data says that's not the opportunity here. The question is about content: given 30-60 minutes, which modules should be prioritized for this family?
 :::
 
 ## HF 2.0: How Do You Personalize Content?
@@ -455,7 +580,7 @@ Recommender algorithms (Netflix, Amazon) learn from **millions of interactions d
 An algorithm selects modules based on family characteristics, visit history, and predicted benefit
 
 **Family choice**
-Families choose from a menu of available modules for their next visit — leveraging their own knowledge of what they need most
+Families choose from a menu of available modules for their next visit -- leveraging their own knowledge of what they need most
 
 :::
 ::: {.column width="50%"}
@@ -476,7 +601,7 @@ HF 2.0 will test **algorithm vs. family choice vs. standard delivery** to determ
 ::::
 
 ::: {.notes}
-[~1.5 min] This is the intellectual payoff. We know the program works. We know personalization should focus on content, not families. The question is HOW to personalize. Two natural approaches — let an algorithm decide, or let families decide. Each has advantages and risks. The next phase of this research is a head-to-head trial. This is where we're heading.
+[~1.5 min] The intellectual payoff. Two natural approaches: let an algorithm decide, or let families decide. Each has advantages and risks. The next phase is a head-to-head trial.
 :::
 
 ## Summary
@@ -485,13 +610,13 @@ HF 2.0 will test **algorithm vs. family choice vs. standard delivery** to determ
 KEY TAKEAWAYS
 :::
 
-1. **HF 1.0 works** — digitally-enabled CHW home visits improve feeding practices, caregiver knowledge, and mental health across multiple domains simultaneously
+1. **HF 1.0 works** -- digitally-enabled CHW home visits improve feeding practices, caregiver knowledge, and mental health across multiple domains simultaneously
 
-2. **The mechanism is social connection** — mental health gains came through structured interpersonal contact, not mental health knowledge transfer
+2. **The mechanism is social connection** -- mental health gains came through structured interpersonal contact, not mental health knowledge transfer
 
-3. **Personalization is about content, not targeting** — treatment effects are equitable across families, so the opportunity is optimizing *what* gets delivered, not *to whom*
+3. **Personalization is about content, not targeting** -- treatment effects are equitable across families, so the opportunity is optimizing *what* gets delivered, not *to whom*
 
-4. **Digital infrastructure makes this possible** — the same platform that ensures fidelity can also enable personalization at scale
+4. **Digital infrastructure makes this possible** -- the same platform that ensures fidelity can also enable personalization at scale
 
 :::: {.columns}
 ::: {.column width="60%"}
@@ -517,17 +642,16 @@ Leave up during Q&A. Four takeaways map to the narrative arc: evidence, mechanis
 
 # Appendix {.center}
 
-## A1 — Post-Double-Selection LASSO
+## A1 -- Post-Double-Selection LASSO
 
 **Why this method?**
 
 - Standard RCT regression: add pre-specified controls; risk of omitting important predictors
-- PDS-LASSO runs two separate LASSO procedures (on outcome and treatment) to identify which baseline covariates are strong predictors; includes those in the final regression
+- PDS-LASSO runs two separate LASSO procedures (on outcome and treatment) to identify strong baseline predictors; includes those in the final regression
 - Result: improved statistical power, reduced SEs, without arbitrary variable selection
-- In HF: baseline maternal dietary diversity was selected -- controlling for it substantially reduced SEs on the DDS outcome (p: 0.051 to 0.035)
-- Increasingly standard in economics RCT papers; still novel in public health literature
+- In HF: baseline maternal dietary diversity was selected -- controlling for it substantially reduced SEs on DDS (p: 0.051 to 0.035)
 
-## A2 — Surrogate Index Framework
+## A2 -- Surrogate Index Framework
 
 **Technical details (Athey et al. 2019)**
 
@@ -535,27 +659,21 @@ Construct a composite $S$ of short-run outcomes that together predict long-run o
 
 $$E[Y \mid X, T] \approx E[E[Y \mid S, X] \mid X, T]$$
 
-**In HF context — candidate surrogates:**
+**In HF context -- candidate surrogates:**
 
-- Dietary diversity score (6-month interim)
-- Breastfeeding practices
-- Caregiver knowledge index
-- Maternal depression score
-- Perceived social support
+- Dietary diversity score, breastfeeding practices, caregiver knowledge, depression score, social support
 
 **HF 2.0 Phase 1:** Formally estimate surrogate index; validate on HF 1.0 control group data; use as optimization target for content recommendation algorithm.
 
-## A3 — Heterogeneous Effects: Causal Forest Analysis
+## A3 -- Heterogeneous Effects: Causal Forest Analysis
 
-<!-- TODO: Pre-render causal forest CATE distribution + variable importance as images/hf-cate-appendix.png -->
-
-![CATE distribution and variable importance for dietary diversity](images/hf-cate-appendix.png){fig-align="center" width="95%" fig-alt="Two-panel figure: left shows CATE distribution histogram for dietary diversity with ATE line; right shows variable importance bar chart from causal forest"}
+![CATE distribution and variable importance for dietary diversity](images/hf-cate-appendix.png){fig-align="center" width="95%" fig-alt="Two-panel figure: CATE distribution histogram and variable importance bar chart"}
 
 ::: {.callout-note}
-**Equity finding:** Across 12 outcomes screened (7 domain indices, 3 factor scores, 2 primary), only caregiver mental health (DASS) shows marginally detectable heterogeneity (BLP p = 0.07). All child nutrition outcomes show **no heterogeneity** — the program benefits all families similarly. This is good news for scale-up: **universal delivery works**, and HF 2.0 should personalize *content* (which topics to emphasize), not *who to treat*.
+**Equity finding:** Across 12 outcomes screened, only caregiver mental health (DASS) shows marginally detectable heterogeneity (BLP p = 0.07). All child nutrition outcomes show **no heterogeneity**. Universal delivery works; HF 2.0 should personalize *content*, not *who to treat*.
 :::
 
-## A4 — Heterogeneity Screening: Domain Summary Indices
+## A4 -- Heterogeneity Screening: Domain Summary Indices
 
 | Index | Components | N | BLP p |
 |-------|-----------|---|-------|
@@ -563,40 +681,38 @@ $$E[Y \mid X, T] \approx E[E[Y \mid S, X] \mid X, T]$$
 | Caregiver Support | SS + Knowledge | 956 | 0.52 |
 | Child Nutrition | Child Health + CF + BFI | 938 | 0.44 |
 
-Anderson (2008) ICW indices. Causal forest: 4,000 trees, tuned. See `hf_heterogeneity.html` for full results with CATE distributions, GATES, and TOC curves.
+Anderson (2008) ICW indices. Causal forest: 4,000 trees, tuned. See `hf_heterogeneity.html` for full results.
 
-## A5 — From Heterogeneity to Equity: Two Studies
+## A5 -- From Heterogeneity to Equity: Two Studies
 
 :::: {.columns}
 ::: {.column width="50%"}
 
-### Sylvia et al. (2021) — Parenting Intervention
+### Sylvia et al. (2021) -- Parenting Intervention
 
-![CATE density: bimodal distribution showing clear heterogeneity](images/QQ-CATE-1.png){width="90%" fig-alt="Bimodal CATE distribution showing significant treatment effect heterogeneity in teacher incentive study"}
+![CATE density: bimodal distribution](images/QQ-CATE-1.png){width="90%" fig-alt="Bimodal CATE distribution showing significant heterogeneity"}
 
 ::: {.callout-note style="font-size: 0.85em;"}
-**Significant heterogeneity detected.** Disadvantaged children benefited **+0.46 SD more** than others. Top predictor: baseline parental investment (27% importance).
+**Significant heterogeneity.** Disadvantaged children benefited **+0.46 SD more**. Top predictor: baseline parental investment.
 :::
 
 :::
 ::: {.column width="50%"}
 
-### Healthy Future 1.0 — This Study
+### Healthy Future 1.0 -- This Study
 
-<!-- TODO: Pre-render CATE contrast histogram as images/hf-cate-contrast.png -->
-
-![CATE density: compressed distribution showing no heterogeneity](images/hf-cate-contrast.png){width="90%" fig-alt="Compressed CATE distribution showing all families benefit similarly from Healthy Future"}
+![CATE density: compressed distribution](images/hf-cate-contrast.png){width="90%" fig-alt="Compressed CATE distribution showing equitable effects"}
 
 ::: {.callout-note style="font-size: 0.85em;"}
-**No significant heterogeneity** across 12 outcomes screened. The program benefits **all families similarly** — an equity finding. Program design, not family characteristics, drives impact.
+**No significant heterogeneity** across 12 outcomes. The program benefits **all families similarly** -- an equity finding.
 :::
 
 :::
 ::::
 
-*The structured, app-guided delivery in Healthy Future equalizes outcomes across family types — a design feature, not a limitation.*
+*App-guided delivery equalizes outcomes across family types -- a design feature, not a limitation.*
 
-## A6 — Encouragement Design: ITT by Treatment Arm
+## A6 -- Encouragement Design: ITT by Treatment Arm
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -610,7 +726,7 @@ Anderson (2008) ICW indices. Causal forest: 4,000 trees, tuned. See `hf_heteroge
 | Anxiety | **-0.87*** | -0.39 |
 | Stress | **-1.33*** | -1.17 |
 
-T1 (standard) shows stronger mental health effects than T2 (encouragement).
+T1 (standard) shows stronger ITT mental health effects.
 
 :::
 ::: {.column width="50%"}
