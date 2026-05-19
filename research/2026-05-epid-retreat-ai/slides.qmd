@@ -1,6 +1,6 @@
 ---
-title: "Three Roles for AI in a Health Economics Lab"
-subtitle: "What we're learning when ground truth is scarce or contested"
+title: "From Prediction to Coordination"
+subtitle: "Three Roles for AI in Health Research"
 author: "Sean Sylvia, PhD"
 institute: "Digital Health Economics & Policy Lab · UNC Gillings"
 date: 2026-05-19
@@ -30,29 +30,31 @@ execute:
   message: false
 ---
 
-## The lab's question, in one line {.smaller}
+## The lab, and the problem {.smaller}
 
 ::: {.eyebrow}
-THE THROUGH-LINE
+DHEP LAB · THE THROUGH-LINE
 :::
 
-Epidemiology is, at bottom, the science of measuring what we can't observe
-directly — validating against an imperfect gold standard, reading noisy
-surveillance signals, living with sensitivity and specificity instead of
-certainty.
+The **Digital Health Economics & Policy Lab** works on one thing: better
+health decisions — coordinating **evidence, behavior, and systems**.
 
-AI doesn't escape that problem. **It sharpens it.**
+AI's first wave was **prediction**. The harder problem — and where the lab
+works — is **coordination**: how we *generate, validate, and aggregate*
+knowledge when there is no clean answer to check against.
 
-> **How do you evaluate an AI system when the ground truth is scarce,
-> expensive, or contested?**
+> Epidemiology already lives this — imperfect gold standards, noisy
+> surveillance. **AI sharpens the problem; it doesn't escape it.**
 
-Three lab projects — three different *roles* AI plays in answering it.
+So: **when ground truth is scarce or contested, what should AI do?**
+Three projects, three roles.
 
 ::: {.notes}
-[~30 sec] Open on the epi-native framing — this room already lives the
-"no clean gold standard" problem, so the AI question lands as familiar, not
-foreign. Don't list the projects yet; name the shared problem first so the
-three slides feel like one argument, not a portfolio tour.
+[~45 sec] One slide does double duty — lab identity *and* the problem.
+Land the prediction→coordination move early; it's the title's promise.
+Keep the epi anchor (this room lives the no-gold-standard problem) so the
+AI question reads as familiar, not foreign. Don't enumerate the projects
+yet — name the shared problem so the three slides feel like one argument.
 Transition: "First role — AI as the thing that *makes* the data."
 :::
 
@@ -136,27 +138,27 @@ under the microscope."
 ROLE 2 · SUBJECT OF STUDY
 :::
 
-> **Epic's sepsis model: deployed across 56% of US hospitals — and missed
-> 67% of cases.** It passed technical validation and still failed in the
-> world.
+> **Setting: colorectal-cancer screening recommendations** — where
+> "correct" is genuinely contested: guideline-concordant ≠
+> patient-appropriate ≠ cost-effective.
 
 :::: {.columns}
 
 ::: {.column width="55%"}
-That gap *is* the contested-ground-truth problem: clinical correctness and
-the economic value of a decision are **not the same target**.
+**Design — randomized experiments.** We randomize **whether the clinician
+sees the AI recommendation** *and* the **patient features** they face.
+That gives a clean causal estimate of physician–AI complementarity.
 
-**Question:** when clinicians work *with* AI, where does the physician–AI
-team actually beat either alone — and where does reliance go wrong? We
-measure **asymmetric reliance** and **heterogeneous response**, not model
-accuracy in isolation.
+**What we measure:** where the team beats either alone — plus
+**asymmetric reliance** (over- vs. under-reliance) and **heterogeneous
+response**, not model accuracy in isolation.
 :::
 
 ::: {.column width="45%"}
 ::: {.callout-note}
 ### AI's role
-The object of measurement — we study physician–AI complementarity, not
-the model alone.
+The object of measurement — we study the physician–AI *team*, not the
+model alone.
 :::
 :::
 
@@ -169,11 +171,12 @@ the model alone.
 :::
 
 ::: {.notes}
-[~70 sec] Open with the Epic sepsis number — it makes "contested ground
-truth" concrete in one breath: a model can be technically validated and
-still wrong about the thing that matters. Then the EPID hook: clinical
-correctness vs. economic value of a decision aren't the same target.
-Transition: "Third role — AI not as data, not as subject, but as
+[~70 sec] Make clear up front this is *colorectal-cancer screening*, not
+generic AI — the contested-truth point is concrete: guideline-concordant,
+patient-appropriate, and cost-effective are three different targets. Lean
+on the randomized design — this room respects a clean experiment, and the
+randomization is *how* we get a defensible answer with no single gold
+standard. Transition: "Third role — AI not as data, not as subject, but as
 infrastructure for getting at truth that lives in experts' heads."
 :::
 
@@ -191,17 +194,17 @@ hard to observe even *after* the fact — exactly like syndromic
 surveillance, where there's no clean gold standard, just dispersed noisy
 signals.
 
-**Sentinel** is a **prediction-market + AI** platform for community-level
-epidemiological surveillance: a cost-effective signal of disease *and*
-socioeconomic trends, built by scaling expert and community elicitation
-under uncertainty.
+**Sentinel** is a **prediction-market + AI** platform that turns dispersed
+expert and community judgment into **collective intelligence** — a
+cost-effective community-level signal of disease *and* socioeconomic
+trends.
 :::
 
 ::: {.column width="45%"}
 ::: {.callout-note}
 ### AI's role
-Market infrastructure — AI elicits and aggregates dispersed judgment at
-scale, rather than substituting for it.
+Coordination infrastructure — AI elicits and aggregates dispersed
+judgment at scale, rather than substituting for it.
 :::
 :::
 
@@ -229,20 +232,22 @@ SYNTHESIS
 ![](images/three-roles-spine.svg){fig-align="center" width="92%"}
 
 ::: {.fragment}
-Same spine in all three — **the design problem is always how to elicit,
-validate, and aggregate expert judgment.** That's the sentence to reuse in
-grants and fundraising.
+Prediction is table stakes. When ground truth is scarce or contested, the
+lab's contribution is the **coordination layer** — generate, validate,
+aggregate. **AI as evidence infrastructure.** That's the thesis to reuse
+in grants and fundraising.
 :::
 
 ::: {.notes}
-[~60 sec] This is the payoff slide — the repeatable narrative. Land the
-fragment line slowly; it's the sentence to reuse in grants and CG
-fundraising. Then open for questions.
+[~30 sec] Payoff slide. The diagram carries the arc; land the fragment
+slowly — "prediction is table stakes; the value is the coordination layer
+— AI as evidence infrastructure." That's the reusable grant thesis. Then
+go straight to the closing question.
 :::
 
 ## Thank you {.smaller}
 
-### Questions? {.center}
+> **What standards should AI meet to shape health decisions?**
 
 **Sean Sylvia** · ssylvia@email.unc.edu · dhep.unc.edu
 
@@ -250,7 +255,8 @@ fundraising. Then open for questions.
 NIH AIM-AHEAD Consortium
 
 ::: {.notes}
-[~15 sec] Contact up, invite the methodology question explicitly:
-"Happy to go deeper on any one of these — the evaluation problem is the
-common thread."
+[~15 sec] Don't ask "questions?" — open with the standards question. It's
+the live debate for an epi faculty: what bar should AI clear to enter a
+health decision, and who sets it. Ties the three projects back to
+evaluation as the common thread.
 :::
