@@ -36,17 +36,17 @@ execute:
 DHEP LAB · THE THROUGH-LINE
 :::
 
-The **Digital Health Economics & Policy Lab** works on one thing: better
-health decisions — coordinating **evidence, behavior, and systems**.
+The **Digital Health Economics & Policy Lab** works on better health
+decisions — coordinating **evidence, behavior, and systems**.
 
-AI's first wave was **prediction**. The harder problem — and where the lab
-works — is **coordination**: how we *generate, validate, and aggregate*
-knowledge when there is no clean answer to check against.
+AI's first wave was **prediction**. The harder problem is
+**coordination**: how we *generate, validate, and aggregate* knowledge
+when there's no clean answer to check against.
 
 > Epidemiology already lives this — imperfect gold standards, noisy
 > surveillance. **AI sharpens the problem; it doesn't escape it.**
 
-So: **when ground truth is scarce or contested, what should AI do?**
+**When ground truth is scarce or contested, what should AI do?**
 Three projects, three roles.
 
 ::: {.notes}
@@ -142,27 +142,11 @@ ROLE 2 · SUBJECT OF STUDY
 > "correct" is genuinely contested: guideline-concordant ≠
 > patient-appropriate ≠ cost-effective.
 
-:::: {.columns}
+![](images/augmed-design.svg){fig-align="center" width="84%"}
 
-::: {.column width="55%"}
-**Design — randomized experiments.** We randomize **whether the clinician
-sees the AI recommendation** *and* the **patient features** they face.
-That gives a clean causal estimate of physician–AI complementarity.
-
-**What we measure:** where the team beats either alone — plus
-**asymmetric reliance** (over- vs. under-reliance) and **heterogeneous
-response**, not model accuracy in isolation.
-:::
-
-::: {.column width="45%"}
-::: {.callout-note}
-### AI's role
-The object of measurement — we study the physician–AI *team*, not the
-model alone.
-:::
-:::
-
-::::
+Randomizing **AI exposure** *and* **patient features** gives a clean
+causal estimate of physician–AI complementarity — the *team* is the
+object of study, not the model alone.
 
 ::: {.statusline}
 **Status:** NIH **AIM-AHEAD** partnership · two papers in progress —
