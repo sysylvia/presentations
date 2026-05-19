@@ -1,0 +1,503 @@
+/*-- scss:defaults --*/
+
+// =============================================================================
+// DHEPLab Presentation Theme for Quarto/Reveal.js
+// =============================================================================
+
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+// -----------------------------------------------------------------------------
+// Color Palette
+// -----------------------------------------------------------------------------
+
+// Primary Colors - Carolina Blue
+$carolina: #4B9CD3 !default;
+$carolina-dark: #3A7CA5 !default;
+$carolina-light: #7BB8E0 !default;
+$carolina-pale: #E8F4FC !default;
+
+// Neutral Colors
+$navy: #13294B !default;
+$navy-light: #1E3A5F !default;
+$charcoal: #334155 !default;
+$slate: #64748B !default;
+$ink: #1E293B !default;
+
+// Background Colors
+$paper: #FAFAF8 !default;
+$cream: #F5F4F0 !default;
+$stone: #E8E6E1 !default;
+
+// Semantic Colors
+$success: #059669 !default;
+$warning: #D97706 !default;
+$error: #DC2626 !default;
+
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+
+$font-family-sans-serif: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !default;
+$font-family-serif: "Instrument Serif", Georgia, "Times New Roman", serif !default;
+$font-family-monospace: "JetBrains Mono", "Fira Code", "Consolas", monospace !default;
+
+// -----------------------------------------------------------------------------
+// Reveal.js Core Variables
+// -----------------------------------------------------------------------------
+
+// Background and text
+$body-bg: $paper !default;
+$body-color: $charcoal !default;
+$link-color: $carolina !default;
+$link-color-hover: $carolina-dark !default;
+$selection-bg: $carolina-pale !default;
+$selection-color: $navy !default;
+
+// Presentation sizing
+$presentation-font-size-root: 40px !default;
+$presentation-line-height: 1.5 !default;
+
+// Headings
+$presentation-heading-font: $font-family-serif !default;
+$presentation-heading-color: $navy !default;
+$presentation-heading-font-weight: 400 !default;
+$presentation-heading-letter-spacing: -0.02em !default;
+$presentation-heading-text-transform: none !default;
+$presentation-heading-line-height: 1.2 !default;
+
+// Heading sizes
+$presentation-h1-font-size: 2.5em !default;
+$presentation-h2-font-size: 1.8em !default;
+$presentation-h3-font-size: 1.3em !default;
+$presentation-h4-font-size: 1.1em !default;
+
+// Layout
+$presentation-slide-text-align: left !default;
+$presentation-title-slide-text-align: center !default;
+$presentation-block-margin: 16px !default;
+
+// Borders
+$border-color: $stone !default;
+$border-width: 1px !default;
+$border-radius: 6px !default;
+
+// Code
+$code-block-bg: $cream !default;
+$code-block-border-color: $stone !default;
+$code-color: $carolina-dark !default;
+$code-bg: rgba($carolina, 0.08) !default;
+
+// Light backgrounds
+$light-bg-text-color: $charcoal !default;
+$light-bg-link-color: $carolina !default;
+$light-bg-code-color: $carolina-dark !default;
+
+// Dark backgrounds
+$dark-bg-text-color: $paper !default;
+$dark-bg-link-color: $carolina-light !default;
+$dark-bg-code-color: $carolina-light !default;
+
+// Callouts
+$callout-color-note: $carolina !default;
+$callout-color-tip: $success !default;
+$callout-color-warning: $warning !default;
+$callout-color-caution: $error !default;
+$callout-color-important: $navy !default;
+
+/*-- scss:rules --*/
+
+// =============================================================================
+// Global Styles
+// =============================================================================
+
+.reveal {
+  font-feature-settings: "liga" 1, "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+// =============================================================================
+// Typography Enhancements
+// =============================================================================
+
+.reveal h1,
+.reveal h2 {
+  font-family: $font-family-serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.reveal h3,
+.reveal h4 {
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+// Accent line under h2
+.reveal h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: $carolina;
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+}
+
+// Remove accent on section headers
+.reveal section.section h2::after {
+  display: none;
+}
+
+// Eyebrow text (uppercase labels)
+.reveal .eyebrow {
+  font-family: $font-family-monospace;
+  font-size: 0.6em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $carolina;
+  margin-bottom: 0.5em;
+}
+
+// =============================================================================
+// Title Slide
+// =============================================================================
+
+.reveal .slides > section.title-slide,
+.reveal .slides > section:first-child {
+  text-align: center;
+
+  h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.2em;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.2em;
+    color: $slate;
+    margin-bottom: 1.5em;
+  }
+
+  .author {
+    font-size: 1em;
+    color: $charcoal;
+    font-weight: 500;
+  }
+
+  .institute {
+    font-size: 0.85em;
+    color: $slate;
+  }
+
+  .date {
+    font-size: 0.8em;
+    color: $slate;
+    margin-top: 2em;
+  }
+}
+
+// =============================================================================
+// Lists
+// =============================================================================
+
+.reveal ul,
+.reveal ol {
+  margin-left: 1em;
+}
+
+.reveal li {
+  margin-bottom: 0.4em;
+  line-height: 1.4;
+}
+
+.reveal ul ul,
+.reveal ol ol {
+  margin-top: 0.3em;
+  font-size: 0.9em;
+  color: $slate;
+}
+
+// =============================================================================
+// Code Blocks
+// =============================================================================
+
+.reveal pre {
+  background: $cream;
+  border: 1px solid $stone;
+  border-radius: $border-radius;
+  padding: 1em;
+  font-size: 0.55em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.reveal code {
+  font-family: $font-family-monospace;
+  background: $code-bg;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.reveal pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+// =============================================================================
+// Links
+// =============================================================================
+
+.reveal a {
+  color: $carolina;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $carolina-dark;
+    border-bottom-color: $carolina-dark;
+  }
+}
+
+// =============================================================================
+// Cards
+// =============================================================================
+
+.reveal .card {
+  background: white;
+  border: 1px solid $stone;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin: 1em 0;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: $carolina-light;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  h3 {
+    margin-top: 0;
+    color: $navy;
+  }
+}
+
+.reveal .card.featured {
+  border-left: 3px solid $carolina;
+}
+
+// =============================================================================
+// Callouts
+// =============================================================================
+
+.reveal .callout {
+  border-radius: $border-radius;
+  padding: 1em;
+  margin: 1em 0;
+  border-left: 3px solid;
+}
+
+.reveal .callout-note {
+  background: $carolina-pale;
+  border-color: $carolina;
+}
+
+.reveal .callout-tip {
+  background: rgba($success, 0.1);
+  border-color: $success;
+}
+
+.reveal .callout-warning {
+  background: rgba($warning, 0.1);
+  border-color: $warning;
+}
+
+.reveal .callout-caution {
+  background: rgba($error, 0.1);
+  border-color: $error;
+}
+
+// =============================================================================
+// Tables
+// =============================================================================
+
+.reveal table {
+  border-collapse: collapse;
+  font-size: 0.8em;
+  margin: 1em 0;
+}
+
+.reveal table th {
+  background: $cream;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75em 1em;
+  border-bottom: 2px solid $stone;
+}
+
+.reveal table td {
+  padding: 0.6em 1em;
+  border-bottom: 1px solid $stone;
+}
+
+.reveal table tr:hover {
+  background: rgba($carolina, 0.03);
+}
+
+// =============================================================================
+// Images and Figures
+// =============================================================================
+
+.reveal figure {
+  margin: 1em 0;
+}
+
+.reveal figcaption {
+  font-size: 0.7em;
+  color: $slate;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.reveal img {
+  border-radius: $border-radius;
+}
+
+// =============================================================================
+// Footer and Logo
+// =============================================================================
+
+.reveal .footer {
+  font-size: 0.5em;
+  color: $slate;
+}
+
+.reveal .slide-logo {
+  max-height: 120px;
+}
+
+// =============================================================================
+// Dark Slides
+// =============================================================================
+
+.reveal section.dark-slide,
+.reveal section[data-background-color="#13294B"],
+.reveal .has-dark-background {
+  color: $paper;
+
+  h1, h2, h3, h4 {
+    color: white;
+  }
+
+  h2::after {
+    background: $carolina-light;
+  }
+
+  a {
+    color: $carolina-light;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .eyebrow {
+    color: $carolina-light;
+  }
+
+  code {
+    background: rgba(255, 255, 255, 0.1);
+    color: $carolina-light;
+  }
+}
+
+// =============================================================================
+// Section Dividers
+// =============================================================================
+
+.reveal section.section {
+  text-align: center;
+
+  h1, h2 {
+    font-size: 2.5em;
+  }
+}
+
+// =============================================================================
+// Columns Layout Enhancements
+// =============================================================================
+
+.reveal .columns {
+  display: flex;
+  gap: 2em;
+}
+
+.reveal .column {
+  flex: 1;
+}
+
+// =============================================================================
+// Blockquotes
+// =============================================================================
+
+.reveal blockquote {
+  background: $cream;
+  border-left: 4px solid $carolina;
+  padding: 1em 1.5em;
+  margin: 1em 0;
+  font-style: italic;
+  font-size: 1.1em;
+  color: $navy;
+}
+
+.reveal blockquote footer {
+  font-style: normal;
+  font-size: 0.8em;
+  color: $slate;
+  margin-top: 0.5em;
+}
+
+// =============================================================================
+// Progress and Slide Numbers
+// =============================================================================
+
+.reveal .progress {
+  background: $stone;
+
+  span {
+    background: $carolina;
+  }
+}
+
+.reveal .slide-number {
+  font-family: $font-family-monospace;
+  font-size: 0.5em;
+  color: $slate;
+  background: transparent;
+}
+
+// =============================================================================
+// Speaker Notes Styling
+// =============================================================================
+
+.reveal .speaker-notes {
+  font-family: $font-family-sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+}

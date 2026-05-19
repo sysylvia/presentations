@@ -1,0 +1,192 @@
+---
+title: "Three Roles for AI in a Health Economics Lab"
+subtitle: "What we're learning when ground truth is scarce or contested"
+author: "Sean Sylvia, PhD"
+institute: "Digital Health Economics & Policy Lab · UNC Gillings"
+date: 2026-05-19
+date-format: long
+format:
+  revealjs:
+    theme: [default, style/dheplab-theme.scss]
+    logo: images/dhep-logo-2.png
+    slide-number: true
+    transition: fade
+    progress: true
+    incremental: false
+    center: false
+    scrollable: true
+    smaller: false
+    footer: "EPID Faculty Retreat · Fleming Lodge · May 2026"
+    preview-links: auto
+    width: 1280
+    height: 720
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## The lab's question, in one line {.smaller}
+
+::: {.eyebrow}
+THE THROUGH-LINE
+:::
+
+Across very different projects, my lab keeps hitting the same methodological
+problem:
+
+> **How do you evaluate an AI system when the ground truth is scarce,
+> expensive, or contested?**
+
+Three projects, three different *roles* AI plays in answering it.
+
+::: {.notes}
+[~30 sec] Open here. Don't list the projects yet — name the shared problem
+first so the three slides feel like one argument, not a portfolio tour.
+Transition: "Here's the first role — AI as the thing that *makes* the data."
+:::
+
+## Daktari Dx — AI as **data generator** {.smaller}
+
+::: {.eyebrow}
+ROLE 1 · DATA GENERATOR
+:::
+
+:::: {.columns}
+
+::: {.column width="55%"}
+**The problem:** clinical-AI "data deserts." >90% of clinical AI training
+data is from high-income settings; African populations are <3%.
+
+**Daktari Dx:** the platform where we run an **RLEF** approach —
+expert clinicians validate AI-generated clinical vignettes *before* they
+enter evaluation or training corpora.
+:::
+
+::: {.column width="45%"}
+::: {.callout-note}
+### AI's role
+Generating *and* filtering synthetic clinical encounters, with expert
+feedback as the validation loop.
+:::
+
+**Funding / partner:** Gillings Innovation Lab — Kenya pilot launching,
+CFK Africa partner site.
+:::
+
+::::
+
+::: {.notes}
+[~75 sec] Emphasize the validation paradox: you can't check synthetic data
+against real data you don't have — so expert judgment *is* the ground truth.
+Transition: "In the next project AI isn't the data source — it's the thing
+under the microscope."
+:::
+
+## AugMed — AI as **subject of study** {.smaller}
+
+::: {.eyebrow}
+ROLE 2 · SUBJECT OF STUDY
+:::
+
+:::: {.columns}
+
+::: {.column width="55%"}
+**Question:** when clinicians work *with* AI, where does the
+physician–AI team actually do better — and where does reliance go wrong?
+
+A methodology for **evaluating AI clinical reasoning** and measuring
+asymmetric reliance and heterogeneous response (AIM-AHEAD partnership).
+:::
+
+::: {.column width="45%"}
+::: {.callout-note}
+### AI's role
+The object of measurement — we study physician–AI complementarity, not
+the model alone.
+:::
+
+Splitting into two papers: **medical** (PLOS Digital Health, CRC-specific)
+and **econ** (Management Science — reliance + heterogeneity framing).
+:::
+
+::::
+
+::: {.notes}
+[~70 sec] The EPID hook here: "ground truth is contested" — clinical
+correctness vs. economic value of a decision aren't the same target.
+Transition: "Third role — AI not as data, not as subject, but as
+infrastructure for getting at truth that lives in experts' heads."
+:::
+
+## Sentinel — AI as **elicitation infrastructure** {.smaller}
+
+::: {.eyebrow}
+ROLE 3 · ELICITATION INFRASTRUCTURE
+:::
+
+:::: {.columns}
+
+::: {.column width="55%"}
+**Setting:** credence-good markets — quality is hard to observe even
+*after* the fact, so expert judgment is the only signal.
+
+**Sentinel** (the lab's information-markets platform): uses AI to
+*scale expert elicitation* under uncertainty — a mechanism-design
+approach to surfacing dispersed expert knowledge.
+:::
+
+::: {.column width="45%"}
+::: {.callout-note}
+### AI's role
+Market infrastructure — AI elicits and aggregates expert judgment at
+scale, rather than substituting for it.
+:::
+:::
+
+::::
+
+::: {.notes}
+[~70 sec] Keep this tight — it's the least familiar to an EPID audience.
+The point is the *pattern*, not the platform internals. Transition into
+the synthesis: "Step back and the three line up."
+:::
+
+## One problem, three roles {.smaller}
+
+::: {.eyebrow}
+SYNTHESIS
+:::
+
+| Project | AI's role | Where the "truth" comes from |
+|---|---|---|
+| **Daktari Dx / RLEF** | Data generator | Expert validation of synthetic data |
+| **AugMed** | Subject of study | Contested: clinical vs. economic value |
+| **Sentinel** | Elicitation infrastructure | Dispersed expert judgment, aggregated |
+
+::: {.fragment}
+The methodological spine is the same in all three: **when ground truth is
+scarce or contested, the design problem is how to elicit, validate, and
+aggregate expert judgment.**
+:::
+
+::: {.notes}
+[~60 sec] This is the payoff slide — the repeatable narrative. Land the
+fragment line slowly; it's the sentence to reuse in grants and CG
+fundraising. Then open for questions.
+:::
+
+## Thank you {.smaller}
+
+### Questions? {.center}
+
+**Sean Sylvia** · ssylvia@email.unc.edu · dhep.unc.edu
+
+**Funders / partners:** Gillings Innovation Lab · CFK Africa ·
+NIH AIM-AHEAD Consortium
+
+::: {.notes}
+[~15 sec] Contact up, invite the methodology question explicitly:
+"Happy to go deeper on any one of these — the evaluation problem is the
+common thread."
+:::
