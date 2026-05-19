@@ -1,0 +1,5 @@
+- source: project
+  netlify:
+    - id: 6543460d-f845-4a38-be81-44328d29d208
+      name: sylvia-talks
+      url: https://talks.ssylvia.io
