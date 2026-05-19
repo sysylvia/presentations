@@ -536,42 +536,6 @@ $callout-color-important: $navy !default;
   margin-top: 0.25em;
 }
 
-// Three-role spectrum band (synthesis slide)
-.reveal .rolebar {
-  display: flex;
-  margin: 0.5em 0 1em;
-  border-radius: $border-radius;
-  overflow: hidden;
-  border: 1px solid $stone;
-}
-
-.reveal .rolebar .seg {
-  flex: 1;
-  padding: 0.7em 0.8em;
-  text-align: center;
-  background: $carolina-pale;
-  border-right: 2px solid white;
-}
-
-.reveal .rolebar .seg:last-child {
-  border-right: none;
-}
-
-.reveal .rolebar .seg .r {
-  font-family: $font-family-monospace;
-  font-size: 0.52em;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: $carolina-dark;
-}
-
-.reveal .rolebar .seg .p {
-  font-family: $font-family-serif;
-  font-size: 1.05em;
-  color: $navy;
-  margin-top: 0.15em;
-}
-
 // Source citation + status footer lines
 .reveal .srcnote {
   font-size: 0.5em;

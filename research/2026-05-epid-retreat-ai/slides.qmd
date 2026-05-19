@@ -5,6 +5,10 @@ author: "Sean Sylvia, PhD"
 institute: "Digital Health Economics & Policy Lab · UNC Gillings"
 date: 2026-05-19
 date-format: long
+title-slide-attributes:
+  data-background-image: images/title-bg.jpg
+  data-background-size: cover
+  data-background-opacity: "0.25"
 format:
   revealjs:
     theme: [default, style/dheplab-theme.scss]
@@ -222,43 +226,12 @@ Transition into the synthesis: "Step back and the three line up."
 SYNTHESIS
 :::
 
-::: {.rolebar}
-::: {.seg}
-::: {.r}
-Role 1
-:::
-::: {.p}
-Data generator
-:::
-:::
-::: {.seg}
-::: {.r}
-Role 2
-:::
-::: {.p}
-Subject of study
-:::
-:::
-::: {.seg}
-::: {.r}
-Role 3
-:::
-::: {.p}
-Elicitation infra
-:::
-:::
-:::
-
-| Project | AI's role | Where the "truth" comes from |
-|---|---|---|
-| **Daktari Dx / RLEF** | Data generator | Expert validation of synthetic data |
-| **AugMed** | Subject of study | Contested: clinical vs. economic value |
-| **Sentinel** | Elicitation infrastructure | Dispersed expert judgment, aggregated |
+![](images/three-roles-spine.svg){fig-align="center" width="92%"}
 
 ::: {.fragment}
-The methodological spine is the same in all three: **when ground truth is
-scarce or contested, the design problem is how to elicit, validate, and
-aggregate expert judgment.**
+Same spine in all three — **the design problem is always how to elicit,
+validate, and aggregate expert judgment.** That's the sentence to reuse in
+grants and fundraising.
 :::
 
 ::: {.notes}
