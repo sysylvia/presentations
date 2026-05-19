@@ -32,18 +32,24 @@ execute:
 THE THROUGH-LINE
 :::
 
-Across very different projects, my lab keeps hitting the same methodological
-problem:
+Epidemiology is, at bottom, the science of measuring what we can't observe
+directly — validating against an imperfect gold standard, reading noisy
+surveillance signals, living with sensitivity and specificity instead of
+certainty.
+
+AI doesn't escape that problem. **It sharpens it.**
 
 > **How do you evaluate an AI system when the ground truth is scarce,
 > expensive, or contested?**
 
-Three projects, three different *roles* AI plays in answering it.
+Three lab projects — three different *roles* AI plays in answering it.
 
 ::: {.notes}
-[~30 sec] Open here. Don't list the projects yet — name the shared problem
-first so the three slides feel like one argument, not a portfolio tour.
-Transition: "Here's the first role — AI as the thing that *makes* the data."
+[~30 sec] Open on the epi-native framing — this room already lives the
+"no clean gold standard" problem, so the AI question lands as familiar, not
+foreign. Don't list the projects yet; name the shared problem first so the
+three slides feel like one argument, not a portfolio tour.
+Transition: "First role — AI as the thing that *makes* the data."
 :::
 
 ## Daktari Dx — AI as **data generator** {.smaller}
@@ -52,15 +58,47 @@ Transition: "Here's the first role — AI as the thing that *makes* the data."
 ROLE 1 · DATA GENERATOR
 :::
 
+::: {.statstrip}
+::: {.stat}
+::: {.num}
+&gt;90%
+:::
+::: {.lab}
+of clinical-AI training data comes from high-income settings
+:::
+:::
+::: {.stat}
+::: {.num}
+&lt;3%
+:::
+::: {.lab}
+represents African populations
+:::
+:::
+::: {.stat}
+::: {.num}
+30,576
+:::
+::: {.lab}
+clinical-AI papers analyzed to document the gap
+:::
+:::
+:::
+
+::: {.srcnote}
+Celi et al., *PLOS Digital Health* (2022)
+:::
+
 :::: {.columns}
 
 ::: {.column width="55%"}
-**The problem:** clinical-AI "data deserts." >90% of clinical AI training
-data is from high-income settings; African populations are <3%.
+**The validation paradox:** you can't check synthetic data against the
+real data that doesn't exist. So **expert judgment *is* the ground truth.**
 
-**Daktari Dx:** the platform where we run an **RLEF** approach —
-expert clinicians validate AI-generated clinical vignettes *before* they
-enter evaluation or training corpora.
+**Daktari Dx** runs an **RLEF** loop — expert clinicians validate
+AI-generated clinical vignettes *before* they enter training or evaluation
+corpora. RLHF learns what people *like*; RLEF learns to do what experts
+*do*.
 :::
 
 ::: {.column width="45%"}
@@ -69,16 +107,21 @@ enter evaluation or training corpora.
 Generating *and* filtering synthetic clinical encounters, with expert
 feedback as the validation loop.
 :::
-
-**Funding / partner:** Gillings Innovation Lab — Kenya pilot launching,
-CFK Africa partner site.
 :::
 
 ::::
 
+::: {.statusline}
+**Status:** Kibera pilot with **CFK Africa** (≈250k residents, 20+ yr
+partner) · Phase 1 complete — 10 clinicians interviewed, mobile-first
+elicitation UI · Funder: **Gillings Innovation Lab**
+:::
+
 ::: {.notes}
-[~75 sec] Emphasize the validation paradox: you can't check synthetic data
-against real data you don't have — so expert judgment *is* the ground truth.
+[~75 sec] Lead with the stat strip — the data-desert numbers are the hook.
+Then the validation paradox: you can't check synthetic data against real
+data you don't have, so expert judgment *is* the ground truth. The RLHF vs
+RLEF line is the one-sentence methods contribution — say it slowly.
 Transition: "In the next project AI isn't the data source — it's the thing
 under the microscope."
 :::
@@ -89,14 +132,20 @@ under the microscope."
 ROLE 2 · SUBJECT OF STUDY
 :::
 
+> **Epic's sepsis model: deployed across 56% of US hospitals — and missed
+> 67% of cases.** It passed technical validation and still failed in the
+> world.
+
 :::: {.columns}
 
 ::: {.column width="55%"}
-**Question:** when clinicians work *with* AI, where does the
-physician–AI team actually do better — and where does reliance go wrong?
+That gap *is* the contested-ground-truth problem: clinical correctness and
+the economic value of a decision are **not the same target**.
 
-A methodology for **evaluating AI clinical reasoning** and measuring
-asymmetric reliance and heterogeneous response (AIM-AHEAD partnership).
+**Question:** when clinicians work *with* AI, where does the physician–AI
+team actually beat either alone — and where does reliance go wrong? We
+measure **asymmetric reliance** and **heterogeneous response**, not model
+accuracy in isolation.
 :::
 
 ::: {.column width="45%"}
@@ -105,15 +154,20 @@ asymmetric reliance and heterogeneous response (AIM-AHEAD partnership).
 The object of measurement — we study physician–AI complementarity, not
 the model alone.
 :::
-
-Splitting into two papers: **medical** (PLOS Digital Health, CRC-specific)
-and **econ** (Management Science — reliance + heterogeneity framing).
 :::
 
 ::::
 
+::: {.statusline}
+**Status:** NIH **AIM-AHEAD** partnership · two papers in progress —
+**medical** (*PLOS Digital Health*, CRC screening) and **econ**
+(*Management Science*, reliance + heterogeneity)
+:::
+
 ::: {.notes}
-[~70 sec] The EPID hook here: "ground truth is contested" — clinical
+[~70 sec] Open with the Epic sepsis number — it makes "contested ground
+truth" concrete in one breath: a model can be technically validated and
+still wrong about the thing that matters. Then the EPID hook: clinical
 correctness vs. economic value of a decision aren't the same target.
 Transition: "Third role — AI not as data, not as subject, but as
 infrastructure for getting at truth that lives in experts' heads."
@@ -128,34 +182,71 @@ ROLE 3 · ELICITATION INFRASTRUCTURE
 :::: {.columns}
 
 ::: {.column width="55%"}
-**Setting:** credence-good markets — quality is hard to observe even
-*after* the fact, so expert judgment is the only signal.
+**The structure is one you know:** in credence-good markets, quality is
+hard to observe even *after* the fact — exactly like syndromic
+surveillance, where there's no clean gold standard, just dispersed noisy
+signals.
 
-**Sentinel** (the lab's information-markets platform): uses AI to
-*scale expert elicitation* under uncertainty — a mechanism-design
-approach to surfacing dispersed expert knowledge.
+**Sentinel** is a **prediction-market + AI** platform for community-level
+epidemiological surveillance: a cost-effective signal of disease *and*
+socioeconomic trends, built by scaling expert and community elicitation
+under uncertainty.
 :::
 
 ::: {.column width="45%"}
 ::: {.callout-note}
 ### AI's role
-Market infrastructure — AI elicits and aggregates expert judgment at
+Market infrastructure — AI elicits and aggregates dispersed judgment at
 scale, rather than substituting for it.
 :::
 :::
 
 ::::
 
+::: {.statusline}
+**Why this room:** participatory surveillance reframed as mechanism
+design — the closest of the three to core epidemiologic practice
+:::
+
 ::: {.notes}
-[~70 sec] Keep this tight — it's the least familiar to an EPID audience.
-The point is the *pattern*, not the platform internals. Transition into
-the synthesis: "Step back and the three line up."
+[~70 sec] This is the slide that should land hardest here — it's literally
+epidemiological surveillance. Anchor on the analogy: credence goods behave
+like syndromic surveillance — no clean gold standard, only dispersed noisy
+signals. The point is the *pattern*, not the platform internals.
+Transition into the synthesis: "Step back and the three line up."
 :::
 
 ## One problem, three roles {.smaller}
 
 ::: {.eyebrow}
 SYNTHESIS
+:::
+
+::: {.rolebar}
+::: {.seg}
+::: {.r}
+Role 1
+:::
+::: {.p}
+Data generator
+:::
+:::
+::: {.seg}
+::: {.r}
+Role 2
+:::
+::: {.p}
+Subject of study
+:::
+:::
+::: {.seg}
+::: {.r}
+Role 3
+:::
+::: {.p}
+Elicitation infra
+:::
+:::
 :::
 
 | Project | AI's role | Where the "truth" comes from |
