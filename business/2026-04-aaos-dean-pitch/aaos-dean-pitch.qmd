@@ -1,0 +1,325 @@
+---
+title: "AAOS"
+subtitle: "Researcher-Centered AI for Academic Work"
+author: "Sean Sylvia, Ph.D."
+institute: "DHEPLab, Gillings School of Global Public Health"
+date: today
+format:
+  revealjs:
+    theme: dheplab-theme.scss
+    slide-number: true
+    progress: true
+    hash: true
+    center: false
+    width: 1920
+    height: 1080
+    margin: 0.05
+    transition: fade
+    transition-speed: default
+    logo: ""
+    footer: "AAOS | Sean Sylvia | DHEPLab"
+---
+
+## The Problem {data-background-color="#13294B"}
+
+Faculty AI adoption is bimodal --- and **both modes are losing propositions** for Gillings.
+
+:::: {.columns}
+::: {.column width="48%"}
+::: {.card}
+**1. The Avoiders**
+
+Faculty who steer clear of AI **fall behind on productivity** --- slower grant turnaround, manual literature reviews, missed methodological advances.
+:::
+:::
+
+::: {.column width="48%"}
+::: {.card .featured}
+**2. The Invisible Users**
+
+Faculty who paste grants and manuscripts into ChatGPT **expose the school** to voice erosion, hallucinated citations, and HIPAA-adjacent data leakage.
+:::
+:::
+::::
+
+**Neither failure mode produces institutional learning, ethical guardrails, or competitive positioning.**
+
+::: {.notes}
+[~2 min] Name the risks the Dean is already worried about. Data leakage. Citation hallucinations. Voice erosion. Let her see that you understand the problem before presenting the solution.
+:::
+
+
+## Why the Usual Answers Don't Work
+
+::: {.eyebrow}
+THE GAP
+:::
+
+:::: {.columns}
+::: {.column width="55%"}
+
+**ChatGPT / Claude direct**
+
+- Voice erosion, hallucinated citations, data leakage, no audit trail
+
+**Custom GPTs / Copilot**
+
+- Same problems, dressed up
+
+**"Train faculty better"**
+
+- Doesn't scale, doesn't solve data risk, doesn't differentiate Gillings
+:::
+::: {.column width="45%"}
+::: {.callout-important}
+### The Missing Piece
+
+A platform that makes ethical AI use **the default, not the effort**.
+
+Not a policy. Not a training. A product.
+:::
+:::
+::::
+
+::: {.notes}
+[~1.5 min] Quick dismissal of alternatives. The point is that none of them solve the institutional problem. Policy doesn't scale; training doesn't stick; tools without guardrails create liability.
+:::
+
+
+## What AAOS Is
+
+::: {.eyebrow}
+THE SOLUTION
+:::
+
+A researcher-centered, agent-assisted platform for academic workflows.
+
+**Agents serve the researcher's reasoning --- never substitute for it.**
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.card .featured}
+**Provenance Everywhere**
+
+Every AI-generated passage carries a visible marker: agent, model, inputs, timestamp.
+:::
+
+::: {.card}
+**Citation Integrity**
+
+Agents cite only sources verifiable in the researcher's own library. Hallucinated citations are architecturally prevented.
+:::
+:::
+
+::: {.column width="50%"}
+::: {.card}
+**No Silent Drafting**
+
+Agent outputs enter the research record only after explicit researcher acceptance.
+:::
+
+::: {.card .featured}
+**Full Audit Trail**
+
+Any coauthor, IRB reviewer, or funder can reconstruct who contributed what.
+:::
+:::
+::::
+
+**The stack:** Individual researcher (AAOS) &rarr; Lab coordination &rarr; School-wide platform
+
+::: {.notes}
+[~2 min] These are not values statements --- they are features visible on every screen. The four commitments are the differentiator. The three-layer stack shows trajectory: this is the foundation for institutional AI infrastructure.
+:::
+
+
+## Live Demo {data-background-color="#13294B" .center}
+
+::: {.eyebrow style="color: #7BB8E0;"}
+3 MINUTES
+:::
+
+:::: {.columns}
+::: {.column width="50%"}
+
+| Time | Action |
+|------|--------|
+| 0:00 | Empty project |
+| 0:20 | Drop in NIH RFA &rarr; structured extraction |
+| 0:50 | Upload 5 papers &rarr; 3 aims with citations |
+
+:::
+::: {.column width="50%"}
+
+| Time | Action |
+|------|--------|
+| 1:40 | Edit aim &rarr; edit logged side-by-side |
+| 2:10 | Reviewer-lens critique by NIH criteria |
+| 2:40 | Export &rarr; provenance footer |
+
+:::
+::::
+
+> Every beat of the demo visibly reinforces one of the four ethics commitments.
+
+::: {.notes}
+[~3 min] THIS IS THE CENTER OF THE MEETING. The slide is a placeholder; switch to the live app. The demo is the proof. Slides before this are setup; slides after are the close.
+:::
+
+
+## Why Gillings, Why Now
+
+::: {.eyebrow}
+THE OPPORTUNITY
+:::
+
+- **Public health is the hardest case.** HIPAA, IRB, human subjects, data sovereignty. If ethical AI works here, it works everywhere.
+
+- **First-mover advantage.** No peer school has an institutional AI research platform with this ethics framing.
+
+- **Publishable outcome.** Evaluation data from a Gillings pilot becomes a paper every public health school will cite.
+
+- **Recruiting and retention.** "Gillings gives faculty an ethical AI platform" is a real differentiator on the market.
+
+::: {.notes}
+[~1.5 min] Public health as hardest case is the strategic insight. If Gillings solves ethical AI for public health, that's a story --- not just infrastructure.
+:::
+
+
+## Two Deliverables for One Investment {data-background-color="#13294B"}
+
+::: {.eyebrow style="color: #7BB8E0;"}
+RESEARCH INSTRUMENT
+:::
+
+The \$60k seed tier doesn't just buy a platform. It buys **two deliverables:**
+
+:::: {.columns}
+::: {.column width="48%"}
+::: {.card}
+**1. Working Pilot**
+
+5 faculty using AI in their research through structured, auditable workflows.
+:::
+:::
+
+::: {.column width="48%"}
+::: {.card .featured}
+**2. Evaluation Study**
+
+IRB-backed research on how faculty adopt AI --- adoption rates, workflow changes, time-on-task, integrity compliance.
+:::
+:::
+::::
+
+::: {.callout-note}
+### The Reframe
+This is a **research project** with infrastructure as a byproduct --- not infrastructure with a hope of research.
+:::
+
+::: {.notes}
+[~1.5 min] This is the slide that reframes the entire investment logic. If the Dean asks "how do I justify this?" --- this is the answer. The platform is what we learn from running the study.
+:::
+
+
+## The Ask: A Three-Tier Ladder
+
+::: {.eyebrow}
+INVESTMENT
+:::
+
+| Tier | Scope | Cost | Duration | Deliverable |
+|------|-------|------|----------|-------------|
+| **Seed** | 5 faculty, one workflow | **\$50--75k** | 6 months | Adoption data, working pilot |
+| **Pilot** | 15--20 faculty, production | \$200--300k | 12 months | Evaluation paper, polished platform |
+| **Platform** | School-wide, on-premise inference | \$600k--1M | 24 months | Institutional infrastructure, HIPAA pathway |
+
+Each tier's success unlocks the next. **No long-term commitment today.**
+
+::: {.notes}
+[~1 min] The ladder makes the \$60k ask feel like a rounding error. That's the point. Anchor high with the Platform tier, then come down to the easy yes. Each tier produces a concrete deliverable --- there's no sunk cost without a return.
+:::
+
+
+## What's Already True
+
+::: {.eyebrow}
+PROOF
+:::
+
+:::: {.columns}
+::: {.column width="55%"}
+
+- **Prototype built.** Solo. Nights and weekends. Zero school budget.
+
+- **UNC-approved infrastructure.** Supabase, Anthropic institutional agreement.
+
+- **Multi-tenant from day one.** Adding more faculty is a UI unlock, not a rewrite.
+
+- **Three-stage workflow runs end-to-end:**
+  - RFA ingestion and structured extraction
+  - Specific aims with PI-sourced citations
+  - Reviewer-lens critique by NIH criteria
+:::
+::: {.column width="45%"}
+::: {.callout-tip}
+### Every stage includes:
+
+- Full provenance logging
+- Edit tracking against agent output
+- Citation verification badges
+- Human-readable export
+:::
+:::
+::::
+
+::: {.notes}
+[~1 min] This slide confirms what the demo just showed. The prototype is real, running, and built on infrastructure the school already approves.
+:::
+
+
+## Seed Tier: The Easy Yes {data-background-color="#13294B" .center}
+
+::: {.eyebrow style="color: #7BB8E0;"}
+THE CLOSE
+:::
+
+**\$60k | 6 months | 5 faculty**
+
+In 6 months, you get **two things:**
+
+A working pilot with real usage data, and a draft paper.
+
+If the data says no, we stop. We're out \$60k and we've learned something defensible.
+
+If it says yes, we have evidence for Tier 1 --- and a submission-ready manuscript with Gillings as the site.
+
+::: {.callout-note}
+### Next Step
+Pick 5 faculty pilot volunteers and confirm go/no-go within 30 days.
+
+**Contact:** Sean Sylvia, DHEPLab (sean.sylvia@unc.edu)
+:::
+
+::: {.notes}
+[~1 min] Close with one concrete action. Not "let me know your thoughts." A specific date and a specific next step. Do not leave the meeting without a target date for the decision.
+:::
+
+
+## {data-background-color="#13294B" .center}
+
+::: {style="text-align: center;"}
+
+<h2 style="color: white; font-size: 2em;">Thank You</h2>
+
+<p style="color: #7BB8E0; font-size: 1.2em;">Questions?</p>
+
+<br>
+
+**Sean Sylvia, Ph.D.**
+
+DHEPLab | Gillings School of Global Public Health
+
+sean.sylvia@unc.edu
+
+:::

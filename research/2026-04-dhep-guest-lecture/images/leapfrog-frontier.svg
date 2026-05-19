@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 550">
+  <!-- Background -->
+  <rect width="1000" height="550" fill="#ffffff"/>
+
+  <!-- Grid lines (subtle) -->
+  <g stroke="#e8e8e8" stroke-width="1">
+    <!-- Horizontal grid -->
+    <line x1="100" y1="450" x2="950" y2="450"/>
+    <line x1="100" y1="375" x2="950" y2="375" stroke-dasharray="3,3"/>
+    <line x1="100" y1="300" x2="950" y2="300" stroke-dasharray="3,3"/>
+    <line x1="100" y1="225" x2="950" y2="225" stroke-dasharray="3,3"/>
+    <line x1="100" y1="150" x2="950" y2="150" stroke-dasharray="3,3"/>
+    <line x1="100" y1="75" x2="950" y2="75" stroke-dasharray="3,3"/>
+  </g>
+
+  <!-- Axes -->
+  <g stroke="#13294B" stroke-width="2.5">
+    <line x1="100" y1="50" x2="100" y2="450"/>
+    <line x1="100" y1="450" x2="950" y2="450"/>
+    <!-- Arrow heads -->
+    <polygon points="100,50 95,62 105,62" fill="#13294B"/>
+    <polygon points="950,450 938,445 938,455" fill="#13294B"/>
+  </g>
+
+  <!-- Axis labels -->
+  <text x="45" y="250" text-anchor="middle" fill="#13294B" font-family="Source Sans 3, sans-serif" font-size="18" font-weight="600" transform="rotate(-90, 45, 250)">Productivity</text>
+  <text x="525" y="500" text-anchor="middle" fill="#13294B" font-family="Source Sans 3, sans-serif" font-size="18" font-weight="600">Time</text>
+
+  <!-- Technology Generation Curves (S-curves starting from Y=0) -->
+  <!-- Generation 1 - Gray - starts earliest, plateaus lowest (~300) -->
+  <path id="gen1-curve"
+        d="M120,450 C180,448 220,440 280,400 C340,340 400,290 480,270 C560,255 650,250 750,248 C850,246 950,245 950,245"
+        stroke="#9CA3AF" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
+
+  <!-- Generation 2 - Blue - starts middle, plateaus higher (~180) -->
+  <path id="gen2-curve"
+        d="M280,450 C340,445 380,430 440,380 C500,310 560,240 640,195 C720,160 800,145 880,138 C920,135 950,133 950,133"
+        stroke="#4B9CD3" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
+
+  <!-- Generation 3 - Gold - starts latest, plateaus highest (~80) -->
+  <path id="gen3-curve"
+        d="M500,450 C560,440 600,410 660,350 C720,270 780,180 840,120 C880,90 920,75 950,68"
+        stroke="#D97706" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
+
+  <!-- Technology Frontier (highlighted) - traces the highest curve at each point -->
+  <path id="frontier"
+        d="M120,450 C180,448 220,440 280,400 C340,340 400,290 440,275
+           C460,268 480,262 500,258
+           C520,252 540,245 560,235
+           C600,210 640,195 680,175
+           C720,155 760,135 800,115
+           C840,95 880,82 920,73 L950,68"
+        stroke="#D97706" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+  <!-- Frontier label with arrow -->
+  <path d="M200,120 Q220,140 235,165" stroke="#D97706" stroke-width="2" fill="none" marker-end="url(#arrow-gold)"/>
+  <rect x="120" y="85" width="160" height="40" rx="4" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="200" y="110" text-anchor="middle" fill="#D97706" font-family="Source Sans 3, sans-serif" font-size="14" font-weight="700">TECHNOLOGY</text>
+  <text x="200" y="122" text-anchor="middle" fill="#D97706" font-family="Source Sans 3, sans-serif" font-size="14" font-weight="700">FRONTIER</text>
+
+  <!-- Generation labels -->
+  <text x="800" y="238" fill="#9CA3AF" font-family="Source Sans 3, sans-serif" font-size="13" font-weight="600">Gen 1</text>
+  <text x="900" y="125" fill="#4B9CD3" font-family="Source Sans 3, sans-serif" font-size="13" font-weight="600">Gen 2</text>
+  <text x="910" y="58" fill="#D97706" font-family="Source Sans 3, sans-serif" font-size="13" font-weight="600">Gen 3</text>
+
+  <!-- "Now" vertical line -->
+  <line id="now-line" x1="600" y1="50" x2="600" y2="450" stroke="#13294B" stroke-width="2" stroke-dasharray="8,4"/>
+  <rect x="575" y="455" width="50" height="22" rx="3" fill="#13294B"/>
+  <text x="600" y="470" text-anchor="middle" fill="white" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="700">NOW</text>
+
+  <!-- High-Income Country Path (solid black, with "drag" effect) -->
+  <!-- Path stays below frontier, approaches asymptotically, shows momentum/lag -->
+  <path id="hic-path"
+        d="M120,448 C160,445 200,435 260,400
+           C320,355 380,310 440,290
+           C500,275 540,268 580,262
+           C620,256 660,248 700,238
+           C740,228 780,218 820,208
+           C860,200 900,195 950,192"
+        stroke="#13294B" stroke-width="4" fill="none"/>
+
+  <!-- Drag/momentum indicators on HIC path (small arrows showing resistance) -->
+  <g fill="#13294B" opacity="0.4">
+    <path d="M300,375 l-15,-8 l0,16 z"/>
+    <path d="M400,310 l-15,-8 l0,16 z"/>
+    <path d="M500,280 l-15,-6 l0,12 z"/>
+  </g>
+
+  <!-- HIC path label -->
+  <rect x="140" y="355" width="200" height="55" rx="5" fill="#f3f4f6" stroke="#13294B" stroke-width="2"/>
+  <text x="240" y="375" text-anchor="middle" fill="#13294B" font-family="Source Sans 3, sans-serif" font-size="13" font-weight="700">High-Income System</text>
+  <text x="240" y="392" text-anchor="middle" fill="#13294B" font-family="Source Sans 3, sans-serif" font-size="11">Technical + Institutional Debt</text>
+  <text x="240" y="405" text-anchor="middle" fill="#6B7280" font-family="Source Sans 3, sans-serif" font-size="10" font-style="italic">(path dependence creates drag)</text>
+
+  <!-- LMIC Starting Point -->
+  <circle cx="600" cy="320" r="8" fill="#4B9CD3" stroke="#13294B" stroke-width="2"/>
+
+  <!-- LMIC Option 1: Follow HIC Path (approaches HIC from below, converges gradually) -->
+  <path id="lmic-option1"
+        d="M600,320
+           C640,315 680,305 720,290
+           C760,278 800,265 840,255
+           C880,248 920,243 950,240"
+        stroke="#4B9CD3" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
+
+  <!-- Option 1 label -->
+  <rect x="750" y="275" width="130" height="40" rx="4" fill="#E8F4FC" stroke="#4B9CD3" stroke-width="2"/>
+  <text x="815" y="292" text-anchor="middle" fill="#4B9CD3" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700">LMIC Option 1:</text>
+  <text x="815" y="307" text-anchor="middle" fill="#4B9CD3" font-family="Source Sans 3, sans-serif" font-size="10">Follow HIC Path</text>
+
+  <!-- LMIC Option 2: Leapfrog (jumps toward Gen 3, with uncertainty cone) -->
+
+  <!-- Uncertainty cone (wider, bounded by frontier at top) -->
+  <path id="uncertainty-cone"
+        d="M600,320
+           C620,310 640,290 660,265
+           C700,210 750,160 800,130
+           C840,110 890,98 950,95
+           L950,72
+           C900,75 850,82 800,95
+           C750,115 700,145 660,190
+           C640,220 620,255 600,320 Z"
+        fill="#D97706" fill-opacity="0.18" stroke="#D97706" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Leapfrog path (central trajectory within cone) -->
+  <path id="lmic-option2"
+        d="M600,320
+           C630,295 660,260 700,210
+           C740,165 790,125 840,100
+           C880,85 920,78 950,75"
+        stroke="#D97706" stroke-width="4" fill="none"/>
+
+  <!-- Option 2 label -->
+  <rect x="660" y="100" width="130" height="55" rx="4" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="725" y="118" text-anchor="middle" fill="#D97706" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="700">LMIC Option 2:</text>
+  <text x="725" y="133" text-anchor="middle" fill="#D97706" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="700">LEAPFROG</text>
+  <text x="725" y="148" text-anchor="middle" fill="#92400E" font-family="Source Sans 3, sans-serif" font-size="10" font-style="italic">(high reward, high risk)</text>
+
+  <!-- Question marks in uncertainty zone -->
+  <text x="720" y="160" fill="#D97706" font-family="Source Sans 3, sans-serif" font-size="20" font-weight="bold" opacity="0.35">?</text>
+  <text x="780" y="130" fill="#D97706" font-family="Source Sans 3, sans-serif" font-size="16" font-weight="bold" opacity="0.3">?</text>
+  <text x="850" y="100" fill="#D97706" font-family="Source Sans 3, sans-serif" font-size="14" font-weight="bold" opacity="0.25">?</text>
+
+  <!-- Arrow marker definitions -->
+  <defs>
+    <marker id="arrow-gold" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D97706"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="525" y="28" text-anchor="middle" fill="#13294B" font-family="Instrument Serif, serif" font-size="24" font-weight="400">The Leapfrog Opportunity</text>
+
+</svg>

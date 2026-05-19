@@ -8,3 +8,6 @@ _site/
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Local Netlify folder
+.netlify
