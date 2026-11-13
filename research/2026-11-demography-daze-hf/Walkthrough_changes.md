@@ -18,6 +18,6 @@ All requested changes C01–C20 and P01 have been implemented. The 14-slide main
 | C17–C18 | Single final website/curriculum-table/source/docs/contribution slide with Sean and lab contacts |
 | C19–C20 | Collaborators and study institutions at slide 2, including UNC, Stanford and Sichuan logos; UNR credits retained |
 
-Slide notes contain evidence limits and citations. Current public resource URLs were checked against the parallel release work and live GitHub/website. That work remains in separate unmerged PRs; no packaged release is claimed. Original v7 exports and the prior source commit remain available.
+Slide notes contain evidence limits and citations. Current public resource URLs were checked against the parallel release work and live GitHub/website. The latest November 13 check confirms both source/documentation PRs merged and the website deployed. No packaged release or hosted CareLoom runtime is claimed. Original v7 exports and the prior source commit remain available.
 
 The PDF uses verified slide images plus clickable links and a static existing video thumbnail. The editable HTML/source retains SVG plots, HTML tables and live video.

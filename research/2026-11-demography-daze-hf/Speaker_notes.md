@@ -40,7 +40,7 @@ Sources: Healthy Future curriculum (English September 2025); Chen et al., medRxi
 
 ## 9. Open Source and Extensible — 35 seconds
 
-[35 seconds] Invite reuse while distinguishing software from curriculum licensing. CPC seed funding supported opening the infrastructure and English-language access. New implementation and documentation changes are under review in separate PRs; this deck links the existing public material. No installable packaged release is claimed.
+[35 seconds] Invite reuse while distinguishing software from curriculum licensing. CPC seed funding supported opening the infrastructure and English-language access. The November 13 implementation and documentation updates are merged to main; this deck links current public material. No installable packaged release is claimed.
 Sources: CareLoom LICENSE; curriculum attribution page; Sean Sylvia CV, 2024–25 CPC award “Open Sourcing a Maternal and Child Health Home Visiting Platform Called Healthy Future”; https://dhep.org/healthy-future/.
 
 ## 10. The initial China randomized trial — 95 seconds
@@ -65,7 +65,7 @@ Source: Belgium talk, Healthy Future 2.0 planning and Sean's requested next-phas
 
 ## 14. Reuse, adapt and contribute — 45 seconds
 
-[45 seconds] Close with one place to start: the existing project website. The compact table summarizes recurring content, not an exhaustive session-by-session schedule. The PDF and software have different licenses. Both source and guides are public; new PRs remain under review and no packaged release is announced. Invite researchers, implementers and developers to contact Sean or the lab. Offer participation in adaptation and evaluation rather than promising implementation support.
+[45 seconds] Close with one place to start: the existing project website. The compact table summarizes recurring content, not an exhaustive session-by-session schedule. The PDF and software have different licenses. Both source and guides are public; the November 13 source/docs updates are merged, while no packaged release or hosted runtime is announced. Invite researchers, implementers and developers to contact Sean or the lab. Offer participation in adaptation and evaluation rather than promising implementation support.
 Sources: https://dhep.org/healthy-future/; https://dhep.org/contact/; CareLoom LICENSE, guides and contributing instructions; Healthy Future curriculum, September 2025.
 
 ## 15. Backup: selected secondary outcomes — 0 seconds

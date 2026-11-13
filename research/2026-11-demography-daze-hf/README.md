@@ -28,4 +28,4 @@ Logo sources: UNC official University Signature package (identity.unc.edu, Augus
 
 ## Publishing
 
-This repository uses the existing `sylvia-talks` Netlify site at `talks.ssylvia.io` (root `_publish.yml`). GitHub stores editable source. Retain the currently published site and add/replace only the current talk’s HTML and v8 PDF. Do not remove older talk assets or the original v7 PDF. Current website/CareLoom implementation PRs remain separate; source availability is not a packaged public release.
+This repository uses the existing `sylvia-talks` Netlify site at `talks.ssylvia.io` (root `_publish.yml`). GitHub stores editable source. Retain the currently published site and add/replace only the current talk’s HTML and v8 PDF. Do not remove older talk assets or the original v7 PDF. The November 13 website/CareLoom source and documentation updates are merged. A packaged GitHub release and hosted runtime are separate from public source availability.
