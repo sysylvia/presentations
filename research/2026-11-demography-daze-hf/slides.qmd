@@ -99,8 +99,9 @@ Source: https://dhep.org/healthy-future/ (collaborators and linked publications;
 
 ::: {.big-stat}
 ≈4 million
+<span class="stat-unit">community health workers</span>
 :::
-CHWs reported by **93 countries**<br>
+Reported by **93 countries**<br>
 <span class="small">WHO national health workforce accounts, 2024</span>
 
 ::: {.impact-stat}
@@ -109,7 +110,7 @@ CHWs reported by **93 countries**<br>
 :::
 <span class="small">Pooled home-visit trials in programme settings in South Asia and sub-Saharan Africa (2013).</span>
 :::
-::: {.column width="50%"}
+::: {.column .fragment width="50%" data-fragment-index="0"}
 
 ### Delivery challenges
 
@@ -133,7 +134,7 @@ Which content is most valuable for this family?
 :::
 
 ::: {.notes}
-[65 seconds] CHWs are a large global workforce; the four-million figure is reporting from 93 countries, not a census of home visitors. The home-visit estimate is a historical pooled effect on neonatal mortality in programme-setting trials in South Asia and sub-Saharan Africa, not a prediction for every programme or for Healthy Future. WHO identifies training, supervision, quality and workload as implementation needs. The two highlighted content-allocation problems motivate our work: our stage-based system does not yet provide validated outcome-informed personalization. Do not describe all CHW programmes as uniformly one-size-fits-all or without data.
+[65 seconds] First show importance and reach. Advance once to reveal the delivery-challenges column. CHWs are a large global workforce; the four-million figure is reporting from 93 countries, not a census of home visitors. The home-visit estimate is a historical pooled effect on neonatal mortality in programme-setting trials in South Asia and sub-Saharan Africa, not a prediction for every programme or for Healthy Future. WHO identifies training, supervision, quality and workload as implementation needs. The two highlighted content-allocation problems motivate our work: our stage-based system does not yet provide validated outcome-informed personalization. Do not describe all CHW programmes as uniformly one-size-fits-all or without data.
 Sources: WHO EB156/15 (20 December 2024), §9; Kirkwood et al. 2013, doi:10.1016/S0140-6736(13)60095-1, pooled programme-setting estimate; WHO 2018 CHW guideline, selection/training, supportive supervision, workload and data recommendations.
 :::
 
@@ -163,12 +164,8 @@ Families at the same developmental stage receive the same scheduled content, des
 :::
 ::::
 
-::: {.source-note}
-Adapted from the [Belgium talk](https://talks.ssylvia.io/research/2026-03-reap-belgium-hf/slides.html#/the-problem-one-visit-many-needs). [Healthy Future protocol](https://doi.org/10.1136/bmjopen-2022-065403).
-:::
-
 ::: {.notes}
-[45 seconds] This is the Belgium framing: a broad maternal and child health agenda competes for one visit. Responsive caregiving is part of the broader agenda, not a claim that the original Healthy Future trial tested a separate stimulation intervention. For Healthy Future, stage determines scheduled content; families at that stage still differ. Transition to the integrated programme.
+[45 seconds] A broad maternal and child health agenda competes for one visit. Responsive caregiving is part of the broader agenda, not a claim that the original Healthy Future trial tested a separate stimulation intervention. For Healthy Future, stage determines scheduled content; families at that stage still differ. Transition to the integrated programme.
 :::
 
 ## The Healthy Future Program {#program data-timing="45"}
@@ -318,7 +315,7 @@ ITT effects with 95% CIs; primary outcomes and selected secondary outcomes. [Che
 :::
 
 ::: {.notes}
-[95 seconds] Township randomization was stratified by county. Two intervention variants, 20 townships each, are pooled here versus 79 controls. The analysis cohort is 1,306; outcome-specific samples differ. The intervention lasted 12 months. The primary dietary-diversity estimate is modest and positive; hemoglobin and exclusive breastfeeding intervals include zero. Selected secondary outcomes show lower reported child illness and caregiver symptoms. These are selected secondary results with multiplicity-adjusted p-values in the backup, not an exhaustive list. Each primary row has its own labeled unit/scale; secondary effects are percentage points. Lines show 95% confidence intervals. Results are a preprint; the later recovered manuscript agrees on these values. Do not infer component-specific effects or validated personalization gains.
+[95 seconds] Township randomization was stratified by county. Two intervention variants, 20 townships each, are pooled here versus 79 controls. The analysis cohort is 1,306; outcome-specific samples differ. The intervention lasted 12 months. The primary dietary-diversity estimate is modest and positive; hemoglobin and exclusive breastfeeding intervals include zero. Selected secondary outcomes show lower reported child illness and caregiver symptoms. These are selected secondary results with multiplicity-adjusted p-values in source Table 4, not an exhaustive list. Each primary row has its own labeled unit/scale; secondary effects are percentage points. Lines show 95% confidence intervals. Results are a preprint; the later recovered manuscript agrees on these values. Do not infer component-specific effects or validated personalization gains.
 Sources: trial protocol doi:10.1136/bmjopen-2022-065403; Chen et al., medRxiv v2, Tables 3–4.
 :::
 
@@ -355,7 +352,9 @@ Family context + visit history <span>→</span> Predict benefit by topic <span>�
 :::
 
 ::: {.callout-note}
-**Research objective:** develop and evaluate predictive models for family-specific content allocation.
+### Research Objective
+
+Develop and evaluate predictive models for family-specific content allocation.
 :::
 
 ::: {.source-note}
@@ -434,88 +433,4 @@ We welcome contributions, questions, adaptations and ideas for new features.
 ::: {.notes}
 [45 seconds] Close with one place to start: the existing project website. The compact table summarizes recurring content, not an exhaustive session-by-session schedule. The PDF and software have different licenses. Both source and guides are public; the November 13 source/docs updates are merged, while no packaged release or hosted runtime is announced. Invite researchers, implementers and developers to contact Sean or the lab. Offer participation in adaptation and evaluation rather than promising implementation support.
 Sources: https://dhep.org/healthy-future/; https://dhep.org/contact/; CareLoom LICENSE, guides and contributing instructions; Healthy Future curriculum, September 2025.
-:::
-
-## Backup: selected secondary outcomes {#backup-secondary .backup data-timing="0"}
-
-{{< include figures/secondary.qmd >}}
-
-::: {.caption}
-Lower is better for these outcomes. FDR-adjusted p ≤ 0.036 within domains.<br>
-Preprint estimates. Child illness N = 1,148; caregiver symptoms N = 973.<br>
-Chen et al., 2026 preprint v2, Table 4
-:::
-
-::: {.notes}
-[Backup] Selected secondary outcomes from Table 4 do not replace the primary outcomes. The four shown retain FDR-adjusted p-values below .05 within their domains. Mental-health measures are symptoms or screening classifications, not clinical diagnoses. Effects concern the integrated intervention, not the software alone.
-
-Source: [preprint v2](https://www.medrxiv.org/content/10.64898/2026.03.27.26349570v2.full.pdf), Table 4. Binary estimates and intervals are displayed in percentage points.
-:::
-
-## Backup: primary-outcome estimates {#backup-primary .backup data-timing="0"}
-
-| Outcome / unit | ITT [95% CI] | N observed | p |
-|:---|:---|:---|:---|
-| Hemoglobin, g/L | −0.382 [−1.964, 1.200] | 904 | 0.636 |
-| Exclusive BF, probability | 0.057 [−0.060, 0.174] | 210 | 0.341 |
-| Dietary diversity, food groups | 0.207 [0.015, 0.399] | 938 | 0.035 |
-
-County fixed effects and post-double-selection LASSO covariates.<br>
-Standard errors clustered by township. Nominal p-values for primary outcomes.
-
-::: {.caption}
-Chen et al., medRxiv v2 (June 16, 2026), Table 3. Not peer reviewed.
-:::
-
-::: {.notes}
-[Backup] Main-slide breastfeeding results convert probability units to percentage points. Hemoglobin IPW sensitivity: −0.346 g/L, 95% CI −1.919 to 1.228. No new participant-level analysis was performed.
-
-Source: [preprint v2](https://www.medrxiv.org/content/10.64898/2026.03.27.26349570v2.full.pdf), Table 3.
-:::
-
-## Backup: interpretation and design limits {#backup-limits .backup data-timing="0"}
-
-| | |
-|:---|:---|
-| **Bundled intervention** | The trial does not isolate app effects. |
-| **Age-specific follow-up** | COVID restrictions reduced the younger-infant sample. |
-| **Exploratory analyses** | Post-hoc domain indices and entry timing require separate interpretation. |
-| **Transfer to new settings** | Adaptation and a new evaluation remain necessary. |
-
-::: {.notes}
-[Backup] The intervention variants were randomized, but the main analysis pools them. COVID disrupted follow-up and age-specific availability. Domain indices were post hoc. Prediction and entry timing do not establish mediation or a validated surrogate. Results in rural Sichuan do not establish transferability.
-
-Sources: [preprint v2](https://www.medrxiv.org/content/10.64898/2026.03.27.26349570v2.full.pdf); [protocol](https://doi.org/10.1136/bmjopen-2022-065403).
-:::
-
-## Backup: the CareLoom interface {#backup-interface .backup data-timing="0"}
-
-:::: {.columns}
-::: {.column width="45%"}
-
-### Program manager
-
-Configure curriculum and stages
-
-### Community health worker
-
-Schedule visits and deliver modules
-
-### Supervisor
-
-Review visit completion and reports
-:::
-::: {.column width="52%"}
-![](assets/careloom-public-screenshot.webp){.interface-image fig-alt="Public CareLoom login and visit-module screens, with no participant records."}
-
-::: {.caption}
-Public interface example, DHEPLab / CareLoom
-:::
-:::
-::::
-
-::: {.notes}
-[Backup] This public interface example illustrates program administration, CHW visits and supervision. It is not a live deployment or evidence of current production readiness. Android app, web administration and API responsibilities are distinct.
-
-Sources: [CareLoom](https://github.com/DHEPLab/careloom); [public screenshot](https://dhep.org/images/healthy-future-chw-app-screenshot.webp).
 :::

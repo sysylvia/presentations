@@ -1,6 +1,6 @@
 # Healthy Future — speaker notes and timing
 
-14 main slides, 720 planned seconds, including about one minute of the 2:18 demo. Four backups follow. No timed rehearsal performed.
+Version 9: 14 slides, 720 planned seconds, no backups. Slide 3 starts with the left column; advance once to reveal delivery challenges. About one minute is allocated to the 2:18 demo. No timed rehearsal performed.
 
 ## 1. Opening Healthy Future — 20 seconds
 
@@ -13,12 +13,12 @@ Source: https://dhep.org/healthy-future/ (collaborators and linked publications;
 
 ## 3. Home visits: global reach, demanding delivery — 65 seconds
 
-[65 seconds] CHWs are a large global workforce; the four-million figure is reporting from 93 countries, not a census of home visitors. The home-visit estimate is a historical pooled effect on neonatal mortality in programme-setting trials in South Asia and sub-Saharan Africa, not a prediction for every programme or for Healthy Future. WHO identifies training, supervision, quality and workload as implementation needs. The two highlighted content-allocation problems motivate our work: our stage-based system does not yet provide validated outcome-informed personalization. Do not describe all CHW programmes as uniformly one-size-fits-all or without data.
+[65 seconds] First show importance and reach. Advance once to reveal the delivery-challenges column. CHWs are a large global workforce; the four-million figure is reporting from 93 countries, not a census of home visitors. The home-visit estimate is a historical pooled effect on neonatal mortality in programme-setting trials in South Asia and sub-Saharan Africa, not a prediction for every programme or for Healthy Future. WHO identifies training, supervision, quality and workload as implementation needs. The two highlighted content-allocation problems motivate our work: our stage-based system does not yet provide validated outcome-informed personalization. Do not describe all CHW programmes as uniformly one-size-fits-all or without data.
 Sources: WHO EB156/15 (20 December 2024), §9; Kirkwood et al. 2013, doi:10.1016/S0140-6736(13)60095-1, pooled programme-setting estimate; WHO 2018 CHW guideline, selection/training, supportive supervision, workload and data recommendations.
 
 ## 4. The Problem: One Visit, Many Needs — 45 seconds
 
-[45 seconds] This is the Belgium framing: a broad maternal and child health agenda competes for one visit. Responsive caregiving is part of the broader agenda, not a claim that the original Healthy Future trial tested a separate stimulation intervention. For Healthy Future, stage determines scheduled content; families at that stage still differ. Transition to the integrated programme.
+[45 seconds] A broad maternal and child health agenda competes for one visit. Responsive caregiving is part of the broader agenda, not a claim that the original Healthy Future trial tested a separate stimulation intervention. For Healthy Future, stage determines scheduled content; families at that stage still differ. Transition to the integrated programme.
 
 ## 5. The Healthy Future Program — 45 seconds
 
@@ -45,7 +45,7 @@ Sources: CareLoom LICENSE; curriculum attribution page; Sean Sylvia CV, 2024–2
 
 ## 10. The initial China randomized trial — 95 seconds
 
-[95 seconds] Township randomization was stratified by county. Two intervention variants, 20 townships each, are pooled here versus 79 controls. The analysis cohort is 1,306; outcome-specific samples differ. The intervention lasted 12 months. The primary dietary-diversity estimate is modest and positive; hemoglobin and exclusive breastfeeding intervals include zero. Selected secondary outcomes show lower reported child illness and caregiver symptoms. These are selected secondary results with multiplicity-adjusted p-values in the backup, not an exhaustive list. Each primary row has its own labeled unit/scale; secondary effects are percentage points. Lines show 95% confidence intervals. Results are a preprint; the later recovered manuscript agrees on these values. Do not infer component-specific effects or validated personalization gains.
+[95 seconds] Township randomization was stratified by county. Two intervention variants, 20 townships each, are pooled here versus 79 controls. The analysis cohort is 1,306; outcome-specific samples differ. The intervention lasted 12 months. The primary dietary-diversity estimate is modest and positive; hemoglobin and exclusive breastfeeding intervals include zero. Selected secondary outcomes show lower reported child illness and caregiver symptoms. These are selected secondary results with multiplicity-adjusted p-values in source Table 4, not an exhaustive list. Each primary row has its own labeled unit/scale; secondary effects are percentage points. Lines show 95% confidence intervals. Results are a preprint; the later recovered manuscript agrees on these values. Do not infer component-specific effects or validated personalization gains.
 Sources: trial protocol doi:10.1136/bmjopen-2022-065403; Chen et al., medRxiv v2, Tables 3–4.
 
 ## 11. The backend separates content from delivery — 55 seconds
@@ -67,27 +67,3 @@ Source: Belgium talk, Healthy Future 2.0 planning and Sean's requested next-phas
 
 [45 seconds] Close with one place to start: the existing project website. The compact table summarizes recurring content, not an exhaustive session-by-session schedule. The PDF and software have different licenses. Both source and guides are public; the November 13 source/docs updates are merged, while no packaged release or hosted runtime is announced. Invite researchers, implementers and developers to contact Sean or the lab. Offer participation in adaptation and evaluation rather than promising implementation support.
 Sources: https://dhep.org/healthy-future/; https://dhep.org/contact/; CareLoom LICENSE, guides and contributing instructions; Healthy Future curriculum, September 2025.
-
-## 15. Backup: selected secondary outcomes — 0 seconds
-
-[Backup] Selected secondary outcomes from Table 4 do not replace the primary outcomes. The four shown retain FDR-adjusted p-values below .05 within their domains. Mental-health measures are symptoms or screening classifications, not clinical diagnoses. Effects concern the integrated intervention, not the software alone.
-
-Source: [preprint v2](https://www.medrxiv.org/content/10.64898/2026.03.27.26349570v2.full.pdf), Table 4. Binary estimates and intervals are displayed in percentage points.
-
-## 16. Backup: primary-outcome estimates — 0 seconds
-
-[Backup] Main-slide breastfeeding results convert probability units to percentage points. Hemoglobin IPW sensitivity: −0.346 g/L, 95% CI −1.919 to 1.228. No new participant-level analysis was performed.
-
-Source: [preprint v2](https://www.medrxiv.org/content/10.64898/2026.03.27.26349570v2.full.pdf), Table 3.
-
-## 17. Backup: interpretation and design limits — 0 seconds
-
-[Backup] The intervention variants were randomized, but the main analysis pools them. COVID disrupted follow-up and age-specific availability. Domain indices were post hoc. Prediction and entry timing do not establish mediation or a validated surrogate. Results in rural Sichuan do not establish transferability.
-
-Sources: [preprint v2](https://www.medrxiv.org/content/10.64898/2026.03.27.26349570v2.full.pdf); [protocol](https://doi.org/10.1136/bmjopen-2022-065403).
-
-## 18. Backup: the CareLoom interface — 0 seconds
-
-[Backup] This public interface example illustrates program administration, CHW visits and supervision. It is not a live deployment or evidence of current production readiness. Android app, web administration and API responsibilities are distinct.
-
-Sources: [CareLoom](https://github.com/DHEPLab/careloom); [public screenshot](https://dhep.org/images/healthy-future-chw-app-screenshot.webp).

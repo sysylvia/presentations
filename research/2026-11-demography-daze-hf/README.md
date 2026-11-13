@@ -1,8 +1,8 @@
 # Opening Healthy Future — Demography Daze 2026
 
-[View slides](https://talks.ssylvia.io/research/2026-11-demography-daze-hf/slides.html) · [Current PDF](slides-v8.pdf) · [Original v7 PDF](slides-v7.pdf)
+[View slides](https://talks.ssylvia.io/research/2026-11-demography-daze-hf/slides.html) · [Current PDF](slides-v9.pdf) · [Previous v8 PDF](slides-v8.pdf) · [Original v7 PDF](slides-v7.pdf)
 
-Version 8 applies Sean’s November 13 walkthrough. Fourteen main slides have a 12-minute planned route; four labeled backups follow the final resources/contact slide. The demo is 2:18 in full; notes allocate about one minute of playback. Original v7 artifacts and earlier source commit are retained.
+Version 9 applies Sean’s follow-up review. The deck has 14 slides, a 12-minute planned route and no backup slides. Slide 3 first shows importance/reach; advance once to reveal delivery challenges. The demo is 2:18 in full; notes allocate about one minute of playback. Original v7 artifacts and earlier source commit are retained.
 
 ## Edit and render
 
@@ -14,7 +14,7 @@ The typography follows the rendered Belgium reference: Instrument Serif headings
 
 ## Figures and evidence
 
-`evidence.json` contains published aggregate estimates from Chen et al., medRxiv v2 (June 16, 2026), Tables 3–4. Binary effects and their confidence bounds are multiplied by 100 for percentage points. No participant dataset or new analysis is included. `python3 render_trial_summary.py` regenerates the editable main forest plots; `python3 render_figures.py` regenerates the detailed backup figures and backend diagram. Tables remain editable HTML.
+`evidence.json` contains published aggregate estimates from Chen et al., medRxiv v2 (June 16, 2026), Tables 3–4. Binary effects and their confidence bounds are multiplied by 100 for percentage points. No participant dataset or new analysis is included. `python3 render_trial_summary.py` regenerates the editable main forest plots; `python3 render_figures.py` regenerates the earlier detailed figures and the backend diagram. Tables remain editable HTML.
 
 Architecture follows inspected CareLoom source revision 71468fae6ce0ca9cd434ebbf847f7eac30cee11e. Authored curriculum branching is separated from proposed learned prioritization. The standalone family-targeting and curriculum-paths slides were removed as requested. Trial uncertainty and the distinction between integrated-program and software effects remain explicit.
 
@@ -28,4 +28,4 @@ Logo sources: UNC official University Signature package (identity.unc.edu, Augus
 
 ## Publishing
 
-This repository uses the existing `sylvia-talks` Netlify site at `talks.ssylvia.io` (root `_publish.yml`). GitHub stores editable source. Retain the currently published site and add/replace only the current talk’s HTML and v8 PDF. Do not remove older talk assets or the original v7 PDF. The November 13 website/CareLoom source and documentation updates are merged. A packaged GitHub release and hosted runtime are separate from public source availability.
+This repository uses the existing `sylvia-talks` Netlify site at `talks.ssylvia.io` (root `_publish.yml`). GitHub stores editable source. Retain the currently published site and add/replace only the current talk’s HTML and v9 PDF. Do not remove older talk assets or the original v7 PDF. The November 13 website/CareLoom source and documentation updates are merged. A packaged GitHub release and hosted runtime are separate from public source availability.

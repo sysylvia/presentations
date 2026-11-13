@@ -6,4 +6,4 @@ Research talks organized by date and event.
 
 ## November 2026
 
-- [Opening Healthy Future — Demography Daze, UNC, November 13](https://talks.ssylvia.io/research/2026-11-demography-daze-hf/slides.html) · [Quarto source](2026-11-demography-daze-hf/slides.qmd) · [PDF](2026-11-demography-daze-hf/slides-v8.pdf)
+- [Opening Healthy Future — Demography Daze, UNC, November 13](https://talks.ssylvia.io/research/2026-11-demography-daze-hf/slides.html) · [Quarto source](2026-11-demography-daze-hf/slides.qmd) · [PDF](2026-11-demography-daze-hf/slides-v9.pdf)
