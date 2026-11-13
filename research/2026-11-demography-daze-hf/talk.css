@@ -81,3 +81,5 @@
 
 .reveal .trial-population{font-size:.75em;color:#64748B;margin:0 0 .35em;}
 .reveal .trial-population p{margin:0;}
+
+.reveal .demo-video{display:block;width:100%;height:660px;object-fit:contain;background:#101114;margin:0;}

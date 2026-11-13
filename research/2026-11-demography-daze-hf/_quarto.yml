@@ -5,3 +5,6 @@ project:
     - slides.qmd
 execute:
   enabled: false
+resources:
+  - assets/healthy-future-demo.mp4
+  - assets/demo-poster.png

@@ -1,6 +1,6 @@
 # Healthy Future — speaker notes and timing
 
-Main route: 14 slides, 720 planned seconds including a 60-second excerpt of the 2:18 demo. Four backups follow. No timed rehearsal has been performed. Press S in Reveal for speaker view.
+14 main slides, 720 planned seconds, including about one minute of the 2:18 demo. Four backups follow. No timed rehearsal performed.
 
 ## 1. Opening Healthy Future — 20 seconds
 
@@ -24,24 +24,24 @@ Sources: WHO EB156/15 (20 December 2024), §9; Kirkwood et al. 2013, doi:10.1016
 
 [45 seconds] The intervention combines content, people and software. It addresses maternal and child health through stage-matched home visits. The curriculum starts in month four of pregnancy; the full curriculum extends to 18 months after birth. The trial delivered the programme over a 12-month study period; those are different time spans.
 
-## 6. What CHWs deliver: a stage-based curriculum — 45 seconds
+## 6. Healthy Future home-visit demo — 70 seconds
+
+[70 seconds, including approximately 60 seconds of video] Show the app guiding a home visit, presenting content and capturing responses. Use the direct link if network access or the embedded player fails. The video is an existing programme demonstration, not new trial evidence. Stop after about one minute to preserve timing.
+Source: original Healthy Future Video shared in the Belgium talk. The existing public demo is embedded as a native video; the original Canva link remains available.
+
+## 7. What CHWs deliver: a stage-based curriculum — 45 seconds
 
 [45 seconds] Walk through how topics change over pregnancy and infancy. Mental-health and government-service content recur across stages. This is scheduled content coverage, not evidence that every component has a known causal effect for every family. In the trial, 82% of intervention families received at least one visit; participating families had a median 12 visits and median visit duration 32 minutes. The numerical implementation details are in notes to keep the timeline readable.
 Sources: Healthy Future curriculum (English September 2025); Chen et al., medRxiv v2 and September 2026 manuscript, Table 2.
 
-## 7. The Healthy Future Platform — 50 seconds
+## 8. The Healthy Future Platform — 50 seconds
 
 [50 seconds] This is CareLoom, the platform behind Healthy Future. Describe implemented functions without claiming demonstrated reductions in CHW workload or automatically learned recommendations. Initial login, synchronization and media preparation require connectivity; offline support is qualified accordingly. English and Chinese are supported; other languages and outcome-informed recommendations remain development work. Public screenshot contains no participant records.
 
-## 8. Open Source and Extensible — 35 seconds
+## 9. Open Source and Extensible — 35 seconds
 
 [35 seconds] Invite reuse while distinguishing software from curriculum licensing. CPC seed funding supported opening the infrastructure and English-language access. New implementation and documentation changes are under review in separate PRs; this deck links the existing public material. No installable packaged release is claimed.
 Sources: CareLoom LICENSE; curriculum attribution page; Sean Sylvia CV, 2024–25 CPC award “Open Sourcing a Maternal and Child Health Home Visiting Platform Called Healthy Future”; https://dhep.org/healthy-future/.
-
-## 9. Healthy Future home-visit demo — 70 seconds
-
-[70 seconds, including approximately 60 seconds of video] Show the app guiding a home visit, presenting content and capturing responses. Use the direct link if network access or the embedded player fails. The video is an existing programme demonstration, not new trial evidence. Stop after about one minute to preserve timing.
-Source: original Healthy Future Video shared in the Belgium talk. The current embed uses Canva's dedicated watch?embed endpoint rather than the blocked ordinary watch-page iframe.
 
 ## 10. The initial China randomized trial — 95 seconds
 

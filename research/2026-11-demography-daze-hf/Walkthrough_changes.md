@@ -9,7 +9,7 @@ All requested changes C01–C20 and P01 have been implemented. The 14-slide main
 | C03 | Two-panel global CHW/home-visit evidence and delivery challenges, with two content-prioritization issues emphasized |
 | C04–C08 | Belgium problem, programme, stage-based curriculum, platform and open-source sequence, updated against current sources |
 | C09 | CPC seed-funding thanks |
-| C10 / P01 | Dedicated Canva watch?embed player, marked data-external=1, plus visible full-video link |
+| C10 / P01 | Native video immediately after the programme overview (slide 6), plus the original visible full-video link |
 | C11 | Single China RCT summary with design and editable primary/selected-secondary forest plots |
 | C12 | Standalone exploratory family-targeting slide removed |
 | C13 | Backend immediately after trial; reusable app separated from modular curriculum |

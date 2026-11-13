@@ -196,6 +196,19 @@ A digitally supported programme for mothers and children, from pregnancy through
 [45 seconds] The intervention combines content, people and software. It addresses maternal and child health through stage-matched home visits. The curriculum starts in month four of pregnancy; the full curriculum extends to 18 months after birth. The trial delivered the programme over a 12-month study period; those are different time spans.
 :::
 
+## Healthy Future home-visit demo {#demo data-timing="70"}
+
+<video data-external="1" class="demo-video" src="assets/healthy-future-demo.mp4" poster="assets/demo-poster.png" controls preload="metadata" playsinline title="Healthy Future home-visit demo"></video>
+
+::: {.video-link}
+[**Open full video ↗**](https://canva.link/otaxx4z8kq8086z){target="_blank" rel="noopener"}
+:::
+
+::: {.notes}
+[70 seconds, including approximately 60 seconds of video] Show the app guiding a home visit, presenting content and capturing responses. Use the direct link if network access or the embedded player fails. The video is an existing programme demonstration, not new trial evidence. Stop after about one minute to preserve timing.
+Source: original Healthy Future Video shared in the Belgium talk. The existing public demo is embedded as a native video; the original Canva link remains available.
+:::
+
 ## What CHWs deliver: a stage-based curriculum {#curriculum data-timing="45"}
 
 ::: {.curriculum-lead}
@@ -286,19 +299,6 @@ Public source and guides are available. No packaged software release.
 ::: {.notes}
 [35 seconds] Invite reuse while distinguishing software from curriculum licensing. CPC seed funding supported opening the infrastructure and English-language access. New implementation and documentation changes are under review in separate PRs; this deck links the existing public material. No installable packaged release is claimed.
 Sources: CareLoom LICENSE; curriculum attribution page; Sean Sylvia CV, 2024–25 CPC award “Open Sourcing a Maternal and Child Health Home Visiting Platform Called Healthy Future”; https://dhep.org/healthy-future/.
-:::
-
-## Healthy Future home-visit demo {#demo data-timing="70"}
-
-<iframe data-external="1" class="demo-frame" loading="lazy" src="https://www.canva.com/design/DAG_D0qj1Ec/Mwfil9LVXp38RRdz8qm1eg/watch?embed" title="Healthy Future home-visit demo" allow="fullscreen" allowfullscreen></iframe>
-
-::: {.video-link}
-[**Open full video ↗**](https://canva.link/otaxx4z8kq8086z){target="_blank" rel="noopener"}
-:::
-
-::: {.notes}
-[70 seconds, including approximately 60 seconds of video] Show the app guiding a home visit, presenting content and capturing responses. Use the direct link if network access or the embedded player fails. The video is an existing programme demonstration, not new trial evidence. Stop after about one minute to preserve timing.
-Source: original Healthy Future Video shared in the Belgium talk. The current embed uses Canva's dedicated watch?embed endpoint rather than the blocked ordinary watch-page iframe.
 :::
 
 ## The initial China randomized trial {#trial data-timing="95"}

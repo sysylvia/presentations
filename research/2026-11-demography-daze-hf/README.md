@@ -6,7 +6,7 @@ Version 8 applies Sean’s November 13 walkthrough. Fourteen main slides have a 
 
 ## Edit and render
 
-Edit `slides.qmd`, then run `quarto render slides.qmd` here (Quarto 1.6.43 verified). This is a nested standalone project. Output: `_rendered/slides.html`. The PDF uses the verified slide renders, clickable resource links and a static demo thumbnail. The editable charts remain in the HTML/source. All slide fonts/media are embedded except the deliberately external Canva `watch?embed` demo player, which needs network access. A visible direct video link is also included. `data-external="1"` on the iframe prevents Pandoc from copying the remote player into a data URL and breaking it.
+Edit `slides.qmd`, then run `quarto render slides.qmd` here (Quarto 1.6.43 verified). This is a nested standalone project. Output: `_rendered/slides.html`. The PDF uses the verified slide renders, clickable resource links and a static demo thumbnail. The editable charts remain in the HTML/source. Slide fonts and images are embedded. The native video and its poster are sibling files in `_rendered/assets/`; keep that folder beside the HTML for offline playback. The original Canva link is also available. The video is the existing public demo, optimized for web delivery without cutting its content. `data-external="1"` keeps the video out of the HTML data bundle; `_quarto.yml` copies it to the output assets folder.
 
 Arrow keys navigate; O opens overview; F enters fullscreen; S opens speaker view. Main talk ends at slide 14. `Speaker_notes.md` contains the timing and public source notes.
 
