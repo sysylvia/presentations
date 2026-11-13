@@ -1,0 +1,20 @@
+```{=html}
+<svg class="evidence-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1650 620" role="img" aria-labelledby="branching-title"><title id="branching-title">Curriculum hierarchy and an illustrative configured yes/no content path</title><defs><marker id="branching-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4B9CD3"/></marker></defs><rect x="0" y="25" width="450" height="105" fill="none" stroke="#4B9CD3" stroke-width="2.5"/>
+<text x="22" y="73" font-size="37" fill="#13294B" font-weight="600" text-anchor="start">Lesson / visit session</text>
+<rect x="600" y="25" width="450" height="105" fill="none" stroke="#4B9CD3" stroke-width="2.5"/>
+<text x="622" y="73" font-size="37" fill="#13294B" font-weight="600" text-anchor="start">Topic modules</text>
+<rect x="1200" y="25" width="450" height="105" fill="none" stroke="#4B9CD3" stroke-width="2.5"/>
+<text x="1222" y="73" font-size="37" fill="#13294B" font-weight="600" text-anchor="start">Components</text>
+<line x1="450" y1="78" x2="600" y2="78" stroke="#4B9CD3" stroke-width="3" marker-end="url(#branching-arrow)"/>
+<line x1="1050" y1="78" x2="1200" y2="78" stroke="#4B9CD3" stroke-width="3" marker-end="url(#branching-arrow)"/>
+<text x="865" y="190" font-size="33" fill="#64748B" font-weight="400" text-anchor="start">Scripts, media and branching questions</text>
+<text x="0" y="270" font-size="33" fill="#64748B" font-weight="400" text-anchor="start">Illustrative configured question</text>
+<rect x="485" y="310" width="680" height="100" fill="none" stroke="#4B9CD3" stroke-width="2.5"/>
+<text x="507" y="358" font-size="37" fill="#13294B" font-weight="600" text-anchor="start">“Revisit this topic?”</text>
+<rect x="0" y="495" width="720" height="100" fill="none" stroke="#4B9CD3" stroke-width="2.5"/>
+<text x="22" y="543" font-size="37" fill="#13294B" font-weight="600" text-anchor="start">Yes: reinforcement content</text>
+<rect x="930" y="495" width="720" height="100" fill="none" stroke="#4B9CD3" stroke-width="2.5"/>
+<text x="952" y="543" font-size="37" fill="#13294B" font-weight="600" text-anchor="start">No: continue the session</text>
+<path d="M 485 360 H 350 V 495" fill="none" stroke="#4B9CD3" stroke-width="3" marker-end="url(#branching-arrow)"/>
+<path d="M 1165 360 H 1290 V 495" fill="none" stroke="#4B9CD3" stroke-width="3" marker-end="url(#branching-arrow)"/></svg>
+```

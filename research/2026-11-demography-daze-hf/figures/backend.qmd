@@ -1,0 +1,24 @@
+```{=html}
+<svg class="evidence-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1650 570" role="img" aria-labelledby="backend-title"><title id="backend-title">CareLoom curriculum editor, Spring Boot API, MySQL records and CHW Android app</title><defs><marker id="backend-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4B9CD3"/></marker></defs><rect x="0" y="55" width="450" height="190" fill="none" stroke="#4B9CD3" stroke-width="2.5"/>
+<text x="22" y="103" font-size="37" fill="#13294B" font-weight="600" text-anchor="start">Curriculum editor</text>
+<text x="22" y="152" font-size="33" fill="#334155" font-weight="400" text-anchor="start">Lessons, topic modules,</text>
+<text x="22" y="195" font-size="33" fill="#334155" font-weight="400" text-anchor="start">scripts and media</text>
+<rect x="600" y="55" width="450" height="190" fill="none" stroke="#4B9CD3" stroke-width="2.5"/>
+<text x="622" y="103" font-size="37" fill="#13294B" font-weight="600" text-anchor="start">Spring Boot API</text>
+<text x="622" y="152" font-size="33" fill="#334155" font-weight="400" text-anchor="start">Scheduling and</text>
+<text x="622" y="195" font-size="33" fill="#334155" font-weight="400" text-anchor="start">content delivery</text>
+<rect x="1200" y="55" width="450" height="190" fill="none" stroke="#4B9CD3" stroke-width="2.5"/>
+<text x="1222" y="103" font-size="37" fill="#13294B" font-weight="600" text-anchor="start">CHW Android app</text>
+<text x="1222" y="152" font-size="33" fill="#334155" font-weight="400" text-anchor="start">Render the configured</text>
+<text x="1222" y="195" font-size="33" fill="#334155" font-weight="400" text-anchor="start">visit content</text>
+<rect x="600" y="390" width="450" height="145" fill="none" stroke="#4B9CD3" stroke-width="2.5"/>
+<text x="622" y="438" font-size="37" fill="#13294B" font-weight="600" text-anchor="start">MySQL</text>
+<text x="622" y="487" font-size="33" fill="#334155" font-weight="400" text-anchor="start">Curriculum and visit records</text>
+<line x1="450" y1="150" x2="600" y2="150" stroke="#4B9CD3" stroke-width="3" marker-end="url(#backend-arrow)"/>
+<line x1="1050" y1="150" x2="1200" y2="150" stroke="#4B9CD3" stroke-width="3" marker-end="url(#backend-arrow)" marker-start="url(#backend-arrow)"/>
+<line x1="825" y1="245" x2="825" y2="390" stroke="#4B9CD3" stroke-width="3" marker-end="url(#backend-arrow)" marker-start="url(#backend-arrow)"/>
+<text x="0" y="414" font-size="35" fill="#334155" font-weight="400" text-anchor="start">Stage, age and prior visits</text>
+<text x="0" y="460" font-size="35" fill="#334155" font-weight="400" text-anchor="start">feed the scheduling rules.</text>
+<text x="1200" y="414" font-size="35" fill="#334155" font-weight="400" text-anchor="start">The app returns visit</text>
+<text x="1200" y="460" font-size="35" fill="#334155" font-weight="400" text-anchor="start">completion and responses.</text></svg>
+```

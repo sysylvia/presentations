@@ -1,0 +1,35 @@
+```{=html}
+<svg class="evidence-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1650 610" role="img" aria-labelledby="secondary-title"><title id="secondary-title">Selected secondary ITT estimates with 95 percent confidence intervals, in percentage points</title><defs><marker id="secondary-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4B9CD3"/></marker></defs><text x="960" y="45" font-size="38" fill="#13294B" font-weight="600" text-anchor="middle">ITT effects, 95% CI</text>
+<text x="1460" y="45" font-size="32" fill="#64748B" font-weight="600" text-anchor="middle">ITT [95% CI]</text>
+<line x1="635.0" y1="88" x2="635.0" y2="474" stroke="#E8E6E1" stroke-width="2" />
+<text x="635.0" y="520" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">-16</text>
+<line x1="765.0" y1="88" x2="765.0" y2="474" stroke="#E8E6E1" stroke-width="2" />
+<text x="765.0" y="520" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">-12</text>
+<line x1="895.0" y1="88" x2="895.0" y2="474" stroke="#E8E6E1" stroke-width="2" />
+<text x="895.0" y="520" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">-8</text>
+<line x1="1025.0" y1="88" x2="1025.0" y2="474" stroke="#E8E6E1" stroke-width="2" />
+<text x="1025.0" y="520" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">-4</text>
+<line x1="1155.0" y1="88" x2="1155.0" y2="474" stroke="#E8E6E1" stroke-width="2" />
+<text x="1155.0" y="520" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">0</text>
+<line x1="1285.0" y1="88" x2="1285.0" y2="474" stroke="#E8E6E1" stroke-width="2" />
+<text x="1285.0" y="520" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">4</text>
+<line x1="1155.0" y1="88" x2="1155.0" y2="474" stroke="#64748B" stroke-width="2" />
+<line x1="635" y1="474" x2="1285" y2="474" stroke="#64748B" stroke-width="1.5" />
+<text x="0" y="157" font-size="35" fill="#334155" font-weight="400" text-anchor="start">Child illness, prior 2 weeks</text>
+<line x1="700.0" y1="145" x2="1077.0" y2="145" stroke="#4B9CD3" stroke-width="5" />
+<circle cx="888.5" cy="145" r="9" fill="#4B9CD3"/>
+<text x="1460" y="157" font-size="31" fill="#13294B" font-weight="400" text-anchor="middle">−8.2 [−14.0, −2.4]</text>
+<text x="0" y="249" font-size="35" fill="#334155" font-weight="400" text-anchor="start">Caregiver depression symptoms</text>
+<line x1="804.0" y1="237" x2="1096.5" y2="237" stroke="#4B9CD3" stroke-width="5" />
+<circle cx="950.25" cy="237" r="9" fill="#4B9CD3"/>
+<text x="1460" y="249" font-size="31" fill="#13294B" font-weight="400" text-anchor="middle">−6.3 [−10.8, −1.8]</text>
+<text x="0" y="341" font-size="35" fill="#334155" font-weight="400" text-anchor="start">Caregiver anxiety symptoms</text>
+<line x1="865.75" y1="329" x2="1125.75" y2="329" stroke="#4B9CD3" stroke-width="5" />
+<circle cx="995.75" cy="329" r="9" fill="#4B9CD3"/>
+<text x="1460" y="341" font-size="31" fill="#13294B" font-weight="400" text-anchor="middle">−4.9 [−8.9, −0.9]</text>
+<text x="0" y="433" font-size="35" fill="#334155" font-weight="400" text-anchor="start">Caregiver stress symptoms</text>
+<line x1="895.0" y1="421" x2="1145.25" y2="421" stroke="#4B9CD3" stroke-width="5" />
+<circle cx="1018.5" cy="421" r="9" fill="#4B9CD3"/>
+<text x="1460" y="433" font-size="31" fill="#13294B" font-weight="400" text-anchor="middle">−4.2 [−8.0, −0.3]</text>
+<text x="960" y="585" font-size="33" fill="#334155" font-weight="600" text-anchor="middle">Difference (percentage points)</text></svg>
+```

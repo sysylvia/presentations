@@ -1,0 +1,52 @@
+```{=html}
+<svg class="evidence-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1650 600" role="img" aria-labelledby="primary-title"><title id="primary-title">Primary ITT estimates with 95 percent confidence intervals, in separate units and scales</title><defs><marker id="primary-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4B9CD3"/></marker></defs><text x="261.0" y="46" font-size="38" fill="#13294B" font-weight="600" text-anchor="middle">Hemoglobin</text>
+<line x1="28.0" y1="80" x2="28.0" y2="332" stroke="#E8E6E1" stroke-width="2" />
+<text x="28.0" y="375" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">-2</text>
+<line x1="144.5" y1="80" x2="144.5" y2="332" stroke="#E8E6E1" stroke-width="2" />
+<text x="144.5" y="375" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">-1</text>
+<line x1="261.0" y1="80" x2="261.0" y2="332" stroke="#E8E6E1" stroke-width="2" />
+<text x="261.0" y="375" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">0</text>
+<line x1="377.5" y1="80" x2="377.5" y2="332" stroke="#E8E6E1" stroke-width="2" />
+<text x="377.5" y="375" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">1</text>
+<line x1="494.0" y1="80" x2="494.0" y2="332" stroke="#E8E6E1" stroke-width="2" />
+<text x="494.0" y="375" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">2</text>
+<line x1="261.0" y1="80" x2="261.0" y2="332" stroke="#64748B" stroke-width="2" />
+<line x1="28" y1="332" x2="494" y2="332" stroke="#64748B" stroke-width="1.5" />
+<line x1="32.194" y1="210" x2="400.8" y2="210" stroke="#4B9CD3" stroke-width="5" />
+<circle cx="216.49699999999999" cy="210" r="9" fill="#4B9CD3"/>
+<text x="261.0" y="428" font-size="33" fill="#334155" font-weight="600" text-anchor="middle">g/L</text>
+<text x="261.0" y="502" font-size="34" fill="#13294B" font-weight="600" text-anchor="middle">−0.382 [−1.964, 1.200]</text>
+<text x="261.0" y="562" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">N = 904</text>
+<text x="811.0" y="46" font-size="38" fill="#13294B" font-weight="600" text-anchor="middle">Exclusive breastfeeding</text>
+<line x1="578.0" y1="80" x2="578.0" y2="332" stroke="#E8E6E1" stroke-width="2" />
+<text x="578.0" y="375" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">-10</text>
+<line x1="733.3333333333333" y1="80" x2="733.3333333333333" y2="332" stroke="#E8E6E1" stroke-width="2" />
+<text x="733.3333333333333" y="375" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">0</text>
+<line x1="888.6666666666666" y1="80" x2="888.6666666666666" y2="332" stroke="#E8E6E1" stroke-width="2" />
+<text x="888.6666666666666" y="375" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">10</text>
+<line x1="1044.0" y1="80" x2="1044.0" y2="332" stroke="#E8E6E1" stroke-width="2" />
+<text x="1044.0" y="375" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">20</text>
+<line x1="733.3333333333333" y1="80" x2="733.3333333333333" y2="332" stroke="#64748B" stroke-width="2" />
+<line x1="578" y1="332" x2="1044" y2="332" stroke="#64748B" stroke-width="1.5" />
+<line x1="640.1333333333333" y1="210" x2="1003.6133333333333" y2="210" stroke="#4B9CD3" stroke-width="5" />
+<circle cx="821.8733333333333" cy="210" r="9" fill="#4B9CD3"/>
+<text x="811.0" y="428" font-size="33" fill="#334155" font-weight="600" text-anchor="middle">percentage points</text>
+<text x="811.0" y="502" font-size="34" fill="#13294B" font-weight="600" text-anchor="middle">+5.7 [−6.0, 17.4]</text>
+<text x="811.0" y="562" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">N = 210</text>
+<text x="1361.0" y="46" font-size="38" fill="#13294B" font-weight="600" text-anchor="middle">Dietary diversity</text>
+<line x1="1128.0" y1="80" x2="1128.0" y2="332" stroke="#E8E6E1" stroke-width="2" />
+<text x="1128.0" y="375" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">-0.1</text>
+<line x1="1283.3333333333333" y1="80" x2="1283.3333333333333" y2="332" stroke="#E8E6E1" stroke-width="2" />
+<text x="1283.3333333333333" y="375" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">0.1</text>
+<line x1="1438.6666666666667" y1="80" x2="1438.6666666666667" y2="332" stroke="#E8E6E1" stroke-width="2" />
+<text x="1438.6666666666667" y="375" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">0.3</text>
+<line x1="1594.0" y1="80" x2="1594.0" y2="332" stroke="#E8E6E1" stroke-width="2" />
+<text x="1594.0" y="375" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">0.5</text>
+<line x1="1205.6666666666667" y1="80" x2="1205.6666666666667" y2="332" stroke="#64748B" stroke-width="2" />
+<line x1="1128" y1="332" x2="1594" y2="332" stroke="#64748B" stroke-width="1.5" />
+<line x1="1217.3166666666666" y1="210" x2="1515.5566666666666" y2="210" stroke="#4B9CD3" stroke-width="5" />
+<circle cx="1366.4366666666667" cy="210" r="9" fill="#4B9CD3"/>
+<text x="1361.0" y="428" font-size="33" fill="#334155" font-weight="600" text-anchor="middle">food groups</text>
+<text x="1361.0" y="502" font-size="34" fill="#13294B" font-weight="600" text-anchor="middle">+0.207 [0.015, 0.399]</text>
+<text x="1361.0" y="562" font-size="31" fill="#64748B" font-weight="400" text-anchor="middle">N = 938</text></svg>
+```

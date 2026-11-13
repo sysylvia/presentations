@@ -1,0 +1,74 @@
+{
+  "source": "https://www.medrxiv.org/content/10.64898/2026.03.27.26349570v2.full.pdf",
+  "source_version": "June 16, 2026, version 2",
+  "primary_table": 3,
+  "primary": [
+    {
+      "outcome": "Hemoglobin",
+      "unit": "g/L",
+      "estimate": -0.382,
+      "lower95": -1.964,
+      "upper95": 1.2,
+      "n_observed": 904,
+      "p": 0.636
+    },
+    {
+      "outcome": "Exclusive breastfeeding",
+      "unit": "probability difference",
+      "estimate": 0.057,
+      "lower95": -0.06,
+      "upper95": 0.174,
+      "n_observed": 210,
+      "p": 0.341
+    },
+    {
+      "outcome": "Dietary diversity",
+      "unit": "food groups",
+      "estimate": 0.207,
+      "lower95": 0.015,
+      "upper95": 0.399,
+      "n_observed": 938,
+      "p": 0.035
+    }
+  ],
+  "selected_secondary_table": 4,
+  "selected_secondary": [
+    {
+      "outcome": "Any child illness in prior two weeks",
+      "unit": "probability difference",
+      "estimate": -0.082,
+      "lower95": -0.14,
+      "upper95": -0.024,
+      "n_observed": 1148,
+      "fdr_p": 0.036
+    },
+    {
+      "outcome": "Caregiver depression symptoms",
+      "unit": "probability difference",
+      "estimate": -0.063,
+      "lower95": -0.108,
+      "upper95": -0.018,
+      "n_observed": 973,
+      "fdr_p": 0.025
+    },
+    {
+      "outcome": "Caregiver anxiety symptoms",
+      "unit": "probability difference",
+      "estimate": -0.049,
+      "lower95": -0.089,
+      "upper95": -0.009,
+      "n_observed": 973,
+      "fdr_p": 0.027
+    },
+    {
+      "outcome": "Caregiver stress symptoms",
+      "unit": "probability difference",
+      "estimate": -0.042,
+      "lower95": -0.08,
+      "upper95": -0.003,
+      "n_observed": 973,
+      "fdr_p": 0.027
+    }
+  ],
+  "transformations": "Main slides multiply binary probability differences and their confidence bounds by 100 to display percentage points. No participant-level reanalysis."
+}

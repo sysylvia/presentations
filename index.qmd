@@ -6,6 +6,7 @@ title: "Presentations"
 
 | Date | Event | Title |
 |------|-------|-------|
+| 2026-11-13 | Demography Daze, UNC | [Opening Healthy Future](https://talks.ssylvia.io/research/2026-11-demography-daze-hf/slides.html) |
 | 2025-06 | PKU-Yale Conference | Sociotechnical Perspective on AI in Healthcare |
 | 2025-06 | ADRI Panel | Sustainable AI in Primary Care |
 | 2025-06 | Internal | RLEF Synthetic Data |
