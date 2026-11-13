@@ -1,8 +1,8 @@
 ---
 title: "Opening Healthy Future"
-subtitle: "An Open-Source CHW Home-Visiting Stack<br>for Maternal and Child Health"
+subtitle: "An open-source home-visiting platform<br>for maternal and child health"
 author: "Sean Sylvia"
-institute: "UNC Chapel Hill"
+institute: "UNC Chapel Hill · DHEPLab"
 date: "November 13, 2026"
 date-format: "MMMM D, YYYY"
 format:
@@ -13,14 +13,14 @@ format:
     html-math-method: mathml
     slide-number: c/t
     show-slide-number: all
-    footer: "Demography Daze 2026"
+    footer: "Sylvia et al. | Demography Daze 2026"
     logo: assets/dhep-logo-2.png
     width: 1920
     height: 1080
-    margin: 0.045
+    margin: 0.08
     center: false
-    transition: none
-    background-transition: none
+    transition: slide
+    background-transition: fade
     incremental: false
     controls: true
     controls-layout: bottom-right
@@ -30,240 +30,410 @@ format:
     touch: true
     preview-links: false
     total-time: 720
-    default-timing: 60
+    default-timing: 45
 title-slide-attributes:
-  data-timing: "25"
+  data-background-image: assets/hf-cover-clean.png
+  data-background-size: cover
+  data-background-opacity: "0.20"
+  data-timing: "20"
   class: "cover"
-  data-notes: "[25 seconds] Introduce the program and the content-allocation question. The China trial evaluates the integrated intervention, not the app alone. Sources: https://doi.org/10.1136/bmjopen-2022-065403 and https://www.medrxiv.org/content/10.64898/2026.03.27.26349570v2.full.pdf . Original DHEPLab logo from this repository."
+  data-notes: "[20 seconds] Introduce Healthy Future and CareLoom. Today: the program, evidence, reusable infrastructure, and the next research phase. Background is a text-free derivative of the Healthy Future curriculum cover; original retained. Curriculum artwork: Healthy Future Program, Stanford University, CC BY-NC 4.0."
 ---
 
+## Healthy Future collaborators {#collaborators data-timing="25"}
 
+::: {.collaborators-grid}
+::: {.institution}
+![](assets/logos/stanford-wordmark.png){.institution-logo fig-alt="Stanford University logo"}
 
-## The content allocation problem {#content-allocation data-timing="60"}
+### Stanford University
 
-::: {.lead}
-More useful content must fit within limited visit time and family attention.
+Yunwei Chen · Gary L. Darmstadt<br>
+Alexis Medina · Scott Rozelle<br>
+Yian Guo · Hanwen Zhang<br>
+Sarah-Eve Dill
+:::
+::: {.institution}
+::: {.scu-logo-band}
+![](assets/logos/sichuan-logo.png){.institution-logo fig-alt="Sichuan University official wordmark"}
 :::
 
-::: {.accent-line}
-Families at the same stage may ask for different support
+### Sichuan University
+
+West China School of Public Health<br>
+Yuju Wu · Huan Zhou
+:::
+::: {.institution}
+![](assets/logos/unc-signature.svg){.institution-logo fig-alt="University of North Carolina at Chapel Hill official signature"}
+
+### UNC Chapel Hill
+
+Sean Sylvia<br>
+Christopher M. Westgard
+:::
+::: {.institution}
+![](assets/logos/unr-logo.svg){.institution-logo fig-alt="University of Nevada Reno logo"}
+
+### University of Nevada, Reno
+
+Ann M. Weber · Siva Balakrishnan<br>
+Sarah A. Friedman · Joshua V. Garn
+:::
 :::
 
-:::: {.columns .family-examples}
-::: {.column width="48%"}
-### One caregiver
-
-Wants to revisit complementary feeding and practical feeding questions.
+::: {.source-note}
+Collaborators across the Healthy Future protocol and published studies. [Project and affiliations](https://dhep.org/healthy-future/).
 :::
-::: {.column width="48%"}
-### Another caregiver
 
-Feels confident about feeding, but wants more support with stress.
+::: {.notes}
+[25 seconds] Healthy Future is a collaboration across these institutions, local health systems and participating families. Credits combine contributors to the protocol and published Healthy Future studies, not just one paper. Institutional groupings follow the public project credits. Thank the implementation teams and families verbally.
+Source: https://dhep.org/healthy-future/ (collaborators and linked publications; checked November 13, 2026).
+:::
+
+## Home visits: global reach, demanding delivery {#global-evidence data-timing="65"}
+
+:::: {.columns}
+::: {.column width="46%"}
+
+### Importance and reach
+
+::: {.big-stat}
+≈4 million
+:::
+CHWs reported by **93 countries**<br>
+<span class="small">WHO national health workforce accounts, 2024</span>
+
+::: {.impact-stat}
+**12% lower neonatal mortality**<br>
+95% CI: 5–18% lower
+:::
+<span class="small">Pooled home-visit trials in programme settings in South Asia and sub-Saharan Africa (2013).</span>
+:::
+::: {.column width="50%"}
+
+### Delivery challenges
+
+- Maintaining implementation fidelity
+- Training and supervision require time and expertise
+- Broad workloads and reporting demands
+
+::: {.priority-problem}
+**One-size-fits-all content**<br>
+The same stage does not imply the same needs.
+:::
+::: {.priority-problem}
+**Limited data-driven prioritization**<br>
+Which content is most valuable for this family?
+:::
 :::
 ::::
 
-::: {.caption}
-Illustrative examples. Which content should get priority in the next visit?
+::: {.source-note}
+[WHO, EB156/15, §9 (2024)](https://apps.who.int/gb/ebwha/pdf_files/EB156/B156_15-en.pdf) · [Kirkwood et al., Lancet (2013)](https://doi.org/10.1016/S0140-6736(13)60095-1) · [WHO CHW guideline (2018)](https://www.who.int/publications/i/item/9789241550369)
 :::
 
 ::: {.notes}
-[60 seconds] More topics compete for limited visit time and caregiver attention. Stage matching helps with timing, while families at the same stage can have different questions and preferences. The examples are hypothetical. The current curriculum already contains questions and branches; tailoring is a question of content allocation within a shared delivery process.
-
-Sources: [Belgium talk, March 28, 2026](https://github.com/sysylvia/presentations/blob/main/research/2026-03-reap-belgium-hf/slides.qmd); [trial protocol](https://doi.org/10.1136/bmjopen-2022-065403).
+[65 seconds] CHWs are a large global workforce; the four-million figure is reporting from 93 countries, not a census of home visitors. The home-visit estimate is a historical pooled effect on neonatal mortality in programme-setting trials in South Asia and sub-Saharan Africa, not a prediction for every programme or for Healthy Future. WHO identifies training, supervision, quality and workload as implementation needs. The two highlighted content-allocation problems motivate our work: our stage-based system does not yet provide validated outcome-informed personalization. Do not describe all CHW programmes as uniformly one-size-fits-all or without data.
+Sources: WHO EB156/15 (20 December 2024), §9; Kirkwood et al. 2013, doi:10.1016/S0140-6736(13)60095-1, pooled programme-setting estimate; WHO 2018 CHW guideline, selection/training, supportive supervision, workload and data recommendations.
 :::
 
-## A practical curriculum for the home visit {#curriculum data-timing="65"}
+## The Problem: One Visit, Many Needs {#content-allocation data-timing="45"}
 
-::: {.lead}
-26 sessions, from month 4 of pregnancy through 18 months after birth
+:::: {.columns}
+::: {.column width="56%"}
+A maternal and child health home visit may need to cover:
+
+- **Breastfeeding** — initiation, exclusivity, timing
+- **Complementary feeding** — diversity, frequency
+- **Maternal mental health** — depression, anxiety, stress
+- **Health service uptake** — vaccines, checkups
+- **Sanitation and safety**
+- **Stimulation** — responsive caregiving, early learning
+- **And more…**
+:::
+::: {.column width="39%"}
+::: {.callout-important}
+
+### The standard approach
+
+Families at the same developmental stage receive the same scheduled content, despite different needs and circumstances.
 :::
 
-Scripts, discussion prompts and knowledge checks support consistent delivery.
-
-![](assets/curriculum-session-b5-introduction.png){.curriculum-excerpt fig-alt="Session B5 introduction from the September 2025 English curriculum, printed page 151."}
-
-::: {.caption}
-Curriculum excerpt, printed p.151. © 2022 Stanford University. CC BY-NC 4.0.
+**The constraint:** limited visit time and caregiver attention.
 :::
+::::
 
-::: {.notes}
-[65 seconds] The actual session introduction makes the curriculum concrete. It helps the CHW introduce the visit and set expectations. Sessions combine topics and reinforce earlier content. Reuse follows the existing license; cultural adaptation and clinical review remain necessary in another setting.
-
-Source: [Healthy Future Curriculum, English September 2025 edition](https://dhep.org/files/healthy-future/healthy-future-curriculum-2025-09.pdf), printed p.151 / PDF p.153. Healthy Future Program © 2022 Stanford University, CC BY-NC 4.0.
-:::
-
-## The China cluster-randomized trial {#trial data-timing="60"}
-
-::: {.lead}
-119 townships in four Sichuan counties
-:::
-
-| Assignment | Townships | Comparison |
-|:---|:---|:---|
-| Healthy Future | 40 | CHW visits + curriculum + digital support |
-| Control | 79 | No Healthy Future intervention |
-
-::: {.study-cohort}
-1,306 families in the analysis cohort<br>
-Pregnant women or caregivers of infants under 6 months at baseline
-:::
-
-::: {.caption}
-12-month intervention. Intent-to-treat analysis. Results are a preprint.
+::: {.source-note}
+Adapted from the [Belgium talk](https://talks.ssylvia.io/research/2026-03-reap-belgium-hf/slides.html#/the-problem-one-visit-many-needs). [Healthy Future protocol](https://doi.org/10.1136/bmjopen-2022-065403).
 :::
 
 ::: {.notes}
-[60 seconds] Township randomization was stratified by county. The protocol specified two intervention variants with 20 townships each and 79 controls. The main analysis pools the 40 intervention townships. The analysis cohort is 1,306; outcome-specific samples differ. COVID restrictions consolidated follow-up waves and reduced the younger-infant sample.
-
-Sources: [protocol](https://doi.org/10.1136/bmjopen-2022-065403); [Chen et al., medRxiv v2, June 16, 2026](https://www.medrxiv.org/content/10.64898/2026.03.27.26349570v2.full.pdf), methods and Tables 3–4.
+[45 seconds] This is the Belgium framing: a broad maternal and child health agenda competes for one visit. Responsive caregiving is part of the broader agenda, not a claim that the original Healthy Future trial tested a separate stimulation intervention. For Healthy Future, stage determines scheduled content; families at that stage still differ. Transition to the integrated programme.
 :::
 
-## Primary outcomes: modest dietary-diversity gain {#primary-outcomes data-timing="90"}
+## The Healthy Future Program {#program data-timing="45"}
 
-{{< include figures/primary.qmd >}}
+:::: {.columns}
+::: {.column width="68%"}
+A digitally supported programme for mothers and children, from pregnancy through **18 months after birth**.
 
-::: {.caption}
-Points: ITT estimates. Lines: 95% confidence intervals. Different units and scales.<br>
-Chen et al., 2026 preprint v2, Table 3
+### Three connected components
+
+- **Stage-based curriculum** — 26 sessions across six content domains
+- **CHW home visits** — structured delivery by trained local health workers
+- **Digital platform** — content assignment, scheduling and monitoring
 :::
-
-::: {.notes}
-[90 seconds] Read each outcome in its own units. The dietary-diversity estimate is 0.207 food groups, with the 95% interval just above zero. Hemoglobin and exclusive breastfeeding have intervals spanning zero. Breastfeeding has a wide interval and 210 age-eligible observations. Neither estimate establishes zero effect. The panels have different horizontal scales.
-
-Source: [evaluation preprint v2](https://www.medrxiv.org/content/10.64898/2026.03.27.26349570v2.full.pdf), Table 3. Probability differences and interval endpoints for breastfeeding are multiplied by 100 to display percentage points. No participant-level reanalysis.
+::: {.column width="27%"}
+![](assets/hf-curriculum-cover-original.png){.curriculum-cover fig-alt="Original Healthy Future curriculum cover"}
 :::
+::::
 
-## Exploratory evidence on family targeting {#heterogeneity data-timing="65"}
-
-::: {.lead}
-The screening asked who benefits more from the whole package.
-:::
-
-| Whole-program screening | Interpretation |
-|:---|:---|
-| Most screened outcomes: no clear signal | No dependable family-targeting rule established |
-| Mental health: suggestive signal | A hypothesis requiring further validation |
-
-::: {.takeaway}
-It did not test which module works best for each family.
-:::
-
-::: {.caption}
-Nondetection does not prove equal effects. This is exploratory evidence.<br>
-Healthy Future exploratory analysis, March 2026
+::: {.source-note}
+[Trial protocol](https://doi.org/10.1136/bmjopen-2022-065403) · [English curriculum, September 2025](https://dhep.org/files/healthy-future/healthy-future-curriculum-2025-09.pdf)
 :::
 
 ::: {.notes}
-[65 seconds] Causal forests screened whether effects of the complete intervention varied across measured family characteristics. The later Belgium talk reports limited clear evidence across the exploratory screen and a suggestive mental-health signal. Nondetection does not establish equal effects, and the screen does not establish a validated targeting policy. A whole-program trial does not identify module-specific effects. The summary stays qualitative because numerical outcome labels differ between the prior talk's main and appendix tables.
-
-Sources: [Belgium presentation](https://github.com/sysylvia/presentations/blob/main/research/2026-03-reap-belgium-hf/slides.qmd); [grf calibration guidance](https://grf-labs.github.io/grf/reference/test_calibration.html).
+[45 seconds] The intervention combines content, people and software. It addresses maternal and child health through stage-matched home visits. The curriculum starts in month four of pregnancy; the full curriculum extends to 18 months after birth. The trial delivered the programme over a 12-month study period; those are different time spans.
 :::
 
-## The backend separates content from delivery {#backend data-timing="85"}
+## What CHWs deliver: a stage-based curriculum {#curriculum data-timing="45"}
 
-::: {.lead}
-A structured curriculum can change without rewriting the visit screen.
+::: {.curriculum-lead}
+**26 sessions · Six domains · Pregnancy to 18 months after birth**
+:::
+
+![](assets/stage-based-curriculum.png){.curriculum-timeline fig-alt="Original Healthy Future module timeline: maternal nutrition, breastfeeding, complementary feeding, preventive care, mental health and government-service uptake, by child age"}
+
+::: {.source-note}
+Original programme timeline, reused from the Belgium talk. [Curriculum](https://dhep.org/files/healthy-future/healthy-future-curriculum-2025-09.pdf): © 2022 Stanford University, CC BY-NC 4.0.
+:::
+
+::: {.notes}
+[45 seconds] Walk through how topics change over pregnancy and infancy. Mental-health and government-service content recur across stages. This is scheduled content coverage, not evidence that every component has a known causal effect for every family. In the trial, 82% of intervention families received at least one visit; participating families had a median 12 visits and median visit duration 32 minutes. The numerical implementation details are in notes to keep the timeline readable.
+Sources: Healthy Future curriculum (English September 2025); Chen et al., medRxiv v2 and September 2026 manuscript, Table 2.
+:::
+
+## The Healthy Future Platform {#platform data-timing="50"}
+
+:::: {.columns}
+::: {.column width="49%"}
+
+### CHW-facing Android app
+
+- Stage-matched visit content
+- Scripts, media and structured questions
+- Visit completion and response capture
+- Offline work after initial setup and content preparation
+
+### Supervisor-facing dashboard
+
+- Curriculum authoring and publishing
+- CHW and visit management
+- Visit monitoring and reporting
+:::
+::: {.column width="46%"}
+![](assets/careloom-public-screenshot.webp){.platform-screenshot fig-alt="Public CareLoom screenshot showing the English login and curriculum-module screens"}
+
+::: {.callout-note}
+**Separate content and delivery**<br>
+The app renders the configured curriculum.<br>
+English and Chinese interfaces.
+:::
+:::
+::::
+
+::: {.source-note}
+[CareLoom source and documentation](https://github.com/DHEPLab/careloom) · [Public platform overview](https://dhep.org/healthy-future/)
+:::
+
+::: {.notes}
+[50 seconds] This is CareLoom, the platform behind Healthy Future. Describe implemented functions without claiming demonstrated reductions in CHW workload or automatically learned recommendations. Initial login, synchronization and media preparation require connectivity; offline support is qualified accordingly. English and Chinese are supported; other languages and outcome-informed recommendations remain development work. Public screenshot contains no participant records.
+:::
+
+## Open Source and Extensible {#open-source data-timing="35"}
+
+:::: {.columns}
+::: {.column width="48%"}
+
+### CareLoom platform
+
+**Apache License 2.0**
+
+Reusable delivery infrastructure for structured modular curricula.
+
+[github.com/DHEPLab/careloom](https://github.com/DHEPLab/careloom)
+:::
+::: {.column width="48%"}
+
+### Healthy Future curriculum
+
+**CC BY-NC 4.0**
+
+English PDF with scripts, activities and knowledge checks. Adapt with attribution for non-commercial use.
+
+[Curriculum and setup guides](https://dhep.org/healthy-future/)
+:::
+::::
+
+::: {.funding-thanks}
+Thank you to the **Carolina Population Center** for seed funding supporting open-sourcing and English-language access.
+:::
+
+::: {.source-note}
+Public source and guides are available. No packaged software release.
+:::
+
+::: {.notes}
+[35 seconds] Invite reuse while distinguishing software from curriculum licensing. CPC seed funding supported opening the infrastructure and English-language access. New implementation and documentation changes are under review in separate PRs; this deck links the existing public material. No installable packaged release is claimed.
+Sources: CareLoom LICENSE; curriculum attribution page; Sean Sylvia CV, 2024–25 CPC award “Open Sourcing a Maternal and Child Health Home Visiting Platform Called Healthy Future”; https://dhep.org/healthy-future/.
+:::
+
+## Healthy Future home-visit demo {#demo data-timing="70"}
+
+<iframe data-external="1" class="demo-frame" loading="lazy" src="https://www.canva.com/design/DAG_D0qj1Ec/Mwfil9LVXp38RRdz8qm1eg/watch?embed" title="Healthy Future home-visit demo" allow="fullscreen" allowfullscreen></iframe>
+
+::: {.video-link}
+[**Open full video ↗**](https://canva.link/otaxx4z8kq8086z){target="_blank" rel="noopener"}
+:::
+
+::: {.notes}
+[70 seconds, including approximately 60 seconds of video] Show the app guiding a home visit, presenting content and capturing responses. Use the direct link if network access or the embedded player fails. The video is an existing programme demonstration, not new trial evidence. Stop after about one minute to preserve timing.
+Source: original Healthy Future Video shared in the Belgium talk. The current embed uses Canva's dedicated watch?embed endpoint rather than the blocked ordinary watch-page iframe.
+:::
+
+## The initial China randomized trial {#trial data-timing="95"}
+
+::: {.trial-design}
+**119 townships · 4 Sichuan counties** <span>→</span> **40 intervention / 79 control** <span>→</span> **1,306 families · 12 months**
+:::
+
+::: {.trial-population}
+Pregnant women or caregivers of infants under 6 months at baseline · County-stratified township randomization
+:::
+
+{{< include figures/trial-summary.qmd >}}
+
+::: {.source-note}
+ITT effects with 95% CIs; primary outcomes and selected secondary outcomes. [Chen et al., medRxiv v2 (June 2026), Tables 3–4](https://www.medrxiv.org/content/10.64898/2026.03.27.26349570v2.full.pdf). The integrated programme was evaluated, not the app alone.
+:::
+
+::: {.notes}
+[95 seconds] Township randomization was stratified by county. Two intervention variants, 20 townships each, are pooled here versus 79 controls. The analysis cohort is 1,306; outcome-specific samples differ. The intervention lasted 12 months. The primary dietary-diversity estimate is modest and positive; hemoglobin and exclusive breastfeeding intervals include zero. Selected secondary outcomes show lower reported child illness and caregiver symptoms. These are selected secondary results with multiplicity-adjusted p-values in the backup, not an exhaustive list. Each primary row has its own labeled unit/scale; secondary effects are percentage points. Lines show 95% confidence intervals. Results are a preprint; the later recovered manuscript agrees on these values. Do not infer component-specific effects or validated personalization gains.
+Sources: trial protocol doi:10.1136/bmjopen-2022-065403; Chen et al., medRxiv v2, Tables 3–4.
+:::
+
+## The backend separates content from delivery {#backend data-timing="55"}
+
+::: {.backend-lead}
+**The app is reusable. The curriculum is separately defined.**
 :::
 
 {{< include figures/backend.qmd >}}
 
-::: {.caption}
-The shared content model provides a base for evaluating new allocation rules.
+::: {.accent-statement}
+Add another modular curriculum through the same content structure.
 :::
 
 ::: {.notes}
-[85 seconds] Program managers configure curricula. The Spring Boot API exposes scheduling and content; MySQL stores curriculum and visit records; the Android app renders configured visits and returns completion and responses. A curriculum contains lessons, which reference topic modules, which contain structured components. This describes implemented responsibilities, not an automatic PDF importer or a learned recommendation policy.
-
-Source: [CareLoom, inspected source revision](https://github.com/DHEPLab/careloom/tree/71468fae6ce0ca9cd434ebbf847f7eac30cee11e). Relevant API classes: Curriculum, Lesson, Module, LessonSchedule, Component and LessonService; app module rendering in `utils/module.ts` and `screens/Module.jsx`.
+[55 seconds] Emphasize app versus curriculum: Healthy Future is one curriculum running on a more general delivery platform. Lessons describe stage/age windows and reference topic modules; modules contain scripts, media and structured components. The app renders that configuration. Another curriculum must be structured in the supported model; there is no automatic arbitrary-PDF importer. Explain branching verbally: a configured question can send a family through different content paths. Those authored branches are distinct from learned outcome prioritization.
+Sources: CareLoom entities Curriculum, Lesson, Module, Component and LessonService; inspected public revision 71468fae6ce0ca9cd434ebbf847f7eac30cee11e; https://github.com/DHEPLab/careloom.
 :::
 
-## Curriculum structure enables different paths {#branching data-timing="85"}
+## Next phase of research {#next-phase data-timing="55"}
 
-::: {.lead}
-Today: stage, age and prior visits select the next lesson.
+::: {.funding-line}
+Supported by the **Cyrus Tang Foundation**<br>
+<span class="small">Stanford prime award · UNC subaward</span>
 :::
 
-{{< include figures/branching.qmd >}}
-
-::: {.caption}
-Configured branching exists today. Learned module prioritization remains proposed.
+::: {.research-question}
+For this family, which content should receive priority to improve the target outcomes?
 :::
 
-::: {.notes}
-[85 seconds] A lesson is a visit session referencing topic modules. Modules contain text, media and branching questions. Scheduling uses curriculum assignment, stage, age and prior lesson coverage. The CHW can select a case based on a caregiver's response; configured content and continue/redirect actions change the path. The example is illustrative. Automatic learning of which module to prioritize remains a proposal. MASTER/DRAFT in the source refers to editing branches, not family-tailoring branches.
-
-Sources: [CareLoom source](https://github.com/DHEPLab/careloom/tree/71468fae6ce0ca9cd434ebbf847f7eac30cee11e); [curriculum](https://dhep.org/files/healthy-future/healthy-future-curriculum-2025-09.pdf).
+::: {.model-flow}
+Family context + visit history <span>→</span> Predict benefit by topic <span>→</span> Prioritize content
 :::
 
-## Testing which content to prioritize {#future-work data-timing="80"}
-
-::: {.lead}
-Same curriculum and delivery platform, different allocation rules
+::: {.callout-note}
+**Research objective:** develop and evaluate predictive models for family-specific content allocation.
 :::
 
-| Approach | How content gets priority |
-|:---|:---|
-| Stage-based delivery | The current developmental schedule |
-| Family choice | Caregivers select from eligible topics |
-| Algorithmic prioritization | Family context, visit history and predicted benefit |
-
-::: {.accent-line}
-Proposed evaluation: outcomes, engagement, fidelity and CHW workload.
+::: {.source-note}
+[Healthy Future 2.0 funding and project overview](https://dhep.org/healthy-future/). Model development is distinct from demonstrated impact.
 :::
 
 ::: {.notes}
-[80 seconds] These proposed comparisons share a curriculum and delivery infrastructure but change content allocation. The whole-program RCT cannot estimate the benefit of these alternatives or the effect of each module. A future study needs a prespecified comparison, outcomes and process measures. Improvements in outcomes or workload are research questions, not established capabilities or commitments.
-
-Source: [Belgium talk](https://github.com/sysylvia/presentations/blob/main/research/2026-03-reap-belgium-hf/slides.qmd); [CareLoom](https://github.com/DHEPLab/careloom).
+[55 seconds] Name the Cyrus Tang Foundation, as listed on the public project page. The funded next phase aims to develop predictive models to prioritize the content expected to help an individual family with specified outcomes. Predictive association alone does not establish a causal gain from reallocating modules. The model and allocation rule require prospective evaluation. Do not announce trial recruitment or imply the award scope includes every proposed evaluation. No award amount or dates are added.
+Source: public Healthy Future funder listing and HF 2.0 overview; model-development focus specified by Sean for this talk.
 :::
 
-## Resources for adaptation and research {#resources data-timing="70"}
+## Testing which content to prioritize {#future-work data-timing="70"}
 
-::: {.resource-link}
-[dhep.org/healthy-future](https://dhep.org/healthy-future/)
+::: {.trial-lead}
+Same curriculum and platform. Three allocation approaches.
 :::
 
-| Resource | Available material | Reuse terms |
+| Stage-based delivery | Family choice | Algorithmic prioritization |
 |:---|:---|:---|
-| Curriculum | English PDF, September 2025 | CC BY-NC 4.0 |
-| CareLoom | Public source repository | Apache 2.0 |
-| Implementation | Program and developer guides | Repository documentation |
+| Content follows the developmental schedule | Caregivers choose from eligible topics | Content ranked by predicted benefit for the family and target outcomes |
 
-Local adaptation, hosting and implementation support still matter.
+::: {.trial-comparison}
+Proposed trial comparison
+:::
 
-::: {.caption}
-Public source available. Packaged release acceptance remains pending.
+**Assess:** health outcomes · engagement · fidelity · CHW workload
+
+::: {.source-note}
+Future research plan, adapted from the Belgium presentation. These comparisons have not yet established a personalization benefit.
 :::
 
 ::: {.notes}
-[70 seconds] Point to the existing resource page. Software and curriculum use different licenses. Public source and guides are available; deployment still requires implementation work. Source availability does not imply a packaged public release or readiness in a new setting.
-
-Sources: [project page](https://dhep.org/healthy-future/); [CareLoom repository and Apache 2.0 license](https://github.com/DHEPLab/careloom); [curriculum and CC BY-NC 4.0 terms](https://dhep.org/files/healthy-future/healthy-future-curriculum-2025-09.pdf). Resource status checked November 13, 2026; GitHub lists no releases at that check.
+[70 seconds] The planned comparison changes the rule for allocating content while keeping delivery infrastructure and curriculum shared. Compare the stage-based benchmark with family choice and algorithmic prioritization. Prespecify outcomes, eligibility, fidelity and workload measures. The previous whole-program trial does not tell us which module to allocate to which family. This is the proposed future trial, not completed results or a commitment on recruitment date, sample size or finalized protocol.
+Source: Belgium talk, Healthy Future 2.0 planning and Sean's requested next-phase comparison.
 :::
 
-## A platform for testing responsive home visits {#closing data-timing="35"}
+## Reuse, adapt and contribute {#resources .closing-slide data-timing="45"}
 
-::: {.closing-question}
-Which content choices would you test<br>within a shared home-visiting platform?
+::: {.closing-url}
+[**dhep.org/healthy-future**](https://dhep.org/healthy-future/)
 :::
 
-::: {.resource-link}
-[dhep.org/healthy-future](https://dhep.org/healthy-future/)
-:::
+:::: {.columns}
+::: {.column width="46%"}
 
-::: {.credits}
-Stanford REAP, Sichuan University, UNR and UNC Chapel Hill<br>
-With thanks to participating families and community health workers
-:::
+### Stage-based curriculum
 
-::: {.caption}
-Enlight Foundation and private donors; Healthy Future 2.0: Cyrus Tang Foundation
+| Stage | Example content |
+|:---|:---|
+| Pregnancy | Maternal nutrition; breastfeeding preparation |
+| Birth–6 months | Breastfeeding; hygiene and infant health |
+| 6–18 months | Complementary feeding; illness and injury prevention |
+| Across stages | Mental health; government-service uptake |
+
+[English curriculum PDF](https://dhep.org/files/healthy-future/healthy-future-curriculum-2025-09.pdf) · CC BY-NC 4.0
+:::
+::: {.column width="49%"}
+
+### CareLoom and documentation
+
+[**Repository ↗**](https://github.com/DHEPLab/careloom) · Apache-2.0<br>
+[Implementer guide](https://github.com/DHEPLab/careloom/blob/main/docs/implementer-guide/README.md) · [Developer guide](https://github.com/DHEPLab/careloom/blob/main/docs/developer-guide/README.md)<br>
+[Contributing](https://github.com/DHEPLab/careloom/blob/main/CONTRIBUTING.md)
+
+### Get in touch
+
+**Sean Sylvia:** [sean.sylvia@unc.edu](mailto:sean.sylvia@unc.edu)<br>
+**DHEPLab:** [dheplab@unc.edu](mailto:dheplab@unc.edu)
+:::
+::::
+
+::: {.contribute-invitation}
+We welcome contributions, questions, adaptations and ideas for new features.
 :::
 
 ::: {.notes}
-[35 seconds] Close with the question colleagues could study using an adaptable curriculum and shared delivery infrastructure. The current trial supports specific findings; new settings and tailoring policies need their own evaluation. Thank families, CHWs, collaborators and funders. This is the end of the 12-minute main route; the remaining slides are backup.
-
-Sources: [protocol](https://doi.org/10.1136/bmjopen-2022-065403); [project page](https://dhep.org/healthy-future/).
+[45 seconds] Close with one place to start: the existing project website. The compact table summarizes recurring content, not an exhaustive session-by-session schedule. The PDF and software have different licenses. Both source and guides are public; new PRs remain under review and no packaged release is announced. Invite researchers, implementers and developers to contact Sean or the lab. Offer participation in adaptation and evaluation rather than promising implementation support.
+Sources: https://dhep.org/healthy-future/; https://dhep.org/contact/; CareLoom LICENSE, guides and contributing instructions; Healthy Future curriculum, September 2025.
 :::
 
 ## Backup: selected secondary outcomes {#backup-secondary .backup data-timing="0"}
@@ -303,23 +473,6 @@ Chen et al., medRxiv v2 (June 16, 2026), Table 3. Not peer reviewed.
 Source: [preprint v2](https://www.medrxiv.org/content/10.64898/2026.03.27.26349570v2.full.pdf), Table 3.
 :::
 
-## Backup: interpreting the exploratory screen {#backup-heterogeneity .backup data-timing="0"}
-
-| Question | What this evidence can support |
-|:---|:---|
-| Do whole-program effects vary by family? | Exploratory causal-forest screening |
-| Which module helps a particular family? | Not identified by a bundled-intervention trial |
-| Does a new prioritization policy improve outcomes? | Requires a separate evaluation |
-
-No clear signal is not proof of equal effects.<br>
-Predicted effect variation is not a validated targeting gain.
-
-::: {.notes}
-[Backup] The exploratory screen used causal forests with baseline family characteristics and township clustering. Multiple nominal screens are not confirmatory evidence. Numerical labels differ across the prior talk's main and appendix tables, so this deck does not report their exact p-values. A spread of predicted CATEs does not establish a useful allocation policy. Whole-package effects cannot identify component effects.
-
-Sources: [Belgium talk](https://github.com/sysylvia/presentations/blob/main/research/2026-03-reap-belgium-hf/slides.qmd); [grf calibration](https://grf-labs.github.io/grf/reference/test_calibration.html); [RATE guidance](https://grf-labs.github.io/grf/reference/rank_average_treatment_effect.html).
-:::
-
 ## Backup: interpretation and design limits {#backup-limits .backup data-timing="0"}
 
 | | |
@@ -335,36 +488,21 @@ Sources: [Belgium talk](https://github.com/sysylvia/presentations/blob/main/rese
 Sources: [preprint v2](https://www.medrxiv.org/content/10.64898/2026.03.27.26349570v2.full.pdf); [protocol](https://doi.org/10.1136/bmjopen-2022-065403).
 :::
 
-## Backup: collaborators and sources {#backup-sources .backup data-timing="0"}
-
-### Trial team
-
-Yunwei Chen, Yuju Wu, Ann M. Weber, Alexis Medina, Yian Guo,<br>
-Siva Balakrishnan, Hanwen Zhang, Scott Rozelle, Huan Zhou,<br>
-Gary L. Darmstadt and Sean Sylvia
-
-::: {.source-links}
-[Evaluation preprint, version 2 (June 2026)](https://www.medrxiv.org/content/10.64898/2026.03.27.26349570v2)<br>
-[Published trial protocol, BMJ Open (2023)](https://doi.org/10.1136/bmjopen-2022-065403)<br>
-[Curriculum and guides: dhep.org/healthy-future](https://dhep.org/healthy-future/)<br>
-[Public source: github.com/DHEPLab/careloom](https://github.com/DHEPLab/careloom)
-:::
-
-::: {.notes}
-[Backup] Author order follows the preprint. The public project page identifies implementation partners and funders. Existing resource links do not announce a new software release.
-:::
-
 ## Backup: the CareLoom interface {#backup-interface .backup data-timing="0"}
 
 :::: {.columns}
 ::: {.column width="45%"}
+
 ### Program manager
+
 Configure curriculum and stages
 
 ### Community health worker
+
 Schedule visits and deliver modules
 
 ### Supervisor
+
 Review visit completion and reports
 :::
 ::: {.column width="52%"}

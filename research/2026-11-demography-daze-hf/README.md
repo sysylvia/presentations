@@ -1,25 +1,31 @@
 # Opening Healthy Future — Demography Daze 2026
 
-[View slides](https://talks.ssylvia.io/research/2026-11-demography-daze-hf/slides.html) · [PDF](slides-v7.pdf)
+[View slides](https://talks.ssylvia.io/research/2026-11-demography-daze-hf/slides.html) · [Current PDF](slides-v8.pdf) · [Original v7 PDF](slides-v7.pdf)
 
-Quarto Reveal.js version of the completed v7 DHEPLab deck for November 13, 2026. Eleven main slides retain a 12-minute working target; six labeled backup slides follow the closing slide. The original PowerPoint and PDF are unchanged.
+Version 8 applies Sean’s November 13 walkthrough. Fourteen main slides have a 12-minute planned route; four labeled backups follow the final resources/contact slide. The demo is 2:18 in full; notes allocate about one minute of playback. Original v7 artifacts and earlier source commit are retained.
 
 ## Edit and render
 
-Edit `slides.qmd` and run `quarto render` in this directory (verified with Quarto 1.6.43). This is a nested standalone project: rendering it does not render other presentations. Output is `_rendered/slides.html`. Fonts and media are embedded, so the HTML can also be opened offline.
+Edit `slides.qmd`, then run `quarto render slides.qmd` here (Quarto 1.6.43 verified). This is a nested standalone project. Output: `_rendered/slides.html`. The PDF uses the verified slide renders, clickable resource links and a static demo thumbnail. The editable charts remain in the HTML/source. All slide fonts/media are embedded except the deliberately external Canva `watch?embed` demo player, which needs network access. A visible direct video link is also included. `data-external="1"` on the iframe prevents Pandoc from copying the remote player into a data URL and breaking it.
 
-Use arrow keys to navigate, `O` for overview, `F` for fullscreen and `S` for speaker view. The main route ends at slide 11; slides 12–17 are backup. Notes contain speaking cues, timing, evidence limits and public citations.
+Arrow keys navigate; O opens overview; F enters fullscreen; S opens speaker view. Main talk ends at slide 14. `Speaker_notes.md` contains the timing and public source notes.
 
-## Figures and sources
+The typography follows the rendered Belgium reference: Instrument Serif headings, Times body text, Source Sans 3 subheadings and JetBrains Mono markers. The Times system font is used rather than redistributed. The title background is a text-free derivative of the curriculum cover; the original is retained. Official institutional logo assets retain their proportions.
 
-`evidence.json` contains only published aggregate estimates from Chen et al., medRxiv v2 (June 16, 2026), Tables 3–4. Binary probability differences are multiplied by 100 for percentage-point displays. There is no participant dataset or new analysis. Run `python3 render_figures.py` after editing the aggregate values or figure layout; it regenerates the editable inline SVG fragments in `figures/`.
+## Figures and evidence
 
-Architecture and branching diagrams reflect CareLoom source inspected at revision `71468fae6ce0ca9cd434ebbf847f7eac30cee11e`. Configured branching is distinguished from proposed learned prioritization. Exploratory heterogeneity stays qualitative; inconsistent outcome labels in the prior Belgium material do not support exact numerical claims here. The historical 2024 deck does not override the current evidence.
+`evidence.json` contains published aggregate estimates from Chen et al., medRxiv v2 (June 16, 2026), Tables 3–4. Binary effects and their confidence bounds are multiplied by 100 for percentage points. No participant dataset or new analysis is included. `python3 render_trial_summary.py` regenerates the editable main forest plots; `python3 render_figures.py` regenerates the detailed backup figures and backend diagram. Tables remain editable HTML.
 
-The curriculum excerpt is from the September 2025 English PDF, printed p.151 / PDF p.153, © 2022 Stanford University, CC BY-NC 4.0. The CareLoom interface is the existing public project screenshot, with no participant records. DHEPLab artwork comes from the repository's original logo. Instrument Serif, Source Sans 3 and JetBrains Mono retain their included SIL OFL licenses.
+Architecture follows inspected CareLoom source revision 71468fae6ce0ca9cd434ebbf847f7eac30cee11e. Authored curriculum branching is separated from proposed learned prioritization. The standalone family-targeting and curriculum-paths slides were removed as requested. Trial uncertainty and the distinction between integrated-program and software effects remain explicit.
+
+The global slide uses WHO EB156/15 (December 2024), §9 (approximately four million CHWs reported from 93 countries), and Kirkwood et al., Lancet 2013 (pooled programme-setting home-visit trials: 12% lower neonatal mortality, 95% CI 5–18%). These are different populations and evidence types, not a universal Healthy Future effect.
+
+## Reuse and provenance
+
+CareLoom: Apache-2.0. Healthy Future curriculum: © 2022 Stanford University, CC BY-NC 4.0; English PDF September 2025. Curriculum diagram/cover derive from the Belgium presentation and curriculum. The clean cover was produced by image editing to remove the embedded program title while retaining the artwork. Public interface screenshot contains no participant records. Instrument Serif, Source Sans 3 and JetBrains Mono retain SIL OFL licenses. Institutional logos are their respective institutions’ marks, used to credit research collaborators.
+
+Logo sources: UNC official University Signature package (identity.unc.edu, August 2026); Stanford official full wordmark (identity.stanford.edu, June 2020); Sichuan University official website header wordmark (scu.edu.cn/images/logo.png, displayed on navy); UNR mark from the existing lab website partner assets.
 
 ## Publishing
 
-This repository's established target is the existing `sylvia-talks` Netlify site at `talks.ssylvia.io` (see root `_publish.yml`). GitHub stores the editable source; GitHub Pages is not enabled by this addition. The public files for this talk are the self-contained HTML and the matching PDF, under `research/2026-11-demography-daze-hf/`.
-
-When updating the existing site, retain its current published files and add or replace only this talk's directory. A deployment containing only the new talk would replace the rest of the site. Verify the live slide URL and retained older URLs after publishing. Local review logs and deployment receipts are kept outside this repository.
+This repository uses the existing `sylvia-talks` Netlify site at `talks.ssylvia.io` (root `_publish.yml`). GitHub stores editable source. Retain the currently published site and add/replace only the current talk’s HTML and v8 PDF. Do not remove older talk assets or the original v7 PDF. Current website/CareLoom implementation PRs remain separate; source availability is not a packaged public release.
